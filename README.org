@@ -2,3 +2,6 @@
 
 * GameJam2025专用仓库
 GameJam2025专用仓库，会有什么新发现呢？
+
+* 模版声明
+godot-gamejam模板来自仓库：[[https://github.com/bitbrain/godot-gamejam]]
