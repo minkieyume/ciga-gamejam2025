@@ -16,3 +16,5 @@ Pixel_Mart：https://ghostpixxells.itch.io/pixel-mart
 Cute RPG - Icons：https://pixymoon.itch.io/cute-rpg
 Ghostpixxells_pixelfood：https://ghostpixxells.itch.io/pixelfood
 kotomori_sounds：https://taira-komori.jpn.org/freesoundcn.html
+tam_free_music：https://www.tam-music.com/
+ark-pixel-font-16px-proportional-ttf：https://github.com/TakWolf/ark-pixel-font
