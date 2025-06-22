@@ -1,7 +1,18 @@
 #+TITLE: README
 
+* 前言
+为CIGA GameJam 2025准备的开源仓库，开源协议是[[https://github.com/minkieyume/Creator_Shared_License][创作者共享协议]]。
+由于本作品使用的部分资产是付费的，因此本开源项目仅公开非付费资产和代码部分。
+
 * GameJam2025专用仓库
 GameJam2025专用仓库，会有什么新发现呢？
 
-* 模版声明
-godot-gamejam模板来自仓库：[[https://github.com/bitbrain/godot-gamejam]]
+* 借物表
+所有借用他人的资源的素材来源，都会在此声明：
+godot-gamejam模板：[[https://github.com/bitbrain/godot-gamejam]]
+Super_Retro_World：https://gif-superretroworld.itch.io/
+Shikashi's Fantasy Icons Pack v2：https://shikashipx.itch.io/shikashis-fantasy-icons-pack
+Pixel_Mart：https://ghostpixxells.itch.io/pixel-mart
+Cute RPG - Icons：https://pixymoon.itch.io/cute-rpg
+Ghostpixxells_pixelfood：https://ghostpixxells.itch.io/pixelfood
+kotomori_sounds：https://taira-komori.jpn.org/freesoundcn.html
