@@ -2,3 +2,6 @@
 **/.godot/
 **/android/
 **/nofree
+
+# Godot 导入文件
+*.import
