@@ -56,7 +56,7 @@ func handle_jumping():
 # Player jump
 func jump():
 	jump_tween()
-	AudioManager.jump_sfx.play()
+	#AudioManager.jump_sfx.play()
 	velocity.y = -jump_force
 
 # Handle Player Animations
@@ -86,7 +86,7 @@ func death_tween():
 	await tween.finished
 	global_position = spawn_point.global_position
 	await get_tree().create_timer(0.3).timeout
-	AudioManager.respawn_sfx.play()
+	#AudioManager.respawn_sfx.play()
 	respawn_tween()
 
 func respawn_tween():
@@ -104,6 +104,6 @@ func jump_tween():
 # Reset the player's position to the current level spawn point if collided with any trap
 func _on_collision_body_entered(_body):
 	if _body.is_in_group("Traps"):
-		AudioManager.death_sfx.play()
+		#AudioManager.death_sfx.play()
 		death_particles.emitting = true
 		death_tween()

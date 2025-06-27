@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://scenes/prefabs/Coin.tscn" id="3_nht2m"]
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="4_ndpt4"]
 [ext_resource type="Texture2D" uid="uid://dl27wu6txldcl" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_8107p"]
-[ext_resource type="Script" path="res://scripts/GameUI.gd" id="6_um0jo"]
+[ext_resource type="Script" uid="uid://d0t2oif0sgvn6" path="res://scripts/GameUI.gd" id="6_um0jo"]
 [ext_resource type="Texture2D" uid="uid://df5nebamtd21y" path="res://assets/platformPack_item008.png" id="7_ns8o6"]
 [ext_resource type="FontFile" uid="uid://dhkpfb66aatc8" path="res://assets/fonts/Star Choco.ttf" id="8_doswy"]
 

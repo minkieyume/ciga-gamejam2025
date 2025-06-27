@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cafa15ypyt8bu"]
+[gd_scene load_steps=3 format=3 uid="uid://cafa15ypyt8bu"]
 
 [ext_resource type="Script" uid="uid://bcckd0l40rliv" path="res://scripts/core/m_playerstatic/MPlayerStatic.gd" id="1_kiho0"]
+[ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://scenes/prefabs/player.tscn" id="2_woow5"]
 
 [node name="MPlayerStatic" type="Node"]
 script = ExtResource("1_kiho0")
+player_scene = ExtResource("2_woow5")

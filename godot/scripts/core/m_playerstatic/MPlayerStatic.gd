@@ -1,4 +1,3 @@
-class_name MPlayerStatic
 extends IManager
 
 signal player_located(target_nodetarget_position: Vector2)

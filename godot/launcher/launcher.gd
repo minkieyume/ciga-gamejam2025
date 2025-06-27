@@ -15,6 +15,7 @@ enum GameMode {Main_Game, Test_Game}
 func _ready() -> void:
 	if (Engine.is_editor_hint()):
 		return
+	RenderingServer.set_default_clear_color(Color.BLACK)
 	var mainLoop: Node
 	match mode:
 		GameMode.Main_Game:
