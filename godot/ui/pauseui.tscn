@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://de0pdvatnb8li"]
+
+[ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/main_ui/maintheme.tres" id="1_dpl3u"]
+[ext_resource type="Script" uid="uid://f34321j0duc0" path="res://ui/pauseui.gd" id="2_dpl3u"]
+
+[node name="PauseUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_dpl3u")
+script = ExtResource("2_dpl3u")
+
+[node name="PauseUI" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 792.0
+offset_bottom = 433.0
+
+[node name="resume" type="Button" parent="PauseUI"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 170.0
+offset_right = 515.0
+offset_bottom = 271.0
+text = "继续游戏"
+
+[node name="return" type="Button" parent="PauseUI"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 294.0
+offset_right = 515.0
+offset_bottom = 395.0
+text = "返回菜单"
+
+[node name="PauseLabel" type="RichTextLabel" parent="PauseUI"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 59.0
+offset_right = 621.0
+offset_bottom = 167.0
+theme_override_font_sizes/bold_italics_font_size = 48
+theme_override_font_sizes/italics_font_size = 48
+theme_override_font_sizes/mono_font_size = 48
+theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/bold_font_size = 48
+text = "暂停ing"
