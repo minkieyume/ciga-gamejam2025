@@ -11,9 +11,10 @@ var is_focus := true
 var current_interative_area: InteractArea
 
 @onready var player_sprite = $AnimatedSprite2D
-@onready var spawn_point = %SpawnPoint
+@onready var spawn_point = %PlayerSpawner
 @onready var particle_trails = $ParticleTrails
 @onready var death_particles = $DeathParticles
+@onready var camera = $Camera2D
 
 # --------- BUILT-IN FUNCTIONS ---------- #
 
@@ -27,14 +28,19 @@ func _process(_delta):
 	flip_player()
 	
 func _input(event):
+	if !is_focus:
+		return
+	
 	if event.is_action_pressed("move"): #TODO:需考虑如何避免和UI冲突
 		target_position = get_global_mouse_position()
 		is_moving = true
-	elif event.is_action_pressed("attach"):
+	elif event.is_action_pressed("interact"):
 		if current_interative_area:
-			current_interative_area.attach()
-			hide()
 			is_focus = false
+			current_interative_area.attach()
+			await possess_tween()
+			hide()
+			camera.enabled = false
 	elif event.is_action_pressed("chat"):
 		pass #TODO: 等对话功能完成后补上
 # --------- CUSTOM FUNCTIONS ---------- #
@@ -68,36 +74,38 @@ func flip_player():
 		player_sprite.flip_h = false
 
 # Tween Animations
-func death_tween():
+func possess_tween():
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
 	await tween.finished
-	global_position = spawn_point.global_position
-	await get_tree().create_timer(0.3).timeout
-	AudioManager.respawn_sfx.play()
-	respawn_tween()
 
 func respawn_tween():
 	var tween = create_tween()
 	tween.stop(); tween.play()
 	tween.tween_property(self, "scale", Vector2.ONE, 0.15) 
 	
-# 玩家取消附身
+# 玩家出生/取消附身
 func respawn(pos: Vector2):
 	position = pos
+	camera.enabled = true
+	camera.make_current()
 	show()
+	await respawn_tween()
 	is_focus = true
 
 # --------- SIGNALS ---------- #
 
 # Reset the player's position to the current level spawn point if collided with any trap
-func _on_collision_body_entered(_body):
-	if _body.is_in_group("Traps"):
-		AudioManager.death_sfx.play()
-		death_particles.emitting = true
-		death_tween()
+#func _on_collision_body_entered(_body):
+	#if _body.is_in_group("Traps"):
+		#AudioManager.death_sfx.play()
+		#death_particles.emitting = true
+		#death_tween()
 
 
 func _on_area_entered(area) -> void:
 	if area is InteractArea:
 		current_interative_area = area
+
+func _on_area_exited(area: Area2D) -> void:
+	current_interative_area = null
