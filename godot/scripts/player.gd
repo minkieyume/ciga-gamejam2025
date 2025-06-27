@@ -21,7 +21,7 @@ var current_interative_area: Area2D
 func _ready():
 	target_position = global_position
 
-func _process(_delta):
+func _physics_process(_delta: float) -> void:
 	# Calling functions
 	movement(_delta)
 	player_animations()

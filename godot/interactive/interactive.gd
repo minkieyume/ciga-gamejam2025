@@ -26,13 +26,14 @@ var can_possess: bool = false
 #@onready var spawn_point = %SpawnPoint
 @onready var particle_trails = $ParticleTrails
 @onready var death_particles = $DeathParticles
+@onready var interact_area = $InteractArea
 @onready var camera:=$Camera2D
 
 # --------- BUILT-IN FUNCTIONS ---------- #
 func _ready():
 	$SelfArea.body_entered.connect(_on_SelfArea_body_entered)
-	$IntereactArea.body_entered.connect(_on_IntereactArea_body_entered)
-	$IntereactArea.body_exited.connect(_on_IntereactArea_body_exited)
+	interact_area.body_entered.connect(_on_IntereactArea_body_entered)
+	interact_area.body_exited.connect(_on_IntereactArea_body_exited)
 	#player.connect("possessed", Callable(player, "_on_possessed"))
 	if camera:
 		camera.current = false
