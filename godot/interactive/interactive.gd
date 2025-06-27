@@ -2,7 +2,7 @@ class_name Interactive
 extends CharacterBody2D
 
 # --------- SIGNALS ---------- #
-signal possessed
+#signal possessed
 
 # --------- VARIABLES ---------- #
 @export var player:Node2D
@@ -31,7 +31,7 @@ func _ready():
 	$SelfArea.body_entered.connect(_on_SelfArea_body_entered)
 	$IntereactArea.body_entered.connect(_on_IntereactArea_body_entered)
 	$IntereactArea.body_exited.connect(_on_IntereactArea_body_exited)
-	player.connect("possessed", Callable(player, "_on_possessed"))
+	#player.connect("possessed", Callable(player, "_on_possessed"))
 
 
 func _physical_process(_delta):
@@ -45,13 +45,13 @@ func _unhandled_input(event):
 	if is_controlling and event.is_action_just_pressed("interact"):
 		#处理交互逻辑
 		handle_interaction()
-	if can_interact and event.is_action_just_pressed("dialog"):
-		# 这里实现对话逻辑
-		print("对话触发")
-	if can_possess and event.is_action_just_pressed("interact"):
-		#附身
-		set_control(true)
-		emit_signal("possessed")
+	#if can_interact and event.is_action_just_pressed("dialog"):
+		## 这里实现对话逻辑
+		#print("对话触发")
+	#if can_possess and event.is_action_just_pressed("interact"):
+		##附身
+		#set_control(true)
+		#emit_signal("possessed")
 # --------- CUSTOM FUNCTIONS ---------- #
 
 # <-- Player Movement Code -->
@@ -131,6 +131,10 @@ func set_control(state: bool):
 func handle_interaction():
 	#空实现,子类覆写
 	pass
+	
+func attach():
+	set_control(true)
+	
 
 # --------- SIGNALS ---------- #
 
