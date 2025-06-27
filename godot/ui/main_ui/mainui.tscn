@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://ik27nkd02ose"]
+
+[ext_resource type="Script" uid="uid://bfbcpcsge1tcn" path="res://ui/main_ui/mainui.gd" id="1_bqiya"]
+[ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/main_ui/maintheme.tres" id="2_0e4jt"]
+
+[node name="MainUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_0e4jt")
+script = ExtResource("1_bqiya")
+
+[node name="Background" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="MainPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="Title" type="Label" parent="MainPanel"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 48.0
+offset_right = 728.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 96
+text = "灵魂炼金师"
+
+[node name="Start" type="Button" parent="MainPanel"]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 237.0
+offset_right = 593.0
+offset_bottom = 335.0
+theme = ExtResource("2_0e4jt")
+text = "开始游戏"
+
+[node name="Quit" type="Button" parent="MainPanel"]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 371.0
+offset_right = 593.0
+offset_bottom = 467.0
+text = "退出游戏
+"
+
+[connection signal="button_down" from="MainPanel/Start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="MainPanel/Quit" to="." method="_on_quit_button_down"]

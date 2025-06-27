@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://c33b0lt5jbf8h"]
+
+[ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/main_ui/maintheme.tres" id="1_dpajb"]
+[ext_resource type="Script" uid="uid://2mp7m0lw0vkw" path="res://ui/fail_ui.gd" id="1_prob3"]
+
+[node name="FailUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_dpajb")
+script = ExtResource("1_prob3")
+
+[node name="Fail" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 792.0
+offset_bottom = 433.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Fail"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 118.0
+offset_right = 607.0
+offset_bottom = 226.0
+theme_override_font_sizes/bold_italics_font_size = 48
+theme_override_font_sizes/italics_font_size = 48
+theme_override_font_sizes/mono_font_size = 48
+theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/bold_font_size = 48
+text = "你死定了！"
+
+[node name="return" type="Button" parent="Fail"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 235.0
+offset_right = 515.0
+offset_bottom = 336.0
+text = "返回菜单"
+
+[connection signal="button_down" from="Fail/return" to="." method="_on_return_button_down"]

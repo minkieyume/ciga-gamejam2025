@@ -22,7 +22,7 @@ func _ready() -> void:
 		if current_locale == locale:
 			select_index = idx
 		idx += 1
-	language_dropdown.select(select_index)		
+	language_dropdown.select(select_index)
 			
 
 func _on_master_volume_toggle_toggled(button_pressed: bool) -> void:
