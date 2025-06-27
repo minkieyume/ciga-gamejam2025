@@ -1,5 +1,5 @@
-#+TITLE: 策划案
-#+GameName:
+#+TITLE: 灵魂炼金师 - 策划案
+#+GameName: 灵魂炼金师
 
 * 游戏介绍
 ** 核心介绍
