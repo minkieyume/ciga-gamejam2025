@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_yg37t"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_nebaj"]
 
-[node name="ExampleBalloon" type="CanvasLayer"]
+[node name="Ballon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_aexjg")
 
@@ -17,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.891501, 0.891501)
 theme = ExtResource("2_avhl4")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon"]

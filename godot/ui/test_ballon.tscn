@@ -6,4 +6,4 @@
 [node name="TestBallon" type="Node"]
 script = ExtResource("1_q0g2b")
 
-[node name="ExampleBalloon" parent="." instance=ExtResource("1_crcse")]
+[node name="Ballon" parent="." instance=ExtResource("1_crcse")]
