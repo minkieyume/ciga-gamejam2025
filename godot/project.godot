@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="gamejam2025"
+config/name="灵魂炼金师"
 config/tags=PackedStringArray("starterkit")
 run/main_scene="res://scenes/levels/Level_01.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
@@ -23,6 +23,7 @@ config/icon="res://Icon.png"
 GameManager="*res://scripts/GameManager.gd"
 SceneTransition="*res://scenes/managers/SceneTransition.tscn"
 AudioManager="*res://scenes/managers/AudioManager.tscn"
+UserSettings="*res://globals/user_settings.tscn"
 
 [display]
 
