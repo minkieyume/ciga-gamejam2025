@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cafa15ypyt8bu"]
+
+[ext_resource type="Script" uid="uid://bcckd0l40rliv" path="res://scripts/core/m_playerstatic/m_player_static.gd" id="1_7qksq"]
+[ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://scenes/prefabs/player.tscn" id="2_6griw"]
+
+[node name="MPlayerStatic" type="Node"]
+script = ExtResource("1_7qksq")
+player_scene = ExtResource("2_6griw")

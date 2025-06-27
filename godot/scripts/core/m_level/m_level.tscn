@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cd5n7gwmin5do"]
 
-[ext_resource type="Script" uid="uid://y3u8cr0vvp5p" path="res://scripts/core/m_level/MLevel.gd" id="1_fuj2h"]
+[ext_resource type="Script" uid="uid://y3u8cr0vvp5p" path="res://scripts/core/m_level/m_level.gd" id="1_fuj2h"]
 
 [node name="MLevel" type="Node"]
 script = ExtResource("1_fuj2h")
