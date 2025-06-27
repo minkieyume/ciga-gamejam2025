@@ -20,13 +20,12 @@ config/icon="res://Icon.png"
 [autoload]
 
 MEventbus="*res://scripts/core/m_eventbus/MEventbus.tscn"
-MLevel="*res://scripts/core/m_level/MLevel.tscn"
-MPlayerStatic="*res://scripts/core/m_playerstatic/MPlayerStatic.tscn"
+MLevel="*res://scripts/core/m_level/m_level.tscn"
+MPlayerStatic="*res://scripts/core/m_playerstatic/m_player_static.tscn"
 MUiSpawner="*res://scripts/core/m_uispawner/m_ui_spawner.tscn"
 GameManager="*res://scripts/GameManager.gd"
 SceneTransition="*res://scenes/managers/SceneTransition.tscn"
 AudioManager="*res://scenes/managers/AudioManager.tscn"
-UserSettings="*res://globals/user_settings.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
