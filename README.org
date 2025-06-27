@@ -9,12 +9,21 @@ GameJam2025专用仓库，会有什么新发现呢？
 
 * 借物表
 所有借用他人的资源的素材来源，都会在此声明：
+
 godot-gamejam模板：[[https://github.com/bitbrain/godot-gamejam]]
+
 Super_Retro_World：https://gif-superretroworld.itch.io/
+
 Shikashi's Fantasy Icons Pack v2：https://shikashipx.itch.io/shikashis-fantasy-icons-pack
+
 Pixel_Mart：https://ghostpixxells.itch.io/pixel-mart
+
 Cute RPG - Icons：https://pixymoon.itch.io/cute-rpg
+
 Ghostpixxells_pixelfood：https://ghostpixxells.itch.io/pixelfood
+
 kotomori_sounds：https://taira-komori.jpn.org/freesoundcn.html
+
 tam_free_music：https://www.tam-music.com/
+
 fusion-pixel-font-12px-proportional-ttf：https://github.com/TakWolf/fusion-pixel-font
