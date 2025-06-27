@@ -5,6 +5,7 @@ extends CharacterBody2D
 #signal possessed
 
 # --------- VARIABLES ---------- #
+
 @export var player:Node2D
 @export var move_speed : float = 400
 @export var jump_force : float = 600
@@ -25,6 +26,7 @@ var can_possess: bool = false
 #@onready var spawn_point = %SpawnPoint
 @onready var particle_trails = $ParticleTrails
 @onready var death_particles = $DeathParticles
+@onready var camera:=$Camera2D
 
 # --------- BUILT-IN FUNCTIONS ---------- #
 func _ready():
@@ -32,6 +34,8 @@ func _ready():
 	$IntereactArea.body_entered.connect(_on_IntereactArea_body_entered)
 	$IntereactArea.body_exited.connect(_on_IntereactArea_body_exited)
 	#player.connect("possessed", Callable(player, "_on_possessed"))
+	if camera:
+		camera.current = false
 
 
 func _physical_process(_delta):
@@ -134,7 +138,8 @@ func handle_interaction():
 	
 func attach():
 	set_control(true)
-	
+	if camera:
+		camera.current = true
 
 # --------- SIGNALS ---------- #
 
