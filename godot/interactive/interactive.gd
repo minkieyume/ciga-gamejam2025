@@ -45,10 +45,10 @@ func _unhandled_input(event):
 	if is_controlling and event.is_action_just_pressed("interact"):
 		#处理交互逻辑
 		handle_interaction()
-	if can_interact and event.is_action_just_pressed("interact"):
+	if can_interact and event.is_action_just_pressed("dialog"):
 		# 这里实现对话逻辑
 		print("对话触发")
-	if can_possess and event.is_action_just_pressed("possess"):
+	if can_possess and event.is_action_just_pressed("interact"):
 		#附身
 		set_control(true)
 		emit_signal("possessed")

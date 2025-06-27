@@ -4,3 +4,13 @@
 
 [node name="Interactive" type="CharacterBody2D"]
 script = ExtResource("1_enjte")
+
+[node name="SelfArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelfArea"]
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
