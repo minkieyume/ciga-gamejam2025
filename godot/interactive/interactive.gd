@@ -46,9 +46,12 @@ func _physical_process(_delta):
 		flip_player()
 	
 func _unhandled_input(event):
-	if is_controlling and event.is_action_just_pressed("interact"):
-		#处理交互逻辑
-		handle_interaction()
+	if is_controlling:
+		if event.is_action_just_pressed("interact"):
+			#处理交互逻辑
+			handle_interaction()
+		if event.is_action_just_pressed("attach"):
+			disattach()
 	#if can_interact and event.is_action_just_pressed("dialog"):
 		## 这里实现对话逻辑
 		#print("对话触发")
@@ -140,6 +143,15 @@ func attach():
 	set_control(true)
 	if camera:
 		camera.current = true
+		
+func disattach():
+	set_control(false)
+	if camera:
+		camera.current = false
+	var spawner=get_tree().get_first_node_in_group("player_spawner")
+	if spawner:
+		spawner.spawn()
+	
 
 # --------- SIGNALS ---------- #
 

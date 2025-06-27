@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://ltm26ods1uac"]
+
+[ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_uw2r6"]
+[ext_resource type="Script" uid="uid://bccmp7txe2nmu" path="res://interactive/herb_bottle.gd" id="2_7ec1c"]
+
+[node name="HerbBottle" instance=ExtResource("1_uw2r6")]
+script = ExtResource("2_7ec1c")
