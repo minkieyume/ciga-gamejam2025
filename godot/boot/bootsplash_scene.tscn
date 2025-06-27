@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://ehrvsjvp61gu"]
+[gd_scene load_steps=2 format=3 uid="uid://co8m7pnbit5io"]
 
 [ext_resource type="Script" uid="uid://psoe3k1dufrt" path="res://boot/bootsplash_scene.gd" id="2"]
 

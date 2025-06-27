@@ -24,8 +24,9 @@ var can_possess: bool = false
 
 @onready var player_sprite = $AnimatedSprite2D
 #@onready var spawn_point = %SpawnPoint
-@onready var particle_trails = $ParticleTrails
-@onready var death_particles = $DeathParticles
+#待实现：
+#@onready var particle_trails = $ParticleTrails
+#@onready var death_particles = $DeathParticles
 @onready var interact_area = $InteractArea
 @onready var camera:=$Camera2D
 
@@ -93,12 +94,13 @@ func jump():
 	velocity.y = -jump_force
 
 # Handle Player Animations
+# 未实现particle_trails
 func player_animations():
-	particle_trails.emitting = false
+#	particle_trails.emitting = false
 	
 	if is_on_floor():
 		if abs(velocity.x) > 0:
-			particle_trails.emitting = true
+#			particle_trails.emitting = true
 			player_sprite.play("Walk", 1.5)
 		else:
 			player_sprite.play("Idle")
@@ -157,10 +159,11 @@ func disattach():
 # --------- SIGNALS ---------- #
 
 # SelfArea内碰到陷阱时触发死亡
+# 未实现死亡动画
 func _on_SelfArea_body_entered(body):
 	if body.is_in_group("Traps") or body.is_in_group("Pot"):
 		AudioManager.death_sfx.play()
-		death_particles.emitting = true
+#		death_particles.emitting = true
 		death_tween()
 		
 func _on_IntereactArea_body_entered(body):
