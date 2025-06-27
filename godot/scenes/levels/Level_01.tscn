@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://scenes/prefabs/player.tscn" id="2_pay8t"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://scenes/prefabs/Coin.tscn" id="3_rrh80"]
 [ext_resource type="Script" uid="uid://crxrtalwdm1s" path="res://scripts/GameManager.gd" id="4_vgfkr"]
-[ext_resource type="Texture2D" uid="uid://jaegp53ccc7w" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_wqbaa"]
+[ext_resource type="Texture2D" uid="uid://cjx6r1e6vsmk6" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_wqbaa"]
 [ext_resource type="Script" uid="uid://d0t2oif0sgvn6" path="res://scripts/GameUI.gd" id="6_66mfc"]
-[ext_resource type="Texture2D" uid="uid://clreg520jah1j" path="res://assets/platformPack_item008.png" id="7_j7jun"]
-[ext_resource type="FontFile" uid="uid://qgc4vi5osk7v" path="res://assets/fonts/Star Choco.ttf" id="8_gwcy2"]
+[ext_resource type="Texture2D" uid="uid://dkhtgqypovfa5" path="res://assets/platformPack_item008.png" id="7_j7jun"]
+[ext_resource type="FontFile" uid="uid://cqyjy4spp8dkg" path="res://assets/fonts/Star Choco.ttf" id="8_gwcy2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs0qk"]
 texture = ExtResource("5_wqbaa")

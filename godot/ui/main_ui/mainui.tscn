@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ik27nkd02ose"]
+
+[node name="MainUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="Start" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 422.0
+offset_top = 248.0
+offset_right = 532.0
+offset_bottom = 312.0
+text = "开始游戏"
+
+[node name="Quit" type="Button" parent="Panel"]
+offset_left = 422.0
+offset_top = 348.0
+offset_right = 532.0
+offset_bottom = 412.0
+text = "退出游戏
+"
