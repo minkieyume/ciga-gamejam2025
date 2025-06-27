@@ -40,6 +40,11 @@ project/assembly_name="2D-Platformer-Starter"
 
 enabled=PackedStringArray()
 
+[global_group]
+
+Traps=""
+Pot=""
+
 [input]
 
 Left={

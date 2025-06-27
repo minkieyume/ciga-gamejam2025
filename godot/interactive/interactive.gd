@@ -157,7 +157,7 @@ func disattach():
 
 # SelfArea内碰到陷阱时触发死亡
 func _on_SelfArea_body_entered(body):
-	if body.is_in_group("Traps"):
+	if body.is_in_group("Traps") or body.is_in_group("Pot"):
 		AudioManager.death_sfx.play()
 		death_particles.emitting = true
 		death_tween()

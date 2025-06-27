@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://drsjr5cxic8ym"]
+
+[node name="Trap" type="CharacterBody2D" groups=["Traps"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
