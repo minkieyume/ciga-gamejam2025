@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://w7m6tehvvy3g"]
+[gd_scene load_steps=13 format=3 uid="uid://w7m6tehvvy3g"]
 
 [ext_resource type="Script" uid="uid://dlwkp0b4dx13s" path="res://scripts/player.gd" id="1_qt7d6"]
 [ext_resource type="Texture2D" uid="uid://cbss87b7xk5lc" path="res://assets/spritesheet/platformerPack_character.png" id="2_q0cxm"]
@@ -54,6 +54,9 @@ animations = [{
 radius = 27.0
 height = 66.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvbjh"]
+size = Vector2(58, 69)
+
 [sub_resource type="Curve" id="Curve_m2jh0"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.246032, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
@@ -62,8 +65,7 @@ point_count = 3
 offsets = PackedFloat32Array(0.25, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
-[node name="Player" type="Area2D" groups=["Player"]]
-collision_layer = 2
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_qt7d6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -73,6 +75,12 @@ animation = &"Walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 15)
 shape = SubResource("CapsuleShape2D_n4sts")
+
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(0, 14.5)
+shape = SubResource("RectangleShape2D_tvbjh")
 
 [node name="ParticleTrails" type="CPUParticles2D" parent="."]
 position = Vector2(0, 42)
@@ -112,4 +120,4 @@ scale_amount_max = 30.0
 scale_amount_curve = SubResource("Curve_m2jh0")
 color_ramp = SubResource("Gradient_3gc37")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

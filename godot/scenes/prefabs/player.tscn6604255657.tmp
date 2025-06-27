@@ -65,6 +65,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 [node name="Player" type="Area2D" groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_qt7d6")
+move_speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4nss6")
