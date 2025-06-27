@@ -8,7 +8,7 @@ extends Area2D
 var target_position: Vector2
 var is_moving := false
 var is_focus := true
-var current_interative_area: InteractArea
+var current_interative_area: Area2D
 
 @onready var player_sprite = $AnimatedSprite2D
 @onready var spawn_point = %PlayerSpawner
@@ -108,8 +108,8 @@ func respawn(pos: Vector2):
 		#death_tween()
 
 
-func _on_area_entered(area) -> void:
-	if area is InteractArea:
+func _on_area_entered(area:Area2D) -> void:
+	if area.is_in_group("interact_area"):
 		current_interative_area = area
 
 func _on_area_exited(area: Area2D) -> void:
