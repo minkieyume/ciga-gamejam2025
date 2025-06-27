@@ -23,6 +23,8 @@ config/icon="res://Icon.png"
 GameManager="*res://scripts/GameManager.gd"
 SceneTransition="*res://scenes/managers/SceneTransition.tscn"
 AudioManager="*res://scenes/managers/AudioManager.tscn"
+UserSettings="*res://settings/user_settings.gd"
+MEventbus="*res://scripts/core/m_eventbus/MEventbus.tscn"
 
 [display]
 
@@ -31,6 +33,10 @@ window/size/viewport_height=540
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
+
+[dotnet]
+
+project/assembly_name="gamejam2025"
 
 [editor_plugins]
 

@@ -41,4 +41,3 @@ visible = false
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 autoplay = true
-bus = &"Music"
