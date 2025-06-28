@@ -22,7 +22,7 @@ var can_interact: bool = false
 var can_possess: bool = false
 var ignore_attach_input: bool = false
 
-@export var player_sprite: AnimatedSprite2D
+@export var player_sprite: Sprite2D
 #@onready var spawn_point = %SpawnPoint
 #待实现：
 #@onready var particle_trails = $ParticleTrails
@@ -34,6 +34,8 @@ var ignore_attach_input: bool = false
 
 # --------- BUILT-IN FUNCTIONS ---------- #
 func _ready():
+	if Engine.is_editor_hint():
+		return
 	self_area.body_entered.connect(_on_SelfArea_body_entered)
 	#player.connect("possessed", Callable(player, "_on_possessed"))
 	print(camera)
@@ -44,6 +46,8 @@ func _ready():
 
 
 func _physics_process(_delta: float):
+	if Engine.is_editor_hint():
+		return
 	handle_gravity(_delta)
 	# Calling functions
 	if is_controlling:
