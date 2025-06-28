@@ -1,58 +1,27 @@
-[gd_scene load_steps=12 format=3 uid="uid://w7m6tehvvy3g"]
+[gd_scene load_steps=9 format=3 uid="uid://w7m6tehvvy3g"]
 
 [ext_resource type="Script" uid="uid://dlwkp0b4dx13s" path="res://scripts/player.gd" id="1_qt7d6"]
-[ext_resource type="Texture2D" uid="uid://cr61juq8pp5tm" path="res://assets/spritesheet/platformerPack_character.png" id="2_q0cxm"]
-[ext_resource type="Texture2D" uid="uid://d1ey8ppfrf8df" path="res://assets/textures/CloudTexture.png" id="3_8vxmb"]
+[ext_resource type="Texture2D" uid="uid://q488l1mkhd37" path="res://assets/textures/小幽灵.png" id="2_8cdkg"]
+[ext_resource type="Texture2D" uid="uid://dbdmbsqod86kd" path="res://assets/textures/CloudTexture.png" id="3_8vxmb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_57bci"]
-atlas = ExtResource("2_q0cxm")
-region = Rect2(0, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y2um1"]
-atlas = ExtResource("2_q0cxm")
-region = Rect2(96, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cjvmv"]
-atlas = ExtResource("2_q0cxm")
-region = Rect2(192, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k3yh2"]
-atlas = ExtResource("2_q0cxm")
-region = Rect2(288, 0, 96, 96)
+[sub_resource type="AtlasTexture" id="AtlasTexture_56dyf"]
+atlas = ExtResource("2_8cdkg")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4nss6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_57bci")
+"texture": SubResource("AtlasTexture_56dyf")
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y2um1")
-}],
-"loop": true,
-"name": &"Jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cjvmv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k3yh2")
-}],
-"loop": true,
-"name": &"Walk",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4sts"]
 radius = 27.0
-height = 66.0
+height = 92.0
 
 [sub_resource type="Curve" id="Curve_m2jh0"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.246032, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -72,11 +41,12 @@ death_particles = NodePath("DeathParticles")
 camera = NodePath("Camera2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_4nss6")
-animation = &"Walk"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 15)
+position = Vector2(0, -4)
 shape = SubResource("CapsuleShape2D_n4sts")
 
 [node name="ParticleTrails" type="CPUParticles2D" parent="."]
