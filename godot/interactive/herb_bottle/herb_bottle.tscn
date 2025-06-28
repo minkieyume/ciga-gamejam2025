@@ -1,32 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://ltm26ods1uac"]
+[gd_scene load_steps=7 format=3 uid="uid://ltm26ods1uac"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_uw2r6"]
 [ext_resource type="Script" uid="uid://bccmp7txe2nmu" path="res://interactive/herb_bottle/herb_bottle.gd" id="2_7ec1c"]
-[ext_resource type="Texture2D" uid="uid://i75gnwsdaeif" path="res://assets/textures/瓶子7.png" id="3_pvygk"]
+[ext_resource type="Texture2D" uid="uid://cqnq7uh5pddwv" path="res://assets/静态背景2/瓶子7.png" id="3_pvygk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uskn8"]
-size = Vector2(27, 48)
+size = Vector2(32, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajm4n"]
-size = Vector2(110.519, 120.551)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pvygk"]
-atlas = ExtResource("3_pvygk")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4tpyw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pvygk")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+size = Vector2(261.971, 200.918)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afrrc"]
-size = Vector2(25, 34.7073)
+size = Vector2(32, 34.5366)
 
 [node name="HerbBottle" instance=ExtResource("1_uw2r6")]
 script = ExtResource("2_7ec1c")
@@ -38,8 +23,8 @@ shape = SubResource("RectangleShape2D_uskn8")
 scale = Vector2(0.244302, 0.398172)
 shape = SubResource("RectangleShape2D_ajm4n")
 
-[node name="AnimatedSprite2D" parent="." index="2"]
-sprite_frames = SubResource("SpriteFrames_4tpyw")
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("3_pvygk")
 
 [node name="CollisionShape2D" parent="." index="3"]
 position = Vector2(0, 1.88135)

@@ -123,4 +123,3 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue")
 
 textures/canvas_textures/default_texture_filter=0
 environment/defaults/default_clear_color=Color(0.105469, 0.457031, 0.730469, 1)
-

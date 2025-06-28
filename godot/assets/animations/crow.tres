@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://rncxn1sp3s7c"]
+
+[ext_resource type="Texture2D" uid="uid://cdsajde1k88s7" path="res://assets/静态背景2/乌鸦atlas/乌鸦01.png" id="1_g0i51"]
+[ext_resource type="Texture2D" uid="uid://clkvqtyu0mkjn" path="res://assets/静态背景2/乌鸦atlas/乌鸦02.png" id="2_uwyrn"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g0i51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uwyrn")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]

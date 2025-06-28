@@ -1,12 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://cr8atlvwwalj5"]
+[gd_scene load_steps=6 format=3 uid="uid://cr8atlvwwalj5"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_s46h7"]
-[ext_resource type="Texture2D" uid="uid://0um6n0yt5urg" path="res://assets/textures/书架.png" id="2_bl4kr"]
+[ext_resource type="Texture2D" uid="uid://jtyibs824rer" path="res://assets/静态物品/书架.png" id="2_bl4kr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bl4kr"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqike"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5fio"]
+size = Vector2(32, 32)
 
 [node name="Box" instance=ExtResource("1_s46h7")]
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+[node name="CollisionShape2D" parent="SelfArea" index="0"]
+shape = SubResource("RectangleShape2D_bl4kr")
+
+[node name="CollisionShape2D" parent="InteractArea" index="0"]
+shape = SubResource("RectangleShape2D_gqike")
+
+[node name="Sprite2D" parent="." index="2"]
+scale = Vector2(1.25, 1.25)
 texture = ExtResource("2_bl4kr")
 
-[node name="Camera2D" parent="." index="5"]
+[node name="CollisionShape2D" parent="." index="3"]
+shape = SubResource("RectangleShape2D_g5fio")
+
+[node name="Camera2D" parent="." index="4"]
 limit_smoothed = false
