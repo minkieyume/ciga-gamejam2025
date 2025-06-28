@@ -21,6 +21,7 @@ var is_grounded : bool = false
 var is_controlling:bool=false
 var can_interact: bool = false
 var can_possess: bool = false
+var ignore_attach_input: bool = false
 
 @onready var player_sprite = $AnimatedSprite2D
 #@onready var spawn_point = %SpawnPoint
@@ -57,9 +58,11 @@ func handle_input():
 		if Input.is_action_just_pressed("interact"):
 			print("interact pressed")
 			handle_interaction()			
-		if Input.is_action_just_pressed("attach"):
+		if Input.is_action_just_pressed("attach") and not ignore_attach_input:
 			print("disattach pressed")
 			disattach()
+		# 重置输入缓冲
+		ignore_attach_input = false
 	#if can_interact and event.is_action_just_pressed("dialog"):
 		## 这里实现对话逻辑
 		#print("对话触发")
@@ -157,7 +160,11 @@ func attach():
 	set_control(true)
 	if camera:
 		camera.enabled = true
-		
+	# 设置输入缓冲，避免同一帧内触发disattach
+	ignore_attach_input = true
+	# 延迟一帧处理输入，避免同一帧内触发disattach
+	await get_tree().process_frame
+
 func disattach():
 	print("disattach")
 	set_control(false)
