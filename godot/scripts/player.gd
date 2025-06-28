@@ -8,7 +8,10 @@ extends Area2D
 var target_position: Vector2
 var is_moving := false
 var is_focus := true
-var current_interative_area: Interactive
+var current_interactive_area: Interactive
+#用数组维护进入的区域对象
+var entered_areas: Array[Interactive]=[]
+
 
 @export var player_sprite: AnimatedSprite2D
 
@@ -38,9 +41,9 @@ func _input(event):
 		target_position = get_global_mouse_position()
 		is_moving = true
 	elif event.is_action_pressed("attach"):
-		if current_interative_area:
+		if current_interactive_area:
 			is_focus = false
-			current_interative_area.attach()
+			current_interactive_area.attach()
 			camera.enabled = false
 			await possess_tween()
 			hide()
@@ -77,9 +80,9 @@ func flip_player():
 	var direction = (target_position - global_position).normalized()
 
 	if direction.x < 0:
-		player_sprite.flip_h = true
-	elif direction.x > 0:
 		player_sprite.flip_h = false
+	elif direction.x > 0:
+		player_sprite.flip_h = true
 
 
 # Tween Animations
@@ -113,10 +116,22 @@ func respawn(pos: Vector2):
 
 
 func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("interact_area"):
-		if area.has_method("get_owneer"):
-			current_interative_area = area.get_owneer()
+	if area.is_in_group("interact_area") and area.has_method("get_owneer"):
+		var current_entered_area=area.get_owneer()
+		if entered_areas.find(current_entered_area)==-1:
+			entered_areas.append(current_entered_area) 
+			current_interactive_area=current_entered_area
+			
 
 
 func _on_area_exited(area: Area2D) -> void:
-	current_interative_area = null
+	if area.is_in_group("interact_area") and area.has_method("get_owneer"):
+		var current_exited_area=area.get_owneer()
+		var leave_area_index:int=entered_areas.find(current_exited_area)
+		if leave_area_index != -1:  # 确保找到才移除
+			entered_areas.remove_at(leave_area_index)
+			current_interactive_area = entered_areas.back() if entered_areas.size() > 0 else null
+		if entered_areas.size()!=0:
+			current_interactive_area = entered_areas.back() 
+		else:
+			current_interactive_area=null
