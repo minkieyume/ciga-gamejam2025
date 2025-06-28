@@ -1,8 +1,13 @@
 [gd_scene load_steps=13 format=3 uid="uid://w7m6tehvvy3g"]
 
 [ext_resource type="Script" uid="uid://dlwkp0b4dx13s" path="res://scripts/player.gd" id="1_qt7d6"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://cr61juq8pp5tm" path="res://assets/spritesheet/platformerPack_character.png" id="2_q0cxm"]
 [ext_resource type="Texture2D" uid="uid://d1ey8ppfrf8df" path="res://assets/textures/CloudTexture.png" id="3_8vxmb"]
+=======
+[ext_resource type="Texture2D" uid="uid://cbss87b7xk5lc" path="res://assets/spritesheet/platformerPack_character.png" id="2_q0cxm"]
+[ext_resource type="Texture2D" uid="uid://dxp77wq60c2rr" path="res://assets/textures/CloudTexture.png" id="3_8vxmb"]
+>>>>>>> f8f00de9a69eb8b30dd11d8ce92dfaeb1224ef40
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_57bci"]
 atlas = ExtResource("2_q0cxm")

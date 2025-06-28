@@ -9,6 +9,7 @@ func _ready() -> void:
 	#.connect("herb_added", Callable(, "_on_herb_added"))
 
 func _unhandled_input(event):
+	super(event)
 	# 允许跳跃
 	if is_controlling:
 		if event.is_action_pressed("Jump"):
@@ -18,8 +19,8 @@ func _unhandled_input(event):
 				jump()
 				jump_count -= 1
 	# 保留父类的交互逻辑
-		if event.is_action_pressed("interact"):
-			handle_interaction() 
+		#if event.is_action_pressed("interact"):
+			#handle_interaction() 
 			
 func _on_SelfArea_body_entered(body):
 	if body.is_in_group("Traps") :
