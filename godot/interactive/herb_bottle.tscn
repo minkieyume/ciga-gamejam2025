@@ -14,7 +14,7 @@ size = Vector2(134.5, 141.5)
 size = Vector2(127, 126)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oecjx"]
-size = Vector2(134.5, 141.5)
+size = Vector2(127, 126)
 
 [node name="HerbBottle" instance=ExtResource("1_uw2r6")]
 script = ExtResource("2_7ec1c")
@@ -38,4 +38,5 @@ shape = SubResource("RectangleShape2D_afrrc")
 limit_smoothed = false
 
 [node name="CollisionShape2D" parent="RigidBody2D" index="0"]
+position = Vector2(12, 0)
 shape = SubResource("RectangleShape2D_oecjx")
