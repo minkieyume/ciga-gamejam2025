@@ -21,6 +21,8 @@ var is_controlling: bool = false
 var can_interact: bool = false
 var can_possess: bool = false
 var ignore_attach_input: bool = false
+#主要用于控制爬梯子
+var can_move_vertical:bool=false
 
 @export var player_sprite: Sprite2D
 #@onready var spawn_point = %SpawnPoint
@@ -37,6 +39,8 @@ func _ready():
 	if Engine.is_editor_hint():
 		return
 	self_area.body_entered.connect(_on_SelfArea_body_entered)
+	self_area.area_entered.connect(_on_SelfArea_area_entered)
+	self_area.area_exited.connect(_on_SelfArea_area_exited)
 	#player.connect("possessed", Callable(player, "_on_possessed"))
 	if camera:
 		camera.enabled = false
@@ -57,7 +61,8 @@ func _physics_process(_delta: float):
 
 
 func _try_handle_input():
-	if is_controlling:
+	if is_controlling and !can_move_vertical:
+		#梯子上禁用解除附身操作
 		if Input.is_action_just_pressed("interact"):
 			#print("interact pressed")
 			handle_interaction()
@@ -83,6 +88,9 @@ func _try_handle_input():
 
 # <-- Player Movement Code -->
 func handle_gravity(delta):
+	if can_move_vertical:
+		#梯子上不结算重力
+		return
 	#初始化时更新is_on_floor
 	move_and_slide()
 	# Gravity
@@ -95,15 +103,21 @@ func handle_gravity(delta):
 func _movement():
 	#handle_jumping()
 	# Move Player
-	var inputAxis = Input.get_axis("Left", "Right")
+	var inputHorizontal = Input.get_axis("Left", "Right")
+	var inputVertical=Input.get_axis("UP", "Down")
 	#if inputAxis!=0:
 	#print("Interactive Moving")
-	velocity = Vector2(inputAxis * move_speed, velocity.y)
+	if can_move_vertical:
+		velocity = Vector2(inputHorizontal * move_speed, velocity.y+inputVertical*move_speed)
+	else:
+		velocity = Vector2(inputHorizontal * move_speed, velocity.y)
 	move_and_slide()
 
 
 # Handles jumping functionality (double jump or single jump, can be toggled from inspector)
 func handle_jumping():
+	if can_move_vertical:
+		return
 	if Input.is_action_pressed("Jump"):
 		if is_on_floor() and !double_jump:
 			jump()
@@ -209,3 +223,12 @@ func _on_SelfArea_body_entered(body):
 		AudioManager.death_sfx.play()
 #		death_particles.emitting = true
 		death_tween()
+		
+func _on_SelfArea_area_entered(area):
+	if area.is_in_group("ladder"):
+		can_move_vertical=true
+		velocity.y=0
+		
+func _on_SelfArea_area_exited(area):
+	if area.is_in_group("ladder"):
+		can_move_vertical=false
