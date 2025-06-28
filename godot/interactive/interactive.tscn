@@ -10,9 +10,8 @@ script = ExtResource("1_enjte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SelfArea"]
 
-[node name="InteractArea" type="Area2D" parent="." node_paths=PackedStringArray("owneer") groups=["interact_area"]]
+[node name="InteractArea" type="Area2D" parent="." groups=["interact_area"]]
 script = ExtResource("2_klykp")
-owneer = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 
