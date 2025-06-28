@@ -39,9 +39,11 @@ func _ready():
 	print(camera)
 	if camera:
 		camera.enabled = false
+	#test
+	set_control(true)
 
 
-func _physical_process(_delta):
+func _physics_process(_delta):
 	handle_gravity()
 	# Calling functions
 	if is_controlling:
@@ -66,6 +68,7 @@ func _unhandled_input(event):
 
 # <-- Player Movement Code -->
 func handle_gravity():
+	move_and_slide() 
 	# Gravity
 	if !is_on_floor():
 		velocity.y += gravity
@@ -171,6 +174,7 @@ func _on_SelfArea_body_entered(body):
 		
 func _on_IntereactArea_body_entered(body):
 	if body.is_in_group("Player"):
+		print("player body entered")
 		can_interact = true
 		can_possess = true
 

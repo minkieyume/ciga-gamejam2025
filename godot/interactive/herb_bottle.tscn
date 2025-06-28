@@ -23,6 +23,9 @@ texture = ExtResource("3_uskn8")
 position = Vector2(5, -4.5)
 shape = SubResource("RectangleShape2D_uskn8")
 
+[node name="InteractArea" parent="." index="2" node_paths=PackedStringArray("owneer")]
+owneer = NodePath("..")
+
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
 position = Vector2(1.75, 0.25)
 shape = SubResource("RectangleShape2D_ajm4n")
