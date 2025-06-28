@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cr8atlvwwalj5"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_s46h7"]
-[ext_resource type="Texture2D" uid="uid://jtyibs824rer" path="res://assets/静态物品/书架.png" id="2_bl4kr"]
+[ext_resource type="Texture2D" uid="uid://dtudpwqqwud52" path="res://assets/静态物品/box.png" id="2_bl4kr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bl4kr"]
 size = Vector2(32, 32)
@@ -21,7 +21,6 @@ shape = SubResource("RectangleShape2D_bl4kr")
 shape = SubResource("RectangleShape2D_gqike")
 
 [node name="Sprite2D" parent="." index="2"]
-scale = Vector2(1.25, 1.25)
 texture = ExtResource("2_bl4kr")
 
 [node name="CollisionShape2D" parent="." index="3"]
