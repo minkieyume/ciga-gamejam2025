@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://c7valpmcx3fsk"]
+[gd_scene load_steps=12 format=3 uid="uid://dr6wakk6lxclv"]
 
-[ext_resource type="Script" uid="uid://blh40p6cn6st1" path="res://scripts/core/m_gamestate/m_gamestate.gd" id="1_ur2cv"]
+[ext_resource type="Script" uid="uid://blh40p6cn6st1" path="res://scripts/core/m_gamestate/MGameState.gd" id="1_ur2cv"]
 [ext_resource type="Script" uid="uid://v2afm55xc0k3" path="res://scripts/composites/StateMachine.gd" id="2_rqjwt"]
 [ext_resource type="Script" uid="uid://dj805ka0lvc2d" path="res://scripts/composites/TransitionState.gd" id="3_va5dq"]
 [ext_resource type="Script" uid="uid://flg8tjtlecau" path="res://scripts/core/m_gamestate/g_state/game_start.gd" id="3_w7qlg"]

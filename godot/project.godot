@@ -28,6 +28,7 @@ MLevel="*res://scripts/core/m_level/m_level.tscn"
 MPlayerStatic="*res://scripts/core/m_playerstatic/m_player_static.tscn"
 MUiSpawner="*res://scripts/core/m_uispawner/m_ui_spawner.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+MGameState="*res://scripts/core/m_gamestate/m_gamestate.tscn"
 
 [display]
 
