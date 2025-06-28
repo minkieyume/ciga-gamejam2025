@@ -1,12 +1,139 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0qbgf7m6rlh4"]
+[gd_scene load_steps=7 format=3 uid="uid://b0qbgf7m6rlh4"]
 
-[ext_resource type="Script" path="res://entities/ladder.gd" id="1_cwnes"]
+[ext_resource type="Texture2D" uid="uid://dcf36wlkm3rc2" path="res://assets/静态物品/梯子.png" id="1_0jvqy"]
+[ext_resource type="Script" uid="uid://cntq3o2nthxj2" path="res://entities/ladder.gd" id="1_cwnes"]
 
-[node name="Ladder" type="Sprite2D"]
+[sub_resource type="Animation" id="Animation_j3cf1"]
+resource_name = "growup"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(32, 32), Vector2(32, 96)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -64)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/LadderArea/CollisionShape2D:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(32, 32), Vector2(32, 96)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/LadderArea/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(16, 16), Vector2(16, -16)]
+}
+
+[sub_resource type="Animation" id="Animation_mrf8o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 32)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/LadderArea/CollisionShape2D:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 32)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/LadderArea/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(16, 16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4iyfp"]
+_data = {
+&"RESET": SubResource("Animation_mrf8o"),
+&"growup": SubResource("Animation_j3cf1")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ko5yr"]
+size = Vector2(32, 32)
+
+[node name="Ladder" type="TextureRect"]
+z_as_relative = false
+texture_repeat = 2
+offset_top = -64.0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("1_0jvqy")
+stretch_mode = 1
 script = ExtResource("1_cwnes")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4iyfp")
+}
 
-[node name="LadderArea" type="Area2D" parent="." groups=["ladder"]]
+[node name="Node" type="Node" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderArea"]
+[node name="LadderArea" type="Area2D" parent="Node" groups=["ladder"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/LadderArea"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_ko5yr")

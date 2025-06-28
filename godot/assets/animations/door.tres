@@ -1,36 +1,37 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://cqb4kwfswjcl4"]
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://cqb4kwfswjcl4"]
 
-[ext_resource type="Texture2D" uid="uid://d3jgvn00gqtly" path="res://assets/静态背景2/场景门atlas/门01.png" id="1_52baq"]
-[ext_resource type="Texture2D" uid="uid://8brw5718qr61" path="res://assets/静态背景2/场景门atlas/门02.png" id="2_vprka"]
-[ext_resource type="Texture2D" uid="uid://bbbw7popd8ipv" path="res://assets/静态背景2/场景门atlas/门03.png" id="3_y3iqx"]
-[ext_resource type="Texture2D" uid="uid://blwityxwnaci1" path="res://assets/静态背景2/场景门atlas/门04.png" id="4_ked1q"]
-[ext_resource type="Texture2D" uid="uid://o1fu1gaxy1ky" path="res://assets/静态背景2/场景门atlas/门05.png" id="5_og7w3"]
-[ext_resource type="Texture2D" uid="uid://d35kbapxial0k" path="res://assets/静态背景2/场景门atlas/门06.png" id="6_ehyyc"]
-[ext_resource type="Texture2D" uid="uid://bqwfh5g1u3s45" path="res://assets/静态背景2/场景门atlas/门07.png" id="7_yv342"]
+[ext_resource type="Texture2D" uid="uid://di1fqrlqvarik" path="res://assets/静态背景2/场景门atlas/场景门-Sheet.png" id="1_p61l7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hr1g"]
+atlas = ExtResource("1_p61l7")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gba5m"]
+atlas = ExtResource("1_p61l7")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xra6"]
+atlas = ExtResource("1_p61l7")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fub50"]
+atlas = ExtResource("1_p61l7")
+region = Rect2(128, 128, 128, 128)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_52baq")
+"texture": SubResource("AtlasTexture_7hr1g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vprka")
+"texture": SubResource("AtlasTexture_gba5m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_y3iqx")
+"texture": SubResource("AtlasTexture_0xra6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ked1q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_og7w3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ehyyc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_yv342")
+"texture": SubResource("AtlasTexture_fub50")
 }],
 "loop": true,
 "name": &"default",

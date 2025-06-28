@@ -1,24 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqhdmgt33jfqb"]
+[gd_scene load_steps=6 format=3 uid="uid://bqhdmgt33jfqb"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_s46h7"]
-[ext_resource type="Texture2D" uid="uid://b5nxjbfpq4viv" path="res://assets/静态物品/box.png" id="2_1ng40"]
+[ext_resource type="Script" uid="uid://c8yfjivp6ktlj" path="res://interactive/box/box.gd" id="2_yf2ss"]
+[ext_resource type="Texture2D" uid="uid://b5nxjbfpq4viv" path="res://assets/静态物品/box.png" id="3_yf2ss"]
 
-[node name="Box" instance=ExtResource("1_s46h7")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixq8g"]
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Sprite2D" index="0"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -151.5
-offset_top = -31.5
-offset_right = 150.5
-offset_bottom = 32.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_1ng40")
-patch_margin_left = 4
-patch_margin_top = 4
-patch_margin_right = 4
-patch_margin_bottom = 4
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf2ss"]
+size = Vector2(81, 45)
+
+[node name="Box" node_paths=PackedStringArray("body_collision_shape") instance=ExtResource("1_s46h7")]
+script = ExtResource("2_yf2ss")
+size = Vector2(81, 45)
+body_collision_shape = NodePath("CollisionShape2D")
+areashape = SubResource("RectangleShape2D_ixq8g")
+
+[node name="CollisionShape2D" parent="SelfArea" index="0"]
+shape = SubResource("RectangleShape2D_yf2ss")
+
+[node name="CollisionShape2D" parent="InteractArea" index="0"]
+shape = SubResource("RectangleShape2D_yf2ss")
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource("RectangleShape2D_yf2ss")
+
+[node name="Camera2D" parent="." index="3"]
+enabled = false
+
+[node name="Sprite2D" parent="." index="5"]
+scale = Vector2(2.53125, 1.40625)
+texture = ExtResource("3_yf2ss")

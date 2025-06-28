@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwyajbo1iy7ii"]
+[gd_scene load_steps=4 format=3 uid="uid://cwyajbo1iy7ii"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_i8dpg"]
-[ext_resource type="Script" path="res://interactive/platform_interactive.gd" id="2_c866c"]
-[ext_resource type="Texture2D" uid="uid://cdgognnt83s33" path="res://icon.svg" id="2_mqju1"]
-[ext_resource type="Script" path="res://interactive/platform.gd" id="4_bre1r"]
+[ext_resource type="Script" uid="uid://dhr612v4hb0vr" path="res://interactive/platform_interactive.gd" id="2_c866c"]
+[ext_resource type="Script" uid="uid://pm653336147r" path="res://interactive/platform.gd" id="4_bre1r"]
 
 [node name="PlatformInteractive" instance=ExtResource("1_i8dpg")]
 script = ExtResource("2_c866c")
@@ -14,7 +13,6 @@ platform_move_speed = 0.0
 [node name="Sprite2D2" type="Sprite2D" parent="." index="0"]
 position = Vector2(4.76837e-07, 0)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_mqju1")
 
 [node name="Platform" type="StaticBody2D" parent="." index="6"]
 script = ExtResource("4_bre1r")

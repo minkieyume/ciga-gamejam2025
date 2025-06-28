@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://nh1ud1cfvpur"]
+[gd_scene load_steps=24 format=4 uid="uid://nh1ud1cfvpur"]
 
 [ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/Level.gd" id="1_2pwgl"]
 [ext_resource type="Texture2D" uid="uid://w5owa1mrky28" path="res://assets/静态背景2/背景颜色.png" id="1_nmsbu"]
@@ -15,6 +15,12 @@
 [ext_resource type="PackedScene" uid="uid://bcevq147eb0fw" path="res://entities/herb_pot.tscn" id="12_xcgyn"]
 [ext_resource type="PackedScene" uid="uid://cvakmbjf2w42x" path="res://scenes/player_spawner/player_spawner.tscn" id="13_2pwgl"]
 [ext_resource type="PackedScene" uid="uid://djxo84uct5y7e" path="res://interactive/herb_bottle/herb_bottle.tscn" id="13_v50rd"]
+[ext_resource type="PackedScene" uid="uid://c2tottyw6nnsb" path="res://interactive/chandelier/chandelier.tscn" id="16_66yrg"]
+[ext_resource type="Script" uid="uid://dhr612v4hb0vr" path="res://interactive/platform_interactive.gd" id="17_mt2t4"]
+[ext_resource type="PackedScene" uid="uid://bqhdmgt33jfqb" path="res://interactive/box/box.tscn" id="18_mt2t4"]
+[ext_resource type="PackedScene" uid="uid://chommy2oxei5m" path="res://interactive/flower_pot/flower_pot.tscn" id="19_7jikg"]
+[ext_resource type="PackedScene" uid="uid://bsqys8mb4i7yb" path="res://entities/piston.tscn" id="20_kn7bi"]
+[ext_resource type="PackedScene" uid="uid://svipjdyo8qrg" path="res://entities/rigidbody.tscn" id="21_fyrsx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sw7q2"]
 texture = ExtResource("1_s0wnu")
@@ -526,3 +532,23 @@ tile_set = SubResource("TileSet_1watm")
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("13_2pwgl")]
 position = Vector2(604, -424)
+
+[node name="Chandelier" parent="." instance=ExtResource("16_66yrg")]
+position = Vector2(1312, -48)
+script = ExtResource("17_mt2t4")
+
+[node name="Box" parent="." instance=ExtResource("18_mt2t4")]
+position = Vector2(1808, -18)
+
+[node name="Box2" parent="." instance=ExtResource("18_mt2t4")]
+position = Vector2(1873, -230)
+size = Vector2(64, 64)
+
+[node name="FlowerPot" parent="." instance=ExtResource("19_7jikg")]
+position = Vector2(1619, -40)
+
+[node name="Piston" parent="." instance=ExtResource("20_kn7bi")]
+position = Vector2(849, 493)
+
+[node name="Rigidbody" parent="." instance=ExtResource("21_fyrsx")]
+position = Vector2(951, 429)

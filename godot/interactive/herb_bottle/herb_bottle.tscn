@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://djxo84uct5y7e"]
+[gd_scene load_steps=9 format=3 uid="uid://djxo84uct5y7e"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_uw2r6"]
 [ext_resource type="Script" uid="uid://bccmp7txe2nmu" path="res://interactive/herb_bottle/herb_bottle.gd" id="2_7ec1c"]
 [ext_resource type="Texture2D" uid="uid://i75gnwsdaeif" path="res://assets/textures/瓶子7.png" id="3_pvygk"]
+[ext_resource type="SpriteFrames" uid="uid://dcadrvwkbvxnn" path="res://assets/animations/leg.tres" id="4_4tpyw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uskn8"]
 size = Vector2(27, 48)
@@ -11,7 +12,10 @@ size = Vector2(27, 48)
 size = Vector2(110.519, 120.551)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afrrc"]
-size = Vector2(25, 34.7073)
+size = Vector2(25, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1iwm"]
+size = Vector2(20, 14)
 
 [node name="HerbBottle" instance=ExtResource("1_uw2r6")]
 script = ExtResource("2_7ec1c")
@@ -30,3 +34,13 @@ shape = SubResource("RectangleShape2D_afrrc")
 
 [node name="Sprite2D" parent="." index="5"]
 texture = ExtResource("3_pvygk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="7"]
+position = Vector2(-1, 33)
+sprite_frames = ExtResource("4_4tpyw")
+animation = &"idle"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="8"]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_d1iwm")
+disabled = true

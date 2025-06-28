@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://c2tottyw6nnsb"]
 
 [ext_resource type="PackedScene" uid="uid://cwyajbo1iy7ii" path="res://interactive/platform_interactive.tscn" id="1_y0fy5"]
-[ext_resource type="Script" path="res://interactive/chandelier.gd" id="2_3ls5r"]
-[ext_resource type="Texture2D" uid="uid://cdgognnt83s33" path="res://icon.svg" id="2_e64hr"]
+[ext_resource type="Script" uid="uid://4hg0mwxh0aj7" path="res://interactive/chandelier/chandelier.gd" id="2_3ls5r"]
+[ext_resource type="Texture2D" uid="uid://cl87apey7hedr" path="res://assets/静态背景2/吊灯.png" id="3_5morm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ls5r"]
 size = Vector2(32, 32)
@@ -33,4 +33,6 @@ shape = SubResource("RectangleShape2D_41n44")
 [node name="Sprite2D" type="Sprite2D" parent="Platform" index="1"]
 position = Vector2(0, 12)
 scale = Vector2(0.25, 0.0625)
-texture = ExtResource("2_e64hr")
+
+[node name="Sprite2D" parent="." index="7"]
+texture = ExtResource("3_5morm")

@@ -1,8 +1,15 @@
+@tool
 extends Interactive
 
 class_name HerbBottle
 
 signal herb_added(herb_id)
+
+enum HerbType{
+	Unknown = -1,
+	Green = 0,
+	
+}
 
 #不同种类药剂的唯一编号
 @export var herb_id:=-1
