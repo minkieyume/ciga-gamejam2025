@@ -22,3 +22,8 @@ func _on_chiko_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_quit_chiko_pressed() -> void:
+	team_panel.visible = false
+	main_panel.visible = true
