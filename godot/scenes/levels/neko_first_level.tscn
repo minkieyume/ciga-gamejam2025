@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://scenes/prefabs/player.tscn" id="4_htwpa"]
 [ext_resource type="Texture2D" uid="uid://cjx6r1e6vsmk6" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_vasoo"]
 [ext_resource type="PackedScene" uid="uid://cvakmbjf2w42x" path="res://scenes/player_spawner/player_spawner.tscn" id="6_435fm"]
-[ext_resource type="PackedScene" uid="uid://ltm26ods1uac" path="res://interactive/herb_bottle.tscn" id="7_06a0y"]
-[ext_resource type="PackedScene" uid="uid://shesvd630677" path="res://interactive/eye_ball.tscn" id="8_fa7hk"]
-[ext_resource type="PackedScene" uid="uid://bcj5nsgbmmc60" path="res://interactive/box.tscn" id="9_uoucr"]
+[ext_resource type="PackedScene" uid="uid://ltm26ods1uac" path="res://interactive/herb_bottle/herb_bottle.tscn" id="7_06a0y"]
+[ext_resource type="PackedScene" uid="uid://d0b5hjmxtvofh" path="res://interactive/eye_ball.tscn" id="8_fa7hk"]
+[ext_resource type="PackedScene" uid="uid://cr8atlvwwalj5" path="res://interactive/box.tscn" id="9_uoucr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs0qk"]
 texture = ExtResource("5_vasoo")

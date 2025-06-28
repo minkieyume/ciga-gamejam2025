@@ -1,24 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://bl1udqpqocb2a"]
+[gd_scene load_steps=8 format=3 uid="uid://bl1udqpqocb2a"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_fsh4t"]
 [ext_resource type="Script" uid="uid://b47miqjjovijq" path="res://interactive/eye_ball/eye_ball.gd" id="2_sr5sd"]
-[ext_resource type="Texture2D" uid="uid://cdgognnt83s33" path="res://icon.svg" id="3_wh8x7"]
+[ext_resource type="Texture2D" uid="uid://qai64on4fwfr" path="res://assets/textures/眼球.png" id="3_wh8x7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wh8x7"]
-size = Vector2(120, 120)
+size = Vector2(36, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uodrw"]
-size = Vector2(120, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0pfu0"]
-atlas = ExtResource("3_wh8x7")
-region = Rect2(0, 0, 128, 128)
+size = Vector2(31, 27)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uodrw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0pfu0")
+"texture": ExtResource("3_wh8x7")
 }],
 "loop": true,
 "name": &"default",
@@ -26,7 +22,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0pfu0"]
-radius = 64.0
+radius = 18.0278
 
 [node name="EyeBall" instance=ExtResource("1_fsh4t")]
 script = ExtResource("2_sr5sd")
@@ -36,6 +32,7 @@ gravity = 0.0
 shape = SubResource("RectangleShape2D_wh8x7")
 
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_uodrw")
 
 [node name="AnimatedSprite2D" parent="." index="2"]
