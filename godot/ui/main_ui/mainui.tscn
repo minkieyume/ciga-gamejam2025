@@ -30,6 +30,7 @@ offset_right = 960.0
 offset_bottom = 540.0
 
 [node name="TeamPanel" type="Panel" parent="MainUI"]
+visible = false
 offset_right = 960.0
 offset_bottom = 540.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_2r3vs")
@@ -157,7 +158,6 @@ text = "发泡胶 Q.E.D"
 uri = "https://space.bilibili.com/323750592"
 
 [node name="MainPanel" type="Panel" parent="MainUI"]
-visible = false
 layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
