@@ -156,6 +156,7 @@ func attach():
 		camera.enabled = true
 		
 func disattach():
+	print("disattach")
 	set_control(false)
 	if camera:
 		camera.enabled = false

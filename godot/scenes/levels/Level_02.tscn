@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bjb3dx2x4bocm"]
 
-[ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/level.gd" id="1_xbyko"]
+[ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/Level.gd" id="1_xbyko"]
 [ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://scenes/prefabs/player.tscn" id="2_lpo2y"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://scenes/prefabs/Coin.tscn" id="3_nht2m"]
 [ext_resource type="Script" uid="uid://crxrtalwdm1s" path="res://scripts/GameManager.gd" id="4_ndpt4"]
