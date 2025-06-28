@@ -1,0 +1,78 @@
+[gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://88w17clpetge"]
+
+[ext_resource type="Texture2D" uid="uid://d2c3esje6wqwk" path="res://assets/静态背景2/花盆atlas/花盆01.png" id="1_qxk6s"]
+[ext_resource type="Texture2D" uid="uid://bb8kxjjfywiph" path="res://assets/静态背景2/花盆atlas/花盆02.png" id="2_jelr4"]
+[ext_resource type="Texture2D" uid="uid://ddgeu3r4bakns" path="res://assets/静态背景2/花盆atlas/花盆03.png" id="3_maklw"]
+[ext_resource type="Texture2D" uid="uid://cb2xuggkq7tx4" path="res://assets/静态背景2/花盆atlas/花盆04.png" id="4_4vs7k"]
+[ext_resource type="Texture2D" uid="uid://be1ucosmeyw00" path="res://assets/静态背景2/花盆atlas/花盆05.png" id="5_qvge5"]
+[ext_resource type="Texture2D" uid="uid://b41q3ijxq64po" path="res://assets/静态背景2/花盆atlas/花盆06.png" id="6_p7bmu"]
+[ext_resource type="Texture2D" uid="uid://bq0m4lq4xa1be" path="res://assets/静态背景2/花盆atlas/花盆07.png" id="7_qhwc7"]
+[ext_resource type="Texture2D" uid="uid://l7mfh0cmnh2h" path="res://assets/静态背景2/花盆atlas/花盆08.png" id="8_1jmdp"]
+[ext_resource type="Texture2D" uid="uid://cwhchlcehx36r" path="res://assets/静态背景2/花盆atlas/花盆09.png" id="9_rp1wy"]
+[ext_resource type="Texture2D" uid="uid://bajci26ikl6t0" path="res://assets/静态背景2/花盆atlas/花盆10.png" id="10_svuwf"]
+[ext_resource type="Texture2D" uid="uid://xrqrrefvntgv" path="res://assets/静态背景2/花盆atlas/花盆11.png" id="11_imf3g"]
+[ext_resource type="Texture2D" uid="uid://b560insswf31h" path="res://assets/静态背景2/花盆atlas/花盆12.png" id="12_cvxpp"]
+[ext_resource type="Texture2D" uid="uid://eevs82y4mv1g" path="res://assets/静态背景2/花盆atlas/花盆13.png" id="13_1aad0"]
+[ext_resource type="Texture2D" uid="uid://d2bistq0gcrum" path="res://assets/静态背景2/花盆atlas/花盆14.png" id="14_64iyq"]
+[ext_resource type="Texture2D" uid="uid://cfc82dwwc7riw" path="res://assets/静态背景2/花盆atlas/花盆15.png" id="15_hd0ss"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qxk6s")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qxk6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jelr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_maklw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4vs7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qvge5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p7bmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qhwc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1jmdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rp1wy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_svuwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_imf3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cvxpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1aad0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_64iyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hd0ss")
+}],
+"loop": true,
+"name": &"Interacting",
+"speed": 5.0
+}]
