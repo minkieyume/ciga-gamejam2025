@@ -9,7 +9,7 @@ func _ready() -> void:
 	#.connect("herb_added", Callable(, "_on_herb_added"))
 
 func _unhandled_input(event):
-	super(event)
+	#super(event)
 	# 允许跳跃
 	if is_controlling:
 		handle_jumping()

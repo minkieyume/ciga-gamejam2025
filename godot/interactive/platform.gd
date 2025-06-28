@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends StaticBody2D
 
 var target_position := Vector2.ZERO
 var move_speed := 0.0
@@ -13,10 +13,8 @@ func move(delta):
 	var direction = (target_position - position).normalized()
 	var distance = position.distance_to(target_position)
 	
-	if distance > move_speed:
-		velocity = direction * move_speed
+	if distance > move_speed * delta:
+		position = position.move_toward(target_position, move_speed * delta)
 	else: 
-		velocity = direction * distance
+		position = target_position
 		emit_signal("reached")
-	
-	move_and_slide()

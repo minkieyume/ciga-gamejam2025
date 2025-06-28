@@ -11,9 +11,6 @@ size = Vector2(32, 64)
 size = Vector2(80, 112)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afrrc"]
-size = Vector2(32, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_afrrc"]
 size = Vector2(127, 126)
 
 [node name="HerbBottle" instance=ExtResource("1_uw2r6")]

@@ -7,6 +7,7 @@ class_name PlatformInteractive
 
 var destination := Vector2.ZERO
 var enabled := false
+var is_at_destination := false
 var platform_ori_pos : Vector2
 
 @onready var platform = $Platform
@@ -25,7 +26,15 @@ func handle_interaction():
 	start()
 
 func start():
-	var target_pos = platform.position + (platform_move_direction * platform_move_distance)
+	var target_pos
+	
+	if is_at_destination:
+		target_pos = platform_ori_pos
+		is_at_destination = false
+	else:
+		target_pos = platform.position + (platform_move_direction * platform_move_distance)
+		is_at_destination = true
+		
 	platform.setup(target_pos, platform_move_speed)
 	enabled = true
 	

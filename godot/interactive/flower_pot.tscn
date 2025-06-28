@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://chommy2oxei5m"]
+[gd_scene load_steps=7 format=3 uid="uid://chommy2oxei5m"]
 
 [ext_resource type="PackedScene" uid="uid://c5oxh8jalilwg" path="res://interactive/platform_interactive.tscn" id="1_iciu2"]
+[ext_resource type="Texture2D" uid="uid://cdgognnt83s33" path="res://icon.svg" id="2_6dgik"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dgik"]
 size = Vector2(32, 16)
@@ -15,12 +16,15 @@ size = Vector2(32, 16)
 size = Vector2(32, 8)
 
 [node name="FlowerPot" instance=ExtResource("1_iciu2")]
-platform_move_distance = 256
+platform_move_distance = 128
 platform_move_speed = 200.0
 
 [node name="CollisionShape2D" parent="SelfArea" index="0"]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_6dgik")
+
+[node name="InteractArea" parent="." index="2" node_paths=PackedStringArray("owneer")]
+owneer = NodePath("..")
 
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
 shape = SubResource("RectangleShape2D_qch6g")
@@ -32,3 +36,8 @@ shape = SubResource("RectangleShape2D_f20jt")
 [node name="CollisionShape2D" parent="Platform" index="0"]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_lmhpc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform" index="1"]
+position = Vector2(0, -12)
+scale = Vector2(0.25, 0.0625)
+texture = ExtResource("2_6dgik")

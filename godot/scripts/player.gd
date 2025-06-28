@@ -51,7 +51,7 @@ func movement(delta):
 		var direction = (target_position - global_position).normalized()
 		var distance = global_position.distance_to(target_position)
 		
-		if distance > 1:
+		if distance > move_speed * delta:
 			position = position.move_toward(target_position, move_speed * delta)
 		else:
 			position = target_position
