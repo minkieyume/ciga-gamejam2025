@@ -23,6 +23,7 @@ script = ExtResource("2_klykp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_smoothed = true
+position_smoothing_enabled = true
 
 [node name="Component" type="Node2D" parent="."]
 

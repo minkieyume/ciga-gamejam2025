@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm6q2jppxo42s"]
+[gd_scene load_steps=3 format=3 uid="uid://bmsnkc27gcwni"]
 
-[ext_resource type="PackedScene" uid="uid://ltm26ods1uac" path="res://interactive/herb_bottle/herb_bottle.tscn" id="1_al5q5"]
-[ext_resource type="Texture2D" uid="uid://1g0atpqfev0x" path="res://assets/静态背景2/瓶子9.png" id="2_al5q5"]
+[ext_resource type="PackedScene" uid="uid://djxo84uct5y7e" path="res://interactive/herb_bottle/herb_bottle.tscn" id="1_al5q5"]
+[ext_resource type="Texture2D" uid="uid://cljp2istngd2x" path="res://assets/静态背景2/瓶子9.png" id="2_al5q5"]
 
 [node name="HerbBottle3" instance=ExtResource("1_al5q5")]
+herb_id = -1
 
-[node name="Sprite2D" parent="." index="2"]
+[node name="Camera2D" parent="." index="3"]
+position_smoothing_enabled = false
+
+[node name="Sprite2D" parent="." index="5"]
 texture = ExtResource("2_al5q5")

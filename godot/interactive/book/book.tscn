@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://brnbu3mrckbjy"]
+
+[ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_tg2nb"]
+[ext_resource type="Script" uid="uid://cx00m8u02voyn" path="res://interactive/book/book.gd" id="2_ve23t"]
+
+[node name="Book" instance=ExtResource("1_tg2nb")]
+script = ExtResource("2_ve23t")

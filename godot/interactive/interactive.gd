@@ -58,7 +58,7 @@ func _physics_process(_delta: float):
 
 func _try_handle_input():
 	if is_controlling:
-		if Input.is_action_just_pressed("interactive"):
+		if Input.is_action_just_pressed("interact"):
 			#print("interact pressed")
 			handle_interaction()
 		if Input.is_action_just_pressed("attach") and not ignore_attach_input:
@@ -204,6 +204,8 @@ func disattach():
 # 未实现死亡动画
 func _on_SelfArea_body_entered(body):
 	if body.is_in_group("Traps") or body.is_in_group("Pot"):
+		#交互物死亡时,灵魂退出附身比较合理
+		disattach()
 		AudioManager.death_sfx.play()
 #		death_particles.emitting = true
 		death_tween()
