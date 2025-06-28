@@ -27,5 +27,6 @@ offset_right = 71.0
 offset_bottom = 44.0
 
 [node name="Ballon" parent="." instance=ExtResource("5_88ddl")]
+visible = false
 
 [connection signal="back_menu" from="FailUi" to="." method="_on_fail_ui_back_menu"]
