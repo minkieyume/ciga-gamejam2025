@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_fsh4t"]
 [ext_resource type="Script" uid="uid://b47miqjjovijq" path="res://interactive/eye_ball/eye_ball.gd" id="2_sr5sd"]
-[ext_resource type="Texture2D" uid="uid://qai64on4fwfr" path="res://assets/textures/眼球.png" id="3_wh8x7"]
+[ext_resource type="Texture2D" uid="uid://hif1wd4hvuf3" path="res://assets/textures/眼球.png" id="3_wh8x7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wh8x7"]
 size = Vector2(36, 35)
@@ -24,7 +24,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_0pfu0"]
 radius = 18.0278
 
-[node name="EyeBall" instance=ExtResource("1_fsh4t")]
+[node name="EyeBall2" instance=ExtResource("1_fsh4t")]
 script = ExtResource("2_sr5sd")
 gravity = 0.0
 
