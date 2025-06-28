@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cedgcne4c2lv6"]
+
+[node name="ERigidbody" type="Node2D"]

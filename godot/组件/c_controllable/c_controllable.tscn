@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://buxmnpiemkrqb"]
+
+[ext_resource type="Script" uid="uid://bbwrlxa4h01c6" path="res://组件/c_controllable/c_controllable.gd" id="1_to4un"]
+
+[node name="CControllable" type="Node"]
+script = ExtResource("1_to4un")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://c14js3qs2mgp8"]
+
+[ext_resource type="PackedScene" uid="uid://ckr6i6lbd4xur" path="res://实体/entity.tscn" id="1_q7pxt"]
+[ext_resource type="PackedScene" uid="uid://bmbjfu2qyvhn3" path="res://resource/节点模板/entity_t/e_character_body.tscn" id="2_u1nvg"]
+[ext_resource type="PackedScene" uid="uid://buxmnpiemkrqb" path="res://组件/c_controllable/c_controllable.tscn" id="3_u1nvg"]
+
+[node name="Player_e" instance=ExtResource("1_q7pxt")]
+
+[node name="ECharacterBody" parent="." index="0" instance=ExtResource("2_u1nvg")]
+
+[node name="CControllable" parent="ECharacterBody/ComponentContainer" index="0" instance=ExtResource("3_u1nvg")]
+
+[editable path="ECharacterBody"]

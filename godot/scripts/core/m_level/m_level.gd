@@ -11,3 +11,6 @@ func _on_level_loaded(target_level_packedscene: PackedScene) -> void:
 	var new_level =  target_level_packedscene.instantiate() as Level
 	MEventbus.add_child(new_level)
 	current_level = new_level
+	
+	## FIXME 会删除，要留意
+	MPlayerStatic.player_located.emit(new_level, )
