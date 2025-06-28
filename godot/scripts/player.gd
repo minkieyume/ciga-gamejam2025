@@ -99,15 +99,6 @@ func respawn(pos: Vector2):
 
 # --------- SIGNALS ---------- #
 
-# Reset the player's position to the current level spawn point if collided with any trap
-
-#func _on_collision_body_entered(_body):
-	#if _body.is_in_group("Traps"):
-		#AudioManager.death_sfx.play()
-		#death_particles.emitting = true
-		#death_tween()
-
-
 func _on_area_entered(area:Area2D) -> void:
 	if area.is_in_group("interact_area"):
 		if area.has_method("get_owneer"):

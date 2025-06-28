@@ -6,7 +6,6 @@ extends CharacterBody2D
 
 # --------- VARIABLES ---------- #
 
-@export var player:Node2D
 @export var move_speed : float = 300
 @export var jump_force : float = 250
 @export var gravity : float = 980
@@ -16,20 +15,20 @@ var jump_count : int = 2
 
 @export var double_jump : = false
 
-var is_grounded : bool = false
 
 var is_controlling:bool=false
 var can_interact: bool = false
 var can_possess: bool = false
 var ignore_attach_input: bool = false
 
-@onready var player_sprite = $AnimatedSprite2D
+@export var player_sprite: AnimatedSprite2D
 #@onready var spawn_point = %SpawnPoint
 #待实现：
 #@onready var particle_trails = $ParticleTrails
 #@onready var death_particles = $DeathParticles
-@onready var interact_area = $InteractArea
-@onready var camera :Camera2D = $Camera2D
+@export var interact_area : Area2D
+@export var self_area : Area2D
+@export var camera :Camera2D 
 
 # --------- BUILT-IN FUNCTIONS ---------- #
 func _ready():
@@ -50,7 +49,7 @@ func _physics_process(_delta: float):
 	if is_controlling:
 		handle_input()
 		movement()
-		player_animations()
+		#player_animations()
 		flip_player()
 	
 func handle_input():
@@ -184,14 +183,3 @@ func _on_SelfArea_body_entered(body):
 		AudioManager.death_sfx.play()
 #		death_particles.emitting = true
 		death_tween()
-		
-#func _on_IntereactArea_body_entered(body):
-	#if body.is_in_group("Player"):
-		#print("player body entered")
-		#can_interact = true
-		#can_possess = true
-#
-#func _on_IntereactArea_body_exited(body):
-	#if body.is_in_group("Player"):
-		#can_interact = false
-		#can_possess = false
