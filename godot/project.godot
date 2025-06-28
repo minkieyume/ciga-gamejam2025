@@ -51,6 +51,7 @@ Pot=""
 player_spawner=""
 Player=""
 interact_area=""
+ui_view=""
 
 [input]
 
