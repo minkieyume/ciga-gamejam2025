@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbj52u86bg364"]
+
+[ext_resource type="PackedScene" uid="uid://ltm26ods1uac" path="res://interactive/herb_bottle/herb_bottle.tscn" id="1_x23jw"]
+[ext_resource type="Texture2D" uid="uid://67va1ctjntrn" path="res://assets/textures/瓶子8.png" id="2_5p3lx"]
+
+[node name="HerbBottle2" instance=ExtResource("1_x23jw")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_5p3lx")

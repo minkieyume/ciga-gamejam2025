@@ -1,13 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://bw0ybb5qykkti"]
+[gd_scene load_steps=16 format=3 uid="uid://bw0ybb5qykkti"]
 
-[ext_resource type="Script" path="res://scenes/levels/Level.gd" id="1_f65v8"]
+[ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/Level.gd" id="1_f65v8"]
 [ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://scenes/prefabs/LevelFinishDoor.tscn" id="2_fa7hk"]
 [ext_resource type="PackedScene" uid="uid://bjb3dx2x4bocm" path="res://scenes/levels/Level_02.tscn" id="3_uoucr"]
 [ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://scenes/prefabs/player.tscn" id="4_htwpa"]
-[ext_resource type="Texture2D" uid="uid://cjx6r1e6vsmk6" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_vasoo"]
+[ext_resource type="Texture2D" uid="uid://jaegp53ccc7w" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_vasoo"]
 [ext_resource type="PackedScene" uid="uid://cvakmbjf2w42x" path="res://scenes/player_spawner/player_spawner.tscn" id="6_435fm"]
 [ext_resource type="PackedScene" uid="uid://ltm26ods1uac" path="res://interactive/herb_bottle/herb_bottle.tscn" id="7_06a0y"]
 [ext_resource type="PackedScene" uid="uid://d0b5hjmxtvofh" path="res://interactive/eye_ball.tscn" id="8_fa7hk"]
+[ext_resource type="PackedScene" uid="uid://cbj52u86bg364" path="res://interactive/herb_bottle/herb_bottle_2.tscn" id="8_vasoo"]
+[ext_resource type="PackedScene" uid="uid://bm6q2jppxo42s" path="res://interactive/herb_bottle/herb_bottle_3.tscn" id="9_435fm"]
 [ext_resource type="PackedScene" uid="uid://cr8atlvwwalj5" path="res://interactive/box.tscn" id="9_uoucr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs0qk"]
@@ -90,10 +92,10 @@ position = Vector2(151, 319)
 [node name="HerbBottle" parent="Poisions" instance=ExtResource("7_06a0y")]
 position = Vector2(573, 1073)
 
-[node name="HerbBottle2" parent="Poisions" instance=ExtResource("7_06a0y")]
-position = Vector2(1622, 559)
+[node name="HerbBottle2" parent="Poisions" instance=ExtResource("8_vasoo")]
+position = Vector2(1622, 558)
 
-[node name="HerbBottle3" parent="Poisions" instance=ExtResource("7_06a0y")]
+[node name="HerbBottle3" parent="Poisions" instance=ExtResource("9_435fm")]
 position = Vector2(2262, 556)
 
 [node name="objects" type="Node2D" parent="."]

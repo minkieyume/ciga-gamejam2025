@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cr8atlvwwalj5"]
+[gd_scene load_steps=3 format=3 uid="uid://cr8atlvwwalj5"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_s46h7"]
+[ext_resource type="Texture2D" uid="uid://0um6n0yt5urg" path="res://assets/textures/书架.png" id="2_bl4kr"]
 
 [node name="Box" instance=ExtResource("1_s46h7")]
 
-[node name="Camera2D" parent="." index="4"]
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_bl4kr")
+
+[node name="Camera2D" parent="." index="5"]
 limit_smoothed = false
