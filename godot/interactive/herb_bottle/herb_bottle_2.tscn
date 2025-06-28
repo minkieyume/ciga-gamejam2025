@@ -1,15 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbj52u86bg364"]
+[gd_scene load_steps=3 format=3 uid="uid://bhxspksqlrkro"]
 
-[ext_resource type="PackedScene" uid="uid://ltm26ods1uac" path="res://interactive/herb_bottle/herb_bottle.tscn" id="1_x23jw"]
-[ext_resource type="Texture2D" uid="uid://drv36xnbq8mtc" path="res://assets/静态背景2/瓶子8.png" id="2_x23jw"]
+[ext_resource type="PackedScene" uid="uid://djxo84uct5y7e" path="res://interactive/herb_bottle/herb_bottle.tscn" id="1_x23jw"]
+[ext_resource type="Texture2D" uid="uid://cn1kqvlqb4f1m" path="res://assets/静态背景2/瓶子8.png" id="2_x23jw"]
 
 [node name="HerbBottle2" instance=ExtResource("1_x23jw")]
+herb_id = -1
 
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
 position = Vector2(9.53674e-07, 0)
 
-[node name="Sprite2D" parent="." index="2"]
-texture = ExtResource("2_x23jw")
-
-[node name="CollisionShape2D" parent="." index="3"]
+[node name="CollisionShape2D" parent="." index="2"]
 position = Vector2(0, 1.2517e-06)
+
+[node name="Camera2D" parent="." index="3"]
+position_smoothing_enabled = false
+
+[node name="Sprite2D" parent="." index="5"]
+texture = ExtResource("2_x23jw")

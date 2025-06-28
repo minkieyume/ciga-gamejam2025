@@ -2,11 +2,14 @@ extends Interactive
 
 class_name HerbBottle
 
-signal herb_added
+signal herb_added(herb_id)
+
+#不同种类药剂的唯一编号
+@export var herb_id:=-1
 
 func _ready() -> void:
 	super()
-	#.connect("herb_added", Callable(, "_on_herb_added"))
+	#.connect("herb_added", Callable(herb_id, "_on_herb_added"))
 
 func _try_handle_input():
 	super()
@@ -19,10 +22,12 @@ func _try_handle_input():
 			
 func _on_SelfArea_body_entered(body):
 	if body.is_in_group("Traps") :
+		disattach()
 		AudioManager.death_sfx.play()
 #		death_particles.emitting = true
 		death_tween()
 	if body.is_in_group("Pot"):
+		disattach()
 		AudioManager.death_sfx.play()
 #		death_particles.emitting = true
 		death_tween()
