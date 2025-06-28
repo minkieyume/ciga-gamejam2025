@@ -9,20 +9,12 @@ extends CharacterBody2D
 
 # --------- VARIABLES ---------- #
 
-<<<<<<< HEAD
 #@export var player: Node2D FIXME 使用单例代替
 @export var move_speed : float = 400 ## 移动的速度
 @export var jump_force : float = 600 ## 跳跃的力度
 @export var gravity : float = 30 ## 重力
 
 @export var max_jump_count : int = 2 ## 连续跳跃次数
-=======
-@export var player:Node2D
-@export var move_speed : float = 300
-@export var jump_force : float = 250
-@export var gravity : float = 980
-@export var max_jump_count : int = 2
->>>>>>> f8f00de9a69eb8b30dd11d8ce92dfaeb1224ef40
 var jump_count : int = 2
 
 
@@ -63,7 +55,7 @@ func _physics_process(delta: float) -> void:
 func _unhandled_input(event):
 	if is_controlling:
 		if event.is_action_pressed("interact"):
-			handle_interaction()			
+			handle_interaction()
 		if event.is_action_pressed("attach"):
 			disattach()
 	#if can_interact and event.is_action_just_pressed("dialog"):

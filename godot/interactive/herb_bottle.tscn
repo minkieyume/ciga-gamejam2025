@@ -13,11 +13,14 @@ size = Vector2(80, 112)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afrrc"]
 size = Vector2(32, 64)
 
-[node name="HerbBottle" instance=ExtResource("1_uw2r6")]
+[node name="HerbBottle" node_paths=PackedStringArray("player_sprite", "interact_area", "camera", "self_area") instance=ExtResource("1_uw2r6")]
 script = ExtResource("2_7ec1c")
+player_sprite = NodePath("AnimatedSprite2D")
+interact_area = NodePath("InteractArea")
+camera = NodePath("Camera2D")
+self_area = NodePath("SelfArea")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
-scale = Vector2(0.25, 0.5)
 texture = ExtResource("3_uskn8")
 
 [node name="CollisionShape2D" parent="SelfArea" index="0"]

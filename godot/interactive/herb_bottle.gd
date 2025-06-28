@@ -1,13 +1,15 @@
+## 药水瓶
 extends Interactive
-
 class_name HerbBottle
 
+## 加入药水的特效
 signal herb_added
 
 func _ready() -> void:
 	super()
 	#.connect("herb_added", Callable(, "_on_herb_added"))
 
+## 药水的特殊操作
 func _unhandled_input(event):
 	super(event)
 	# 允许跳跃
@@ -21,14 +23,15 @@ func _unhandled_input(event):
 	# 保留父类的交互逻辑
 		#if event.is_action_pressed("interact"):
 			#handle_interaction() 
-			
+
+## 药水瓶相关的触发
 func _on_SelfArea_body_entered(body):
 	if body.is_in_group("Traps") :
 		AudioManager.death_sfx.play()
 #		death_particles.emitting = true
-		death_tween()
+		#death_tween()
 	if body.is_in_group("Pot"):
 		AudioManager.death_sfx.play()
 #		death_particles.emitting = true
-		death_tween()
+		#death_tween()
 		emit_signal("herb_added")
