@@ -10,7 +10,10 @@ extends CharacterBody2D
 @export var jump_force: float = 250
 @export var gravity: float = 980 / 2
 @export var max_jump_count: int = 2
+@export var dialogue_resource: DialogueResource
+@export var dialogue_node:String
 var jump_count: int = 2
+
 
 @export var double_jump := false
 
@@ -60,9 +63,12 @@ func _try_handle_input():
 			disattach()
 		# 重置输入缓冲
 		ignore_attach_input = false
-	#if can_interact and event.is_action_just_pressed("dialog"):
+	if can_interact and Input.is_action_just_pressed("dialog"):
 	## 这里实现对话逻辑
-	#print("对话触发")
+		var nodes  = get_tree().get_nodes_in_group("ui_view")
+		if !nodes.is_empty():
+			var ballon = nodes[1].get_ballon()
+			ballon.start(dialogue_resource,dialogue_node)
 	#if can_possess and event.is_action_just_pressed("interact"):
 	##附身
 	#set_control(true)
