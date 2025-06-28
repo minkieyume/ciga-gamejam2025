@@ -105,7 +105,7 @@ func _movement():
 	#handle_jumping()
 	# Move Player
 	var inputHorizontal = Input.get_axis("Left", "Right")
-	var inputVertical=Input.get_axis("UP", "Down")
+	var inputVertical=Input.get_axis("Up", "Down")
 	#if inputAxis!=0:
 	#print("Interactive Moving")
 	if can_move_vertical:
