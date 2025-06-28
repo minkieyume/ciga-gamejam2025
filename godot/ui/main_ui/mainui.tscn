@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bfbcpcsge1tcn" path="res://ui/main_ui/mainui.gd" id="1_bqiya"]
 [ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/main_ui/maintheme.tres" id="2_0e4jt"]
-[ext_resource type="Texture2D" uid="uid://cjd8i5utscqxg" path="res://assets/chikochiko_full.png" id="3_7riyb"]
-[ext_resource type="Texture2D" uid="uid://bprwnuxjecm6p" path="res://chikochiko.svg" id="3_ncs8n"]
+[ext_resource type="Texture2D" uid="uid://4qh5wnlc4xfs" path="res://assets/chikochiko_full.png" id="3_7riyb"]
+[ext_resource type="Texture2D" uid="uid://883q87siu5li" path="res://chikochiko.svg" id="3_ncs8n"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r3vs"]
 texture = ExtResource("3_7riyb")
@@ -31,6 +31,7 @@ offset_bottom = 540.0
 
 [node name="TeamPanel" type="Panel" parent="MainUI"]
 visible = false
+layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_2r3vs")
@@ -65,6 +66,7 @@ text = "BACK
 "
 
 [node name="TextureRect2" type="TextureRect" parent="MainUI/TeamPanel"]
+layout_mode = 0
 offset_left = 552.0
 offset_top = -7.99998
 offset_right = 1064.0
@@ -88,6 +90,7 @@ text = "明琪小梦"
 uri = "https://www.yumieko.com/"
 
 [node name="triangle" type="LinkButton" parent="MainUI/TeamPanel"]
+layout_mode = 0
 offset_left = 707.0
 offset_top = 11.0
 offset_right = 851.0
@@ -102,6 +105,7 @@ text = "九指子"
 uri = "https://space.bilibili.com/157354847"
 
 [node name="Dreamtwi" type="LinkButton" parent="MainUI/TeamPanel"]
+layout_mode = 0
 offset_left = 323.0
 offset_top = 3.0
 offset_right = 519.0
@@ -116,6 +120,7 @@ text = "Dreamtwi"
 uri = "https://github.com/dreamtwi"
 
 [node name="xx" type="LinkButton" parent="MainUI/TeamPanel"]
+layout_mode = 0
 offset_left = 71.0
 offset_top = 207.0
 offset_right = 174.0
@@ -130,6 +135,7 @@ text = "萧萧"
 uri = "`https://space.bilibili.com/348732826"
 
 [node name="Inh" type="LinkButton" parent="MainUI/TeamPanel"]
+layout_mode = 0
 offset_left = 872.0
 offset_top = 148.0
 offset_right = 1068.0
@@ -144,6 +150,7 @@ text = "Inh"
 uri = "https://space.bilibili.com/289934772"
 
 [node name="QED" type="LinkButton" parent="MainUI/TeamPanel"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 348.0
 offset_right = 296.0
@@ -199,6 +206,7 @@ scale = Vector2(0.312647, 0.312647)
 texture_normal = ExtResource("3_ncs8n")
 
 [node name="Chiko2" type="TextureButton" parent="MainUI/MainPanel"]
+layout_mode = 0
 offset_left = 744.0
 offset_top = 40.0
 offset_right = 1256.0

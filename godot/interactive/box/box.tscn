@@ -1,5 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqhdmgt33jfqb"]
+[gd_scene load_steps=3 format=3 uid="uid://bqhdmgt33jfqb"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_s46h7"]
+[ext_resource type="Texture2D" uid="uid://b5nxjbfpq4viv" path="res://assets/静态物品/box.png" id="2_1ng40"]
 
 [node name="Box" instance=ExtResource("1_s46h7")]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Sprite2D" index="0"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.5
+offset_top = -31.5
+offset_right = 150.5
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1ng40")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4

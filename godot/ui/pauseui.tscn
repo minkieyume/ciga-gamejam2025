@@ -19,6 +19,7 @@ grow_vertical = 2
 theme = ExtResource("1_dpl3u")
 
 [node name="PauseUI" type="Panel" parent="PauseUI"]
+layout_mode = 0
 offset_right = 792.0
 offset_bottom = 433.0
 
