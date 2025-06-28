@@ -38,7 +38,6 @@ func _ready():
 		return
 	self_area.body_entered.connect(_on_SelfArea_body_entered)
 	#player.connect("possessed", Callable(player, "_on_possessed"))
-	print(camera)
 	if camera:
 		camera.enabled = false
 	#test
