@@ -62,10 +62,14 @@ point_count = 3
 offsets = PackedFloat32Array(0.25, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
-[node name="Player" type="Area2D" groups=["Player"]]
+[node name="Player" type="Area2D" node_paths=PackedStringArray("player_sprite", "particle_trails", "death_particles", "camera") groups=["Player"]]
 z_index = 2
 collision_layer = 2
 script = ExtResource("1_qt7d6")
+player_sprite = NodePath("AnimatedSprite2D")
+particle_trails = NodePath("ParticleTrails")
+death_particles = NodePath("DeathParticles")
+camera = NodePath("Camera2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4nss6")
