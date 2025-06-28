@@ -1,12 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ot4paherewbe"]
+[gd_scene load_steps=2 format=3 uid="uid://b0qbgf7m6rlh4"]
 
-[ext_resource type="Script" uid="uid://cntq3o2nthxj2" path="res://entities/ladder.gd" id="1_cwnes"]
+[ext_resource type="Script" path="res://entities/ladder.gd" id="1_cwnes"]
 
 [node name="Ladder" type="Sprite2D"]
 script = ExtResource("1_cwnes")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
-[node name="LadderArea" type="Area2D" parent="."]
+[node name="LadderArea" type="Area2D" parent="." groups=["ladder"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LadderArea"]

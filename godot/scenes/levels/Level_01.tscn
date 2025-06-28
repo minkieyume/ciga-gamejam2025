@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cjanwm3sy2x37"]
+[gd_scene load_steps=15 format=3 uid="uid://cjanwm3sy2x37"]
 
 [ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/Level.gd" id="1_5dpfh"]
 [ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://scenes/prefabs/LevelFinishDoor.tscn" id="1_oqkjg"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cvakmbjf2w42x" path="res://scenes/player_spawner/player_spawner.tscn" id="6_5dpfh"]
 [ext_resource type="PackedScene" uid="uid://djxo84uct5y7e" path="res://interactive/herb_bottle/herb_bottle.tscn" id="7_10xc4"]
 [ext_resource type="PackedScene" uid="uid://bl1udqpqocb2a" path="res://interactive/eye_ball/eye_ball.tscn" id="8_dwcxj"]
+[ext_resource type="PackedScene" uid="uid://chommy2oxei5m" path="res://interactive/flower_pot/flower_pot.tscn" id="9_5dpfh"]
+[ext_resource type="PackedScene" uid="uid://c2tottyw6nnsb" path="res://interactive/chandelier/chandelier.tscn" id="10_vlkw4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs0qk"]
 texture = ExtResource("5_wqbaa")
@@ -95,3 +97,9 @@ herb_id = -1
 
 [node name="EyeBall" parent="." instance=ExtResource("8_dwcxj")]
 position = Vector2(560, 259)
+
+[node name="FlowerPot" parent="." instance=ExtResource("9_5dpfh")]
+position = Vector2(251, 408)
+
+[node name="Chandelier" parent="." instance=ExtResource("10_vlkw4")]
+position = Vector2(337, 407)

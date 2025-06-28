@@ -30,5 +30,9 @@ func _on_SelfArea_body_entered(body):
 		disattach()
 		AudioManager.death_sfx.play()
 #		death_particles.emitting = true
-		death_tween()
+		added_into_pot_tween()
 		emit_signal("herb_added")
+		
+#TODO:药水扔到锅里的动画
+func added_into_pot_tween():
+	pass 
