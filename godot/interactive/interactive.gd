@@ -42,6 +42,7 @@ func _ready():
 
 
 func _physical_process(_delta):
+	handle_gravity()
 	# Calling functions
 	if is_controlling:
 		movement()
@@ -64,17 +65,19 @@ func _unhandled_input(event):
 # --------- CUSTOM FUNCTIONS ---------- #
 
 # <-- Player Movement Code -->
-func movement():
+func handle_gravity():
 	# Gravity
 	if !is_on_floor():
 		velocity.y += gravity
 	elif is_on_floor():
 		jump_count = max_jump_count
-	
+
+func movement():
 	#handle_jumping()
-	
 	# Move Player
 	var inputAxis = Input.get_axis("Left", "Right")
+	if inputAxis!=0:
+		print("Interactive Moving")
 	velocity = Vector2(inputAxis * move_speed, velocity.y)
 	move_and_slide()
 

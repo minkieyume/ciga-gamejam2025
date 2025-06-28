@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ltm26ods1uac"]
+[gd_scene load_steps=7 format=3 uid="uid://ltm26ods1uac"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_uw2r6"]
 [ext_resource type="Script" uid="uid://bccmp7txe2nmu" path="res://interactive/herb_bottle.gd" id="2_7ec1c"]
@@ -9,6 +9,9 @@ size = Vector2(144, 149)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajm4n"]
 size = Vector2(134.5, 141.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afrrc"]
+size = Vector2(127, 126)
 
 [node name="HerbBottle" instance=ExtResource("1_uw2r6")]
 script = ExtResource("2_7ec1c")
@@ -23,3 +26,7 @@ shape = SubResource("RectangleShape2D_uskn8")
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
 position = Vector2(1.75, 0.25)
 shape = SubResource("RectangleShape2D_ajm4n")
+
+[node name="CollisionShape2D" parent="." index="4"]
+position = Vector2(1.5, -1)
+shape = SubResource("RectangleShape2D_afrrc")
