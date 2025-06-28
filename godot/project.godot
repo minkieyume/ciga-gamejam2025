@@ -14,8 +14,8 @@ config/name="灵魂炼金师"
 config/tags=PackedStringArray("ciga2025")
 run/main_scene="uid://cmqqdhtcmdkqd"
 config/features=PackedStringArray("4.4", "Forward Plus")
-boot_splash/bg_color=Color(0, 0, 0, 1)
-config/icon="res://Icon.png"
+boot_splash/image="uid://cjd8i5utscqxg"
+config/icon="uid://bprwnuxjecm6p"
 
 [autoload]
 
