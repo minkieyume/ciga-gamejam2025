@@ -1,3 +1,4 @@
+class_name PlayerSpawner
 extends Marker2D
 
 func spawn():

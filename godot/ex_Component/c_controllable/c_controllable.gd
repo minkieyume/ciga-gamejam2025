@@ -12,7 +12,8 @@ func _ready() -> void:
 			child.c_controllable = self
 
 func _update(delta: float):
-	control_strategy._focus_listen(delta)
+	if is_controlling:
+		control_strategy._focus_listen(delta)
 
 func _fixed_update(delta: float):
 	pass

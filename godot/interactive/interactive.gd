@@ -1,3 +1,6 @@
+## Interactive: 所有可交互物品的基类
+## 
+
 class_name Interactive
 extends CharacterBody2D
 
@@ -6,33 +9,36 @@ extends CharacterBody2D
 
 # --------- VARIABLES ---------- #
 
-@export var player:Node2D
-@export var move_speed : float = 400
-@export var jump_force : float = 600
-@export var gravity : float = 30
-@export var max_jump_count : int = 2
+#@export var player: Node2D FIXME 使用单例代替
+@export var move_speed : float = 400 ## 移动的速度
+@export var jump_force : float = 600 ## 跳跃的力度
+@export var gravity : float = 30 ## 重力
+
+@export var max_jump_count : int = 2 ## 连续跳跃次数
 var jump_count : int = 2
 
 
-@export var double_jump : = false
+@export var double_jump : = false ## 二段跳开关 
 
-var is_grounded : bool = false
+var is_grounded : bool = false ## WARNING 判断当前是否在地上？ 
 
-var is_controlling:bool=false
-var can_interact: bool = false
-var can_possess: bool = false
+var is_controlling : bool = false ## 判断当前是否被控制
+var can_interact : bool = false ## 是否可以交互 
+var can_possess : bool = false ## 是否可以附身
 
-@onready var player_sprite = $AnimatedSprite2D
+@export_subgroup("引用依赖项")
+@export var player_sprite : AnimatedSprite2D
 #@onready var spawn_point = %SpawnPoint
 #待实现：
 #@onready var particle_trails = $ParticleTrails
 #@onready var death_particles = $DeathParticles
-@onready var interact_area = $InteractArea
-@onready var camera :Camera2D = $Camera2D
+@export var interact_area : Area2D
+@export var camera : Camera2D
+@export var self_area: Area2D
 
 # --------- BUILT-IN FUNCTIONS ---------- #
 func _ready():
-	$SelfArea.body_entered.connect(_on_SelfArea_body_entered)
+	self_area.body_entered.connect(_on_SelfArea_body_entered)
 	interact_area.body_entered.connect(_on_IntereactArea_body_entered)
 	interact_area.body_exited.connect(_on_IntereactArea_body_exited)
 	#player.connect("possessed", Callable(player, "_on_possessed"))
@@ -90,7 +96,7 @@ func handle_jumping():
 # Player jump
 func jump():
 	jump_tween()
-	AudioManager.jump_sfx.play()
+	#AudioManager.jump_sfx.play()
 	velocity.y = -jump_force
 
 # Handle Player Animations
@@ -162,7 +168,7 @@ func disattach():
 # 未实现死亡动画
 func _on_SelfArea_body_entered(body):
 	if body.is_in_group("Traps") or body.is_in_group("Pot"):
-		AudioManager.death_sfx.play()
+		#AudioManager.death_sfx.play()
 #		death_particles.emitting = true
 		death_tween()
 		

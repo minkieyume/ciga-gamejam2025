@@ -11,7 +11,7 @@ var is_focus := true
 var current_interative_area: Interactive
 
 @onready var player_sprite = $AnimatedSprite2D
-@onready var spawn_point = %PlayerSpawner
+#@onready var spawn_point = %PlayerSpawner
 @onready var particle_trails = $ParticleTrails
 @onready var death_particles = $DeathParticles
 @onready var camera = $Camera2D
@@ -78,7 +78,7 @@ func possess_tween():
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
 	await tween.finished
-	global_position = spawn_point.global_position
+	#global_position = spawn_point.global_position
 	await get_tree().create_timer(0.3).timeout
 	#AudioManager.respawn_sfx.play()
 	respawn_tween()

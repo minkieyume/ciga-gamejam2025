@@ -65,7 +65,7 @@ point_count = 3
 offsets = PackedFloat32Array(0.25, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
-[node name="Player" type="CharacterBody2D" groups=["Player"]]
+[node name="Player" type="Area2D" groups=["Player"]]
 script = ExtResource("1_qt7d6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -120,4 +120,4 @@ scale_amount_max = 30.0
 scale_amount_curve = SubResource("Curve_m2jh0")
 color_ramp = SubResource("Gradient_3gc37")
 
-[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
+[node name="Camera2D" type="Camera2D" parent="."]

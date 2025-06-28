@@ -13,4 +13,8 @@ func _ready() -> void:
 
 ## FIXME 功能完善后需要删除
 func load_start_level():
+	await MPlayerStatic._setup()
+	await MLevel._setup()
+	#await MUiSpawner._setup()
+	
 	MLevel.level_loaded.emit.call_deferred(start_level_test)

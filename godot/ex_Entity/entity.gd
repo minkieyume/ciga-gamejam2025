@@ -17,7 +17,7 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	
-	var player = MPlayerStatic.player_static
+	var player = MPlayerStatic
 	player.player_located_finished.connect(_initialize)
 
 func _initialize():

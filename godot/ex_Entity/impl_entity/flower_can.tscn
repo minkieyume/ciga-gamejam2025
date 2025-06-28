@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqqrqd7qln62w"]
+
+[ext_resource type="PackedScene" uid="uid://ckr6i6lbd4xur" path="res://ex_Entity/entity.tscn" id="1_vbtlp"]
+[ext_resource type="PackedScene" uid="uid://bmbjfu2qyvhn3" path="res://ex_Resource/节点模板/entity_t/e_character_body.tscn" id="2_vnokl"]
+
+[node name="FlowerCan" instance=ExtResource("1_vbtlp")]
+
+[node name="ECharacterBody" parent="." index="0" instance=ExtResource("2_vnokl")]
+
+[editable path="ECharacterBody"]

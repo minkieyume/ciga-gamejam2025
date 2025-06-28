@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://sk6fmt1e8lxk"]
 
-[ext_resource type="Script" uid="uid://bacycx8b0tdih" path="res://实体/entity.gd" id="1_c8vjc"]
-[ext_resource type="PackedScene" uid="uid://bmbjfu2qyvhn3" path="res://resource/节点模板/entity_t/e_character_body.tscn" id="2_ruh8y"]
-[ext_resource type="PackedScene" uid="uid://wc6tla8abo8d" path="res://组件/c_texture/c_texture.tscn" id="3_j36c6"]
-[ext_resource type="PackedScene" uid="uid://buxmnpiemkrqb" path="res://组件/c_controllable/c_controllable.tscn" id="3_p2t43"]
+[ext_resource type="Script" uid="uid://bacycx8b0tdih" path="res://ex_Entity/entity.gd" id="1_c8vjc"]
+[ext_resource type="PackedScene" uid="uid://bmbjfu2qyvhn3" path="res://ex_Resource/节点模板/entity_t/e_character_body.tscn" id="2_ruh8y"]
+[ext_resource type="PackedScene" uid="uid://wc6tla8abo8d" path="res://ex_Component/c_texture/c_texture.tscn" id="3_j36c6"]
+[ext_resource type="PackedScene" uid="uid://buxmnpiemkrqb" path="res://ex_Component/c_controllable/c_controllable.tscn" id="3_p2t43"]
 [ext_resource type="Texture2D" uid="uid://cdgognnt83s33" path="res://icon.svg" id="4_vu7xa"]
-[ext_resource type="Script" uid="uid://dx52ooss543gn" path="res://组件/c_controllable/control_strategy/eight_award_move.gd" id="4_wuh8o"]
+[ext_resource type="Script" uid="uid://dx52ooss543gn" path="res://ex_Component/c_controllable/control_strategy/eight_award_move.gd" id="4_wuh8o"]
 
 [node name="Eyeball" type="Node2D" node_paths=PackedStringArray("main_control", "component_container")]
 script = ExtResource("1_c8vjc")
@@ -19,7 +19,8 @@ component_container = NodePath("ECharacterBody/ComponentContainer")
 [node name="Sprite2D" parent="ECharacterBody/ComponentContainer/CTexture" index="0"]
 texture = ExtResource("4_vu7xa")
 
-[node name="CControllable" parent="ECharacterBody/ComponentContainer" index="1" instance=ExtResource("3_p2t43")]
+[node name="CControllable" parent="ECharacterBody/ComponentContainer" index="1" node_paths=PackedStringArray("control_strategy") instance=ExtResource("3_p2t43")]
+control_strategy = NodePath("EightAwardMove")
 
 [node name="EightAwardMove" type="Node" parent="ECharacterBody/ComponentContainer/CControllable" node_paths=PackedStringArray("character")]
 script = ExtResource("4_wuh8o")

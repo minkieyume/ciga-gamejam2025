@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://bjb3dx2x4bocm"]
+[gd_scene load_steps=12 format=3 uid="uid://bjb3dx2x4bocm"]
 
 [ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/Level.gd" id="1_xbyko"]
-[ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://scenes/prefabs/player.tscn" id="2_lpo2y"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://scenes/prefabs/Coin.tscn" id="3_nht2m"]
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="4_ndpt4"]
 [ext_resource type="Texture2D" uid="uid://dl27wu6txldcl" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_8107p"]
@@ -44,26 +43,6 @@ sources/0 = SubResource("TileSetAtlasSource_rndpx")
 
 [node name="Level_02" type="Node2D"]
 script = ExtResource("1_xbyko")
-
-[node name="Player" parent="." instance=ExtResource("2_lpo2y")]
-z_index = 1
-position = Vector2(150, 318)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(16, 36)
-limit_left = 0
-limit_right = 1985
-limit_bottom = 705
-limit_smoothed = true
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.4
-drag_top_margin = 0.4
-drag_right_margin = 0.4
-drag_bottom_margin = 0.4
-editor_draw_limits = true
-editor_draw_drag_margin = true
 
 [node name="Coins" type="Node2D" parent="."]
 

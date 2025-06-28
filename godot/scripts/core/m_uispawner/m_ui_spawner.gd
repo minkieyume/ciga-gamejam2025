@@ -1,4 +1,4 @@
-extends Node
+extends IManager
 
 @export var main_menu_scene: PackedScene
 
@@ -7,7 +7,7 @@ extends Node
 var current_hud: Dictionary[StringName, Canvas] = {}
 var current_ui: IUi
 
-func _initialize():
+func _setup():
 	_spawn(main_menu_scene)
 
 
