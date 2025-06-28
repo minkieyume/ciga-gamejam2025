@@ -5,7 +5,7 @@
 
 [node name="Interactive" type="CharacterBody2D" node_paths=PackedStringArray("player_sprite", "interact_area", "self_area", "camera")]
 script = ExtResource("1_enjte")
-player_sprite = NodePath("AnimatedSprite2D")
+player_sprite = NodePath("Sprite2D")
 interact_area = NodePath("InteractArea")
 self_area = NodePath("SelfArea")
 camera = NodePath("Camera2D")
@@ -19,11 +19,13 @@ script = ExtResource("2_klykp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_smoothed = true
 
 [node name="Component" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

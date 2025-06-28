@@ -1,25 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://bl1udqpqocb2a"]
+[gd_scene load_steps=7 format=3 uid="uid://bl1udqpqocb2a"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_fsh4t"]
 [ext_resource type="Script" uid="uid://b47miqjjovijq" path="res://interactive/eye_ball/eye_ball.gd" id="2_sr5sd"]
-[ext_resource type="Texture2D" uid="uid://qai64on4fwfr" path="res://assets/textures/眼球.png" id="3_wh8x7"]
+[ext_resource type="Texture2D" uid="uid://db56dktkggbt5" path="res://assets/textures/眼球.png" id="3_wh8x7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wh8x7"]
 size = Vector2(36, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uodrw"]
 size = Vector2(31, 27)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_uodrw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_wh8x7")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0pfu0"]
 radius = 18.0278
@@ -35,8 +24,11 @@ shape = SubResource("RectangleShape2D_wh8x7")
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_uodrw")
 
-[node name="AnimatedSprite2D" parent="." index="2"]
-sprite_frames = SubResource("SpriteFrames_uodrw")
-
-[node name="CollisionShape2D" parent="." index="3"]
+[node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource("CircleShape2D_0pfu0")
+
+[node name="Sprite2D" parent="." index="5"]
+texture = ExtResource("3_wh8x7")
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="6"]
+target_position = Vector2(100, 0)
