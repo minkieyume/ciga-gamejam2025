@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://d00smms5c2anp"]
+[gd_scene load_steps=3 format=3 uid="uid://d00smms5c2anp"]
 
 [ext_resource type="Script" uid="uid://hnx1nub0o304" path="res://interactive/interactive.gd" id="1_enjte"]
 [ext_resource type="Script" uid="uid://danxy3e6iopem" path="res://interactive/interact_area.gd" id="2_klykp"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_klykp"]
-friction = 0.0
 
 [node name="Interactive" type="CharacterBody2D" node_paths=PackedStringArray("player_sprite", "interact_area", "self_area", "camera")]
 script = ExtResource("1_enjte")
@@ -28,8 +25,3 @@ script = ExtResource("2_klykp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_smoothed = true
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-physics_material_override = SubResource("PhysicsMaterial_klykp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
