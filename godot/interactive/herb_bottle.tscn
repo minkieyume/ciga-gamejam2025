@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdqxlmye4004r"]
+
+[ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_uw2r6"]
+[ext_resource type="Script" path="res://interactive/herb_bottle.gd" id="2_7ec1c"]
+[ext_resource type="Texture2D" uid="uid://cdgognnt83s33" path="res://icon.svg" id="3_uskn8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uskn8"]
+size = Vector2(144, 149)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajm4n"]
+size = Vector2(134.5, 141.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afrrc"]
+size = Vector2(127, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oecjx"]
+size = Vector2(134.5, 141.5)
+
+[node name="HerbBottle" instance=ExtResource("1_uw2r6")]
+script = ExtResource("2_7ec1c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_uskn8")
+
+[node name="CollisionShape2D" parent="SelfArea" index="0"]
+position = Vector2(5, -4.5)
+shape = SubResource("RectangleShape2D_uskn8")
+
+[node name="CollisionShape2D" parent="InteractArea" index="0"]
+position = Vector2(1.75, 0.25)
+shape = SubResource("RectangleShape2D_ajm4n")
+
+[node name="CollisionShape2D" parent="." index="4"]
+position = Vector2(1.5, -1)
+shape = SubResource("RectangleShape2D_afrrc")
+
+[node name="Camera2D" parent="." index="5"]
+limit_smoothed = false
+
+[node name="CollisionShape2D" parent="RigidBody2D" index="0"]
+shape = SubResource("RectangleShape2D_oecjx")

@@ -8,7 +8,7 @@ extends CharacterBody2D
 
 @export var move_speed : float = 300
 @export var jump_force : float = 250
-@export var gravity : float = 980
+@export var gravity : float = 980/2
 @export var max_jump_count : int = 2
 var jump_count : int = 2
 
