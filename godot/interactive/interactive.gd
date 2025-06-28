@@ -7,9 +7,9 @@ extends CharacterBody2D
 # --------- VARIABLES ---------- #
 
 @export var player:Node2D
-@export var move_speed : float = 400
-@export var jump_force : float = 600
-@export var gravity : float = 30
+@export var move_speed : float = 300
+@export var jump_force : float = 250
+@export var gravity : float = 980
 @export var max_jump_count : int = 2
 var jump_count : int = 2
 
@@ -43,8 +43,8 @@ func _ready():
 	set_control(true)
 
 
-func _physics_process(_delta):
-	handle_gravity()
+func _physics_process(_delta: float):
+	handle_gravity(_delta)
 	# Calling functions
 	if is_controlling:
 		movement()
@@ -67,11 +67,12 @@ func _unhandled_input(event):
 # --------- CUSTOM FUNCTIONS ---------- #
 
 # <-- Player Movement Code -->
-func handle_gravity():
+func handle_gravity(delta):
+	#初始化时更新is_on_floor
 	move_and_slide() 
 	# Gravity
 	if !is_on_floor():
-		velocity.y += gravity
+		velocity.y += gravity*delta
 	elif is_on_floor():
 		jump_count = max_jump_count
 
