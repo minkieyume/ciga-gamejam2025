@@ -33,8 +33,8 @@ var can_possess: bool = false
 # --------- BUILT-IN FUNCTIONS ---------- #
 func _ready():
 	$SelfArea.body_entered.connect(_on_SelfArea_body_entered)
-	interact_area.body_entered.connect(_on_IntereactArea_body_entered)
-	interact_area.body_exited.connect(_on_IntereactArea_body_exited)
+	#interact_area.body_entered.connect(_on_IntereactArea_body_entered)
+	#interact_area.body_exited.connect(_on_IntereactArea_body_exited)
 	#player.connect("possessed", Callable(player, "_on_possessed"))
 	print(camera)
 	if camera:
@@ -47,15 +47,18 @@ func _physics_process(_delta: float):
 	handle_gravity(_delta)
 	# Calling functions
 	if is_controlling:
+		handle_input()
 		movement()
 		player_animations()
 		flip_player()
 	
-func _unhandled_input(event):
+func handle_input():
 	if is_controlling:
-		if event.is_action_pressed("interact"):
+		if Input.is_action_just_pressed("interact"):
+			print("interact pressed")
 			handle_interaction()			
-		if event.is_action_pressed("attach"):
+		if Input.is_action_just_pressed("attach"):
+			print("disattach pressed")
 			disattach()
 	#if can_interact and event.is_action_just_pressed("dialog"):
 		## 这里实现对话逻辑
@@ -80,8 +83,8 @@ func movement():
 	#handle_jumping()
 	# Move Player
 	var inputAxis = Input.get_axis("Left", "Right")
-	if inputAxis!=0:
-		print("Interactive Moving")
+	#if inputAxis!=0:
+		#print("Interactive Moving")
 	velocity = Vector2(inputAxis * move_speed, velocity.y)
 	move_and_slide()
 
@@ -150,7 +153,7 @@ func handle_interaction():
 	pass
 	
 func attach():
-	print("attached")
+	#print("attached")
 	set_control(true)
 	if camera:
 		camera.enabled = true
@@ -175,13 +178,13 @@ func _on_SelfArea_body_entered(body):
 #		death_particles.emitting = true
 		death_tween()
 		
-func _on_IntereactArea_body_entered(body):
-	if body.is_in_group("Player"):
-		print("player body entered")
-		can_interact = true
-		can_possess = true
-
-func _on_IntereactArea_body_exited(body):
-	if body.is_in_group("Player"):
-		can_interact = false
-		can_possess = false
+#func _on_IntereactArea_body_entered(body):
+	#if body.is_in_group("Player"):
+		#print("player body entered")
+		#can_interact = true
+		#can_possess = true
+#
+#func _on_IntereactArea_body_exited(body):
+	#if body.is_in_group("Player"):
+		#can_interact = false
+		#can_possess = false
