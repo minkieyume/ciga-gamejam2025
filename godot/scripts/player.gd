@@ -27,7 +27,7 @@ func _physics_process(_delta: float) -> void:
 	player_animations()
 	flip_player()
 	
-func _input(event):
+func _unhandled_input(event: InputEvent) -> void:
 	if !is_focus:
 		return
 	

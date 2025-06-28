@@ -7,9 +7,9 @@ extends CharacterBody2D
 # --------- VARIABLES ---------- #
 
 @export var player:Node2D
-@export var move_speed : float = 400
-@export var jump_force : float = 600
-@export var gravity : float = 30
+@export var move_speed : float = 300
+@export var jump_force : float = 250
+@export var gravity : float = 980
 @export var max_jump_count : int = 2
 var jump_count : int = 2
 
@@ -36,15 +36,13 @@ func _ready():
 	interact_area.body_entered.connect(_on_IntereactArea_body_entered)
 	interact_area.body_exited.connect(_on_IntereactArea_body_exited)
 	#player.connect("possessed", Callable(player, "_on_possessed"))
-	print(camera)
 	if camera:
 		camera.enabled = false
 
-
-func _physical_process(_delta):
+func _physics_process(delta: float) -> void:
 	# Calling functions
 	if is_controlling:
-		movement()
+		movement(delta)
 		player_animations()
 		flip_player()
 	
@@ -64,13 +62,23 @@ func _unhandled_input(event):
 # --------- CUSTOM FUNCTIONS ---------- #
 
 # <-- Player Movement Code -->
-func movement():
+func movement(delta):
+	var direction = 0.0
+	
+	if Input.is_action_pressed("Left"):
+		direction -= 1.0
+	elif Input.is_action_pressed("Right"):
+		direction += 1.0
+		
+	velocity.x = direction * move_speed
+	
 	# Gravity
 	if !is_on_floor():
-		velocity.y += gravity
+		velocity.y += gravity * delta
 	elif is_on_floor():
 		jump_count = max_jump_count
 	
+	move_and_slide()
 	#handle_jumping()
 	
 	# Move Player
