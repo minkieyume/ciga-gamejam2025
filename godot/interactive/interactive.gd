@@ -11,9 +11,8 @@ extends CharacterBody2D
 @export var gravity: float = 980 / 2
 @export var max_jump_count: int = 2
 #@export var dialogue_resource: DialogueResource
-@export var dialogue_node:String
+@export var dialogue_node: String
 var jump_count: int = 2
-
 
 @export var double_jump := false
 
@@ -56,6 +55,7 @@ func _physics_process(_delta: float):
 		flip_player()
 
 
+## 可覆盖: 与目标相关的交互逻辑, 相当于控制器
 func _try_handle_input():
 	if is_controlling:
 		if Input.is_action_just_pressed("interact"):
@@ -67,8 +67,8 @@ func _try_handle_input():
 		# 重置输入缓冲
 		ignore_attach_input = false
 	if can_interact and Input.is_action_just_pressed("dialog"):
-	## 这里实现对话逻辑
-		var nodes  = get_tree().get_nodes_in_group("ui_view")
+		## 这里实现对话逻辑
+		var nodes = get_tree().get_nodes_in_group("ui_view")
 		if !nodes.is_empty():
 			var ballon = nodes[1].get_ballon()
 			#ballon.start(dialogue_resource,dialogue_node)
@@ -92,6 +92,7 @@ func handle_gravity(delta):
 		jump_count = max_jump_count
 
 
+## 移动逻辑: 每个Interactive都有所不同
 func _movement():
 	#handle_jumping()
 	# Move Player
@@ -102,7 +103,7 @@ func _movement():
 	move_and_slide()
 
 
-# Handles jumping functionality (double jump or single jump, can be toggled from inspector)
+## 跳跃逻辑
 func handle_jumping():
 	if Input.is_action_pressed("Jump"):
 		if is_on_floor() and !double_jump:
@@ -134,7 +135,7 @@ func player_animations():
 		player_sprite.play("Jump")
 
 
-# Flip player sprite based on X velocity
+## WARNING:可复用性较低,应考虑子类实现
 func flip_player():
 	if velocity.x < 0:
 		player_sprite.flip_h = true
@@ -143,6 +144,8 @@ func flip_player():
 
 
 # Tween Animations
+
+
 func death_tween():
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
