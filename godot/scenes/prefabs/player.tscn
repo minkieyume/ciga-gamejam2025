@@ -1,13 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://w7m6tehvvy3g"]
+[gd_scene load_steps=12 format=3 uid="uid://w7m6tehvvy3g"]
 
 [ext_resource type="Script" uid="uid://dlwkp0b4dx13s" path="res://scripts/player.gd" id="1_qt7d6"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://cr61juq8pp5tm" path="res://assets/spritesheet/platformerPack_character.png" id="2_q0cxm"]
 [ext_resource type="Texture2D" uid="uid://d1ey8ppfrf8df" path="res://assets/textures/CloudTexture.png" id="3_8vxmb"]
-=======
-[ext_resource type="Texture2D" uid="uid://cbss87b7xk5lc" path="res://assets/spritesheet/platformerPack_character.png" id="2_q0cxm"]
-[ext_resource type="Texture2D" uid="uid://dxp77wq60c2rr" path="res://assets/textures/CloudTexture.png" id="3_8vxmb"]
->>>>>>> f8f00de9a69eb8b30dd11d8ce92dfaeb1224ef40
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_57bci"]
 atlas = ExtResource("2_q0cxm")
@@ -59,9 +54,6 @@ animations = [{
 radius = 27.0
 height = 66.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvbjh"]
-size = Vector2(58, 69)
-
 [sub_resource type="Curve" id="Curve_m2jh0"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.246032, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
@@ -71,7 +63,10 @@ offsets = PackedFloat32Array(0.25, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [node name="Player" type="Area2D" groups=["Player"]]
+z_index = 2
+collision_layer = 2
 script = ExtResource("1_qt7d6")
+move_speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4nss6")
@@ -80,12 +75,6 @@ animation = &"Walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 15)
 shape = SubResource("CapsuleShape2D_n4sts")
-
-[node name="Collision" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
-position = Vector2(0, 14.5)
-shape = SubResource("RectangleShape2D_tvbjh")
 
 [node name="ParticleTrails" type="CPUParticles2D" parent="."]
 position = Vector2(0, 42)
@@ -126,3 +115,6 @@ scale_amount_curve = SubResource("Curve_m2jh0")
 color_ramp = SubResource("Gradient_3gc37")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
