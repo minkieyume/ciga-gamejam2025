@@ -405,7 +405,8 @@ sources/0 = SubResource("TileSetAtlasSource_sw7q2")
 [node name="LevelF1" type="Node2D" node_paths=PackedStringArray("player_spawner")]
 script = ExtResource("1_2pwgl")
 player_spawner = NodePath("PlayerSpawner")
-metadata/_edit_horizontal_guides_ = [-931.0, -931.0]
+metadata/_edit_horizontal_guides_ = [-931.0, -931.0, 576.0]
+metadata/_edit_vertical_guides_ = [2233.0, 2236.0]
 
 [node name="BackGround" type="Control" parent="."]
 layout_mode = 3
@@ -516,3 +517,12 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAAAAAEAAAABAAIAAABEAA0AAAAAAAE
 tile_set = SubResource("TileSet_1watm")
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("13_2pwgl")]
+position = Vector2(763, -104)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(3, -4)
+enabled = false
+limit_left = 1000
+limit_top = 1000
+limit_right = 1000
+limit_bottom = 1000

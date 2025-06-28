@@ -15,6 +15,7 @@ size = Vector2(25, 34.7073)
 
 [node name="HerbBottle" instance=ExtResource("1_uw2r6")]
 script = ExtResource("2_7ec1c")
+herb_id = -1
 
 [node name="CollisionShape2D" parent="SelfArea" index="0"]
 shape = SubResource("RectangleShape2D_uskn8")

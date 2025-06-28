@@ -35,4 +35,4 @@ func _on_SelfArea_body_entered(body):
 		
 #TODO:药水扔到锅里的动画
 func added_into_pot_tween():
-	pass 
+	death_tween()
