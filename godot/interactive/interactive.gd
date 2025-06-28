@@ -55,11 +55,11 @@ func _physics_process(_delta: float):
 
 func _try_handle_input():
 	if is_controlling:
-		if Input.is_action_just_pressed("interact"):
-			print("interact pressed")
+		if Input.is_action_just_pressed("interactive"):
+			#print("interact pressed")
 			handle_interaction()
 		if Input.is_action_just_pressed("attach") and not ignore_attach_input:
-			print("disattach pressed")
+			#print("disattach pressed")
 			disattach()
 		# 重置输入缓冲
 		ignore_attach_input = false
@@ -173,7 +173,7 @@ func handle_interaction():
 
 
 func attach():
-	#print("attached")
+	print("attached")
 	set_control(true)
 	if camera:
 		camera.enabled = true
