@@ -11,11 +11,10 @@ config_version=5
 [application]
 
 config/name="灵魂炼金师"
-config/tags=PackedStringArray("starterkit")
+config/tags=PackedStringArray("ciga2025")
 run/main_scene="uid://cmqqdhtcmdkqd"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-config/icon="res://Icon.png"
 
 [autoload]
 
