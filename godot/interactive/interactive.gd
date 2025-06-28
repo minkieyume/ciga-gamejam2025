@@ -48,9 +48,9 @@ func _physics_process(delta: float) -> void:
 	
 func _unhandled_input(event):
 	if is_controlling:
+		if event.is_action_pressed("interactive"):
+			handle_interaction()
 		if event.is_action_pressed("interact"):
-			handle_interaction()			
-		if event.is_action_pressed("attach"):
 			disattach()
 	#if can_interact and event.is_action_just_pressed("dialog"):
 		## 这里实现对话逻辑

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cjanwm3sy2x37"]
+[gd_scene load_steps=13 format=3 uid="uid://cjanwm3sy2x37"]
 
 [ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/Level.gd" id="1_5dpfh"]
 [ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://scenes/prefabs/LevelFinishDoor.tscn" id="1_oqkjg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://jaegp53ccc7w" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_wqbaa"]
 [ext_resource type="PackedScene" uid="uid://cvakmbjf2w42x" path="res://scenes/player_spawner/player_spawner.tscn" id="6_5dpfh"]
 [ext_resource type="PackedScene" uid="uid://ltm26ods1uac" path="res://interactive/herb_bottle.tscn" id="7_10xc4"]
+[ext_resource type="PackedScene" uid="uid://chommy2oxei5m" path="res://interactive/flower_pot.tscn" id="7_dwcxj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs0qk"]
 texture = ExtResource("5_wqbaa")
@@ -82,6 +83,9 @@ layer_0/tile_data = PackedInt32Array(589836, 0, 5, 589835, 0, 5, 589834, 0, 5, 5
 [node name="PlayerSpawner" parent="Level" instance=ExtResource("6_5dpfh")]
 unique_name_in_owner = true
 position = Vector2(151, 319)
+
+[node name="FlowerPot" parent="Level" instance=ExtResource("7_dwcxj")]
+position = Vector2(363, 430)
 
 [node name="HerbBottle" parent="." instance=ExtResource("7_10xc4")]
 position = Vector2(250, 324)
