@@ -10,8 +10,7 @@ var is_moving := false
 var is_focus := true
 var current_interactive_area: Interactive
 #用数组维护进入的区域对象
-var entered_areas: Array[Interactive]=[]
-
+var entered_areas: Array[Interactive] = []
 
 @export var player_sprite: AnimatedSprite2D
 
@@ -19,6 +18,7 @@ var entered_areas: Array[Interactive]=[]
 @export var death_particles: CPUParticles2D
 @export var camera: Camera2D
 
+var input_lock: bool = false
 # --------- BUILT-IN FUNCTIONS ---------- #
 
 
@@ -36,17 +36,17 @@ func _physics_process(_delta: float) -> void:
 func _input(event):
 	if !is_focus:
 		return
-
-	if event.is_action_pressed("move"):  #TODO:需考虑如何避免和UI冲突
+	elif event.is_action_pressed("move"):  #TODO:需考虑如何避免和UI冲突
 		target_position = get_global_mouse_position()
 		is_moving = true
 	elif event.is_action_pressed("attach"):
 		if current_interactive_area:
 			is_focus = false
-			current_interactive_area.attach()
+			var temp = current_interactive_area
+			await possess_tween(temp)
 			camera.enabled = false
-			await possess_tween()
-			hide()
+			temp.attach()
+			hide.call_deferred()
 	elif event.is_action_pressed("chat"):
 		pass  #TODO: 等对话功能完成后补上
 
@@ -86,13 +86,15 @@ func flip_player():
 
 
 # Tween Animations
-func possess_tween():
+## 目前问题
+func possess_tween(target: Node2D):
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
 	await tween.finished
 	await get_tree().create_timer(0.3).timeout
 	#AudioManager.respawn_sfx.play()
-	respawn_tween()
+
+	# respawn_tween()
 
 
 func respawn_tween():
@@ -117,21 +119,20 @@ func respawn(pos: Vector2):
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("interact_area") and area.has_method("get_owneer"):
-		var current_entered_area=area.get_owneer()
-		if entered_areas.find(current_entered_area)==-1:
-			entered_areas.append(current_entered_area) 
-			current_interactive_area=current_entered_area
-			
+		var current_entered_area = area.get_owneer()
+		if entered_areas.find(current_entered_area) == -1:
+			entered_areas.append(current_entered_area)
+			current_interactive_area = current_entered_area
 
 
 func _on_area_exited(area: Area2D) -> void:
 	if area.is_in_group("interact_area") and area.has_method("get_owneer"):
-		var current_exited_area=area.get_owneer()
-		var leave_area_index:int=entered_areas.find(current_exited_area)
+		var current_exited_area = area.get_owneer()
+		var leave_area_index: int = entered_areas.find(current_exited_area)
 		if leave_area_index != -1:  # 确保找到才移除
 			entered_areas.remove_at(leave_area_index)
 			current_interactive_area = entered_areas.back() if entered_areas.size() > 0 else null
-		if entered_areas.size()!=0:
-			current_interactive_area = entered_areas.back() 
+		if entered_areas.size() != 0:
+			current_interactive_area = entered_areas.back()
 		else:
-			current_interactive_area=null
+			current_interactive_area = null
