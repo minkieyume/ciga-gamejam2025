@@ -2,6 +2,5 @@
 
 [ext_resource type="Script" uid="uid://bspg14vjmpncw" path="res://scenes/player_spawner/player_spawner.gd" id="1_6nsck"]
 
-[node name="PlayerSpawner" type="Marker2D" groups=["player_spawner"]]
-gizmo_extents = 32.0
+[node name="PlayerSpawner" type="Node2D" groups=["player_spawner"]]
 script = ExtResource("1_6nsck")

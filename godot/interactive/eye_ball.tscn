@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bl1udqpqocb2a"]
-
-[ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_fsh4t"]
-
-[node name="EyeBall" instance=ExtResource("1_fsh4t")]
-gravity = 0.0

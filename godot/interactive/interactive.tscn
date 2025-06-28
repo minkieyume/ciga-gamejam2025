@@ -24,3 +24,4 @@ script = ExtResource("2_klykp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true

@@ -8,7 +8,7 @@ func _ready() -> void:
 	super()
 	#.connect("herb_added", Callable(, "_on_herb_added"))
 
-func handle_input():
+func _try_handle_input():
 	super()
 	# 允许跳跃
 	if is_controlling:

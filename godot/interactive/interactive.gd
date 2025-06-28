@@ -32,9 +32,7 @@ var ignore_attach_input: bool = false
 
 # --------- BUILT-IN FUNCTIONS ---------- #
 func _ready():
-	$SelfArea.body_entered.connect(_on_SelfArea_body_entered)
-	#interact_area.body_entered.connect(_on_IntereactArea_body_entered)
-	#interact_area.body_exited.connect(_on_IntereactArea_body_exited)
+	self_area.body_entered.connect(_on_SelfArea_body_entered)
 	#player.connect("possessed", Callable(player, "_on_possessed"))
 	print(camera)
 	if camera:
@@ -47,12 +45,13 @@ func _physics_process(_delta: float):
 	handle_gravity(_delta)
 	# Calling functions
 	if is_controlling:
-		handle_input()
-		movement()
+		_try_handle_input()
+		_movement()
 		#player_animations()
 		flip_player()
-	
-func handle_input():
+
+
+func _try_handle_input():
 	if is_controlling:
 		if Input.is_action_just_pressed("interact"):
 			print("interact pressed")
@@ -81,7 +80,7 @@ func handle_gravity(delta):
 	elif is_on_floor():
 		jump_count = max_jump_count
 
-func movement():
+func _movement():
 	#handle_jumping()
 	# Move Player
 	var inputAxis = Input.get_axis("Left", "Right")
@@ -169,8 +168,9 @@ func disattach():
 	set_control(false)
 	if camera:
 		camera.enabled = false
-	var spawner=get_tree().get_first_node_in_group("player_spawner")
+	var spawner: PlayerSpawner = get_tree().get_first_node_in_group("player_spawner")
 	if spawner:
+		spawner.global_position = global_position
 		spawner.spawn()
 	
 
