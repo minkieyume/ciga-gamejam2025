@@ -13,7 +13,7 @@ size = Vector2(80, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41n44"]
 size = Vector2(32, 8)
 
-[node name="Chandelier" instance=ExtResource("1_y0fy5")]
+[node name="Chandelier2" instance=ExtResource("1_y0fy5")]
 motion_mode = 1
 script = ExtResource("2_3ls5r")
 platform_move_direction = Vector2(0, 1)

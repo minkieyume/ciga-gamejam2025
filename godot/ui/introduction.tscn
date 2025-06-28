@@ -1,0 +1,123 @@
+[gd_scene load_steps=13 format=3 uid="uid://cjybbal1tv5f0"]
+
+[ext_resource type="Script" uid="uid://nsxm1ap3uiwk" path="res://ui/introduction.gd" id="1_fi4d0"]
+[ext_resource type="Texture2D" uid="uid://bmgbihu2uyue4" path="res://assets/静态背景2/背景颜色.png" id="1_juoam"]
+[ext_resource type="Texture2D" uid="uid://brnp7xflfi5db" path="res://assets/静态背景2/窗户.png" id="2_g63kb"]
+[ext_resource type="Texture2D" uid="uid://cld61qro1yr07" path="res://assets/静态背景2/窗外的鸟.png" id="3_hxtic"]
+[ext_resource type="Texture2D" uid="uid://dw8acjjw5wsgf" path="res://assets/界面基础物件.png" id="3_o1ah8"]
+[ext_resource type="Texture2D" uid="uid://bdg2hoiriwe6x" path="res://assets/静态背景2/窗外风景.png" id="4_8ffk7"]
+[ext_resource type="Texture2D" uid="uid://2x5n8y08dlcy" path="res://assets/静态背景2/破败墙壁.png" id="6_8ffk7"]
+[ext_resource type="Texture2D" uid="uid://chhfxdqba1yld" path="res://assets/静态背景2/蜘蛛网.png" id="7_vvr1o"]
+[ext_resource type="Texture2D" uid="uid://4ie6hus8sqk2" path="res://assets/静态背景2/主界面组件1.png" id="8_weq0j"]
+[ext_resource type="Texture2D" uid="uid://ch62os7jjhb3q" path="res://assets/静态背景2/主界面组件.png" id="9_ij1lr"]
+[ext_resource type="Texture2D" uid="uid://qhaefl5gsrgi" path="res://assets/静态背景2/小蜘蛛.png" id="11_e6iy2"]
+[ext_resource type="Texture2D" uid="uid://dffwgpwjigi11" path="res://assets/静态背景2/女巫背身.png" id="12_wv30a"]
+
+[node name="Introduction" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fi4d0")
+
+[node name="IntroComponents" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackGround" type="TextureRect" parent="IntroComponents"]
+layout_mode = 0
+offset_right = 959.0
+offset_bottom = 540.0
+texture = ExtResource("1_juoam")
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="WallCraps" type="TextureRect" parent="IntroComponents"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 542.0
+texture = ExtResource("6_8ffk7")
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="Basic" type="TextureRect" parent="IntroComponents"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 542.0
+texture = ExtResource("3_o1ah8")
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="Window" type="TextureRect" parent="IntroComponents"]
+layout_mode = 0
+offset_left = 132.0
+offset_right = 828.0
+offset_bottom = 550.0
+texture = ExtResource("2_g63kb")
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="Bird" type="TextureRect" parent="IntroComponents/Window"]
+layout_mode = 0
+offset_left = -117.0
+offset_top = 4.0
+offset_right = 839.0
+offset_bottom = 577.0
+texture = ExtResource("3_hxtic")
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="SceneOutside" type="TextureRect" parent="IntroComponents/Window"]
+layout_mode = 0
+offset_left = -125.0
+offset_top = -2.0
+offset_right = 831.0
+offset_bottom = 571.0
+texture = ExtResource("4_8ffk7")
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="Component1" type="TextureRect" parent="IntroComponents/Window"]
+layout_mode = 0
+offset_left = -132.0
+offset_right = 826.0
+offset_bottom = 542.0
+texture = ExtResource("8_weq0j")
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="Component2" type="TextureRect" parent="IntroComponents/Window"]
+layout_mode = 0
+offset_left = -132.0
+offset_right = 826.0
+offset_bottom = 542.0
+texture = ExtResource("9_ij1lr")
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="SpidersNet" type="TextureRect" parent="IntroComponents"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 542.0
+texture = ExtResource("7_vvr1o")
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="Spider" type="TextureRect" parent="IntroComponents/SpidersNet"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 542.0
+texture = ExtResource("11_e6iy2")
+stretch_mode = 6
+metadata/_edit_lock_ = true
+
+[node name="Witch" type="TextureRect" parent="IntroComponents"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 542.0
+texture = ExtResource("12_wv30a")
+stretch_mode = 6
+metadata/_edit_lock_ = true
