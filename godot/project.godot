@@ -113,7 +113,3 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue")
 [layer_names]
 
 2d_physics/layer_2="RigidBody"
-
-[rendering]
-
-environment/defaults/default_clear_color=Color(0.105469, 0.457031, 0.730469, 1)

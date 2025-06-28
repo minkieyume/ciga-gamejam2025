@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://5cv7rd4ewepe"]
+
+[ext_resource type="Script" uid="uid://v34fns1oa2xp" path="res://launcher/main/ui_view.gd" id="1_lhyvh"]
+[ext_resource type="PackedScene" uid="uid://ik27nkd02ose" path="res://ui/main_ui/mainui.tscn" id="2_p7qbf"]
+[ext_resource type="PackedScene" uid="uid://c33b0lt5jbf8h" path="res://ui/fail_ui.tscn" id="3_jcolc"]
+[ext_resource type="PackedScene" uid="uid://de0pdvatnb8li" path="res://ui/pauseui.tscn" id="4_cbbir"]
+[ext_resource type="PackedScene" uid="uid://ce886t7m7s78i" path="res://ui/dialog.tscn" id="5_88ddl"]
+
+[node name="UiView" type="CanvasLayer" groups=["ui_view"]]
+script = ExtResource("1_lhyvh")
+metadata/_custom_type_script = "uid://bhwyguulvscig"
+
+[node name="MainUI" parent="." instance=ExtResource("2_p7qbf")]
+
+[node name="FailUi" parent="." instance=ExtResource("3_jcolc")]
+visible = false
+offset_left = 73.0
+offset_top = 46.0
+offset_right = -84.0
+offset_bottom = -47.0
+
+[node name="PauseUI" parent="." instance=ExtResource("4_cbbir")]
+visible = false
+offset_left = 71.0
+offset_top = 44.0
+offset_right = 71.0
+offset_bottom = 44.0
+
+[node name="Ballon" parent="." instance=ExtResource("5_88ddl")]
+
+[connection signal="back_menu" from="FailUi" to="." method="_on_fail_ui_back_menu"]
