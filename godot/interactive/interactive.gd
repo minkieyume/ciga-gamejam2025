@@ -40,7 +40,7 @@ func _ready():
 	if camera:
 		camera.enabled = false
 	#test
-	set_control(true)
+	#set_control(true)
 
 
 func _physics_process(_delta: float):
