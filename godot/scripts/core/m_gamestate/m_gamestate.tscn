@@ -1,0 +1,60 @@
+[gd_scene load_steps=12 format=3 uid="uid://c7valpmcx3fsk"]
+
+[ext_resource type="Script" uid="uid://blh40p6cn6st1" path="res://scripts/core/m_gamestate/m_gamestate.gd" id="1_ur2cv"]
+[ext_resource type="Script" uid="uid://v2afm55xc0k3" path="res://scripts/composites/StateMachine.gd" id="2_rqjwt"]
+[ext_resource type="Script" uid="uid://dj805ka0lvc2d" path="res://scripts/composites/TransitionState.gd" id="3_va5dq"]
+[ext_resource type="Script" uid="uid://flg8tjtlecau" path="res://scripts/core/m_gamestate/g_state/game_start.gd" id="3_w7qlg"]
+[ext_resource type="Script" uid="uid://dhmyrr52gv8mp" path="res://scripts/core/m_gamestate/g_state/gaming_hsm.gd" id="6_xyfvk"]
+[ext_resource type="Script" uid="uid://clcbjl11n4bfq" path="res://scripts/core/m_gamestate/g_state/gaming_normal.gd" id="7_muumc"]
+[ext_resource type="Script" uid="uid://boa5b7nqvayow" path="res://scripts/core/m_gamestate/g_state/gaming_pause.gd" id="8_lq1dr"]
+
+[sub_resource type="Resource" id="Resource_qn6oe"]
+script = ExtResource("3_va5dq")
+keyword = &""
+from_state = NodePath("GameStart")
+to_state = NodePath("Gaming")
+metadata/_custom_type_script = "uid://dj805ka0lvc2d"
+
+[sub_resource type="Resource" id="Resource_o85k1"]
+script = ExtResource("3_va5dq")
+keyword = &""
+from_state = NodePath("Gaming")
+to_state = NodePath("GameStart")
+metadata/_custom_type_script = "uid://dj805ka0lvc2d"
+
+[sub_resource type="Resource" id="Resource_4ymnf"]
+script = ExtResource("3_va5dq")
+keyword = &""
+from_state = NodePath("GamingNormal")
+to_state = NodePath("GamingPause")
+metadata/_custom_type_script = "uid://dj805ka0lvc2d"
+
+[sub_resource type="Resource" id="Resource_d3go1"]
+script = ExtResource("3_va5dq")
+keyword = &""
+from_state = NodePath("GamingPause")
+to_state = NodePath("GamingNormal")
+metadata/_custom_type_script = "uid://dj805ka0lvc2d"
+
+[node name="MGameState" type="Node" node_paths=PackedStringArray("state_machine")]
+script = ExtResource("1_ur2cv")
+state_machine = NodePath("StateMachine")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_rqjwt")
+transition_list = Array[ExtResource("3_va5dq")]([SubResource("Resource_qn6oe"), SubResource("Resource_o85k1")])
+init_state = NodePath("GameStart")
+
+[node name="GameStart" type="Node" parent="StateMachine"]
+script = ExtResource("3_w7qlg")
+
+[node name="Gaming" type="Node" parent="StateMachine"]
+script = ExtResource("6_xyfvk")
+transition_list = Array[ExtResource("3_va5dq")]([SubResource("Resource_4ymnf"), SubResource("Resource_d3go1")])
+init_state = NodePath("GamingNormal")
+
+[node name="GamingNormal" type="Node" parent="StateMachine/Gaming"]
+script = ExtResource("7_muumc")
+
+[node name="GamingPause" type="Node" parent="StateMachine/Gaming"]
+script = ExtResource("8_lq1dr")

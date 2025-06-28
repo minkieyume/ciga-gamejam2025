@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://cbhscqd75573k" path="res://launcher/main/main.gd" id="1_0op7w"]
 [ext_resource type="PackedScene" uid="uid://5cv7rd4ewepe" path="res://ui/ui_view.tscn" id="3_3gwpf"]
 
-[node name="Main" type="Node" node_paths=PackedStringArray("game_view")]
+[node name="Main" type="Node" node_paths=PackedStringArray("game_view", "ui_view")]
 script = ExtResource("1_0op7w")
 game_view = NodePath("GameView")
+ui_view = NodePath("UiView")
 
 [node name="GameView" type="Node" parent="."]
 

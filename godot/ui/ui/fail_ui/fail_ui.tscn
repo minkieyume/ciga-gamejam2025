@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpi8wwhn1kjy6"]
 
-[ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/main_ui/maintheme.tres" id="1_dpajb"]
-[ext_resource type="Script" uid="uid://2mp7m0lw0vkw" path="res://ui/fail_ui.gd" id="1_prob3"]
+[ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/ui/main_ui/maintheme.tres" id="1_dpajb"]
+[ext_resource type="Script" uid="uid://2mp7m0lw0vkw" path="res://ui/ui/fail_ui/fail_ui.gd" id="1_prob3"]
 
 [node name="Canvas" type="CanvasLayer" node_paths=PackedStringArray("back_menu_button")]
 script = ExtResource("1_prob3")

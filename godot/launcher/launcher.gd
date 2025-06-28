@@ -2,6 +2,8 @@
 extends Node
 enum GameMode {Main_Game, Test_Game}
 
+signal basic_loaded
+
 @export var mode: GameMode :
 	set(value):
 		mode = value
@@ -24,6 +26,7 @@ func _ready() -> void:
 			mainLoop = test_game.instantiate()
 	add_child(mainLoop)
 	MEventbus.main  = mainLoop
+	basic_loaded.emit()
 
 func _validate_property(property: Dictionary) -> void:
 	

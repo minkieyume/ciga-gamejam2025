@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ik27nkd02ose"]
+[gd_scene load_steps=7 format=3 uid="uid://ik27nkd02ose"]
 
-[ext_resource type="Script" uid="uid://bfbcpcsge1tcn" path="res://ui/main_ui/mainui.gd" id="1_bqiya"]
-[ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/main_ui/maintheme.tres" id="2_0e4jt"]
+[ext_resource type="Script" uid="uid://bfbcpcsge1tcn" path="res://ui/ui/main_ui/mainui.gd" id="1_bqiya"]
+[ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/ui/main_ui/maintheme.tres" id="2_0e4jt"]
+[ext_resource type="PackedScene" uid="uid://nh1ud1cfvpur" path="res://scenes/levels/level_f_1.tscn" id="2_8af7k"]
 [ext_resource type="Texture2D" uid="uid://4qh5wnlc4xfs" path="res://assets/chikochiko_full.png" id="3_7riyb"]
 [ext_resource type="Texture2D" uid="uid://883q87siu5li" path="res://chikochiko.svg" id="3_ncs8n"]
 
@@ -10,6 +11,7 @@ texture = ExtResource("3_7riyb")
 
 [node name="MainUi" type="CanvasLayer" node_paths=PackedStringArray("start_game_button", "quit_game_button")]
 script = ExtResource("1_bqiya")
+start_level = ExtResource("2_8af7k")
 start_game_button = NodePath("MainUI/MainPanel/Start")
 quit_game_button = NodePath("MainUI/MainPanel/Quit")
 metadata/_custom_type_script = "uid://bhwyguulvscig"

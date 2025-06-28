@@ -34,6 +34,8 @@ func _setup() -> void:
 			i.state_transition.connect(_on_state_transition)
 			if i is StateMachine:
 				i._setup()
+	_enter()
+	
 
 func _on_state_transition(from: NodePath, transition_keyword: StringName = ""):
 	var filter_result = transition_list.filter(func(a: TransitionState): return a.keyword == transition_keyword && a.from_state == from)
@@ -48,6 +50,7 @@ func _on_state_transition(from: NodePath, transition_keyword: StringName = ""):
 
 func _enter():
 	current_state = get_node(init_state)
+	current_state._enter()
 
 func _fixed_update(delta: float) -> void:
 	current_state._fixed_update(delta)

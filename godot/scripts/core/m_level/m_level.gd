@@ -14,3 +14,5 @@ func _on_level_loaded(target_level_packedscene: PackedScene) -> void:
 	var new_level = target_level_packedscene.instantiate() as Level
 	MEventbus.main.game_view.add_child(new_level)
 	current_level = new_level
+	
+	MPlayerStatic.player_located.emit(new_level, current_level.player_spawner.global_position)

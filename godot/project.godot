@@ -20,6 +20,7 @@ config/icon="uid://883q87siu5li"
 
 [autoload]
 
+MGameState="*res://scripts/core/m_gamestate/m_gamestate.tscn"
 MEventbus="*res://scripts/core/m_eventbus/MEventbus.tscn"
 MLevel="*res://scripts/core/m_level/m_level.tscn"
 MPlayerStatic="*res://scripts/core/m_playerstatic/m_player_static.tscn"
@@ -43,7 +44,7 @@ project/assembly_name="gamejam2025"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [global_group]
 

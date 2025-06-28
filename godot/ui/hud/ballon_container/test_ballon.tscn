@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://clcby547g7swm"]
+
+[ext_resource type="PackedScene" uid="uid://ce886t7m7s78i" path="res://ui/hud/ballon_container/ballon.tscn" id="1_crcse"]
+[ext_resource type="Script" uid="uid://c8eu7erfgvg8w" path="res://ui/hud/ballon_container/test_ballon.gd" id="1_q0g2b"]
+
+[node name="TestBallon" type="Node"]
+script = ExtResource("1_q0g2b")
+
+[node name="Ballon" parent="." instance=ExtResource("1_crcse")]
