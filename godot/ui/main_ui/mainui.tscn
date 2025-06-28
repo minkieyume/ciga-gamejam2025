@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://ik27nkd02ose"]
+[gd_scene load_steps=6 format=3 uid="uid://ik27nkd02ose"]
 
 [ext_resource type="Script" uid="uid://bfbcpcsge1tcn" path="res://ui/main_ui/mainui.gd" id="1_bqiya"]
 [ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/main_ui/maintheme.tres" id="2_0e4jt"]
+[ext_resource type="Texture2D" uid="uid://cjd8i5utscqxg" path="res://assets/chikochiko_full.png" id="3_7riyb"]
+[ext_resource type="Texture2D" uid="uid://bprwnuxjecm6p" path="res://chikochiko.svg" id="3_ncs8n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r3vs"]
+texture = ExtResource("3_7riyb")
 
 [node name="MainUi" type="CanvasLayer" node_paths=PackedStringArray("start_game_button", "quit_game_button")]
 script = ExtResource("1_bqiya")
@@ -23,6 +28,134 @@ visible = false
 layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
+
+[node name="TeamPanel" type="Panel" parent="MainUI"]
+visible = false
+offset_right = 960.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2r3vs")
+
+[node name="TextureRect" type="TextureRect" parent="MainUI/TeamPanel"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 512.0
+offset_bottom = 515.0
+scale = Vector2(0.331368, 0.331368)
+texture = ExtResource("3_ncs8n")
+
+[node name="Title" type="LinkButton" parent="MainUI/TeamPanel"]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 10.0
+offset_right = 653.0
+offset_bottom = 154.0
+theme_override_colors/font_color = Color(0, 0.588235, 0.717647, 1)
+theme_override_colors/font_outline_color = Color(0.0460029, 0.283837, 1, 1)
+theme_override_font_sizes/font_size = 96
+text = "Team"
+uri = "https://www.gmhub.com/team/8817"
+
+[node name="QuitChiko" type="Button" parent="MainUI/TeamPanel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 435.0
+offset_right = 264.0
+offset_bottom = 531.0
+text = "BACK
+"
+
+[node name="TextureRect2" type="TextureRect" parent="MainUI/TeamPanel"]
+offset_left = 552.0
+offset_top = -7.99998
+offset_right = 1064.0
+offset_bottom = 504.0
+scale = Vector2(0.265988, 0.265988)
+texture = ExtResource("3_ncs8n")
+flip_h = true
+
+[node name="yumi" type="LinkButton" parent="MainUI/TeamPanel"]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 398.0
+offset_right = 517.0
+offset_bottom = 470.0
+theme_override_colors/font_color = Color(1.54018e-06, 0.514729, 0.656927, 1)
+theme_override_colors/font_focus_color = Color(0.746291, 0.360339, 0.445633, 1)
+theme_override_colors/font_pressed_color = Color(0.793745, 0.353585, 0.597161, 1)
+theme_override_colors/font_hover_color = Color(0.85786, 0.326003, 0.584182, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.882881, 0.456006, 0.599834, 1)
+text = "明琪小梦"
+uri = "https://www.yumieko.com/"
+
+[node name="triangle" type="LinkButton" parent="MainUI/TeamPanel"]
+offset_left = 707.0
+offset_top = 11.0
+offset_right = 851.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(1, 0.611158, 0.634726, 1)
+theme_override_colors/font_focus_color = Color(0.746291, 0.360339, 0.445633, 1)
+theme_override_colors/font_pressed_color = Color(0.793745, 0.353585, 0.597161, 1)
+theme_override_colors/font_hover_color = Color(0.85786, 0.326003, 0.584182, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.882881, 0.456006, 0.599834, 1)
+theme_override_colors/font_outline_color = Color(0, 0.296379, 0.590111, 1)
+text = "九指子"
+uri = "https://space.bilibili.com/157354847"
+
+[node name="Dreamtwi" type="LinkButton" parent="MainUI/TeamPanel"]
+offset_left = 323.0
+offset_top = 3.0
+offset_right = 519.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(2.79158e-06, 0.846913, 0.56078, 1)
+theme_override_colors/font_focus_color = Color(0.746291, 0.360339, 0.445633, 1)
+theme_override_colors/font_pressed_color = Color(0.793745, 0.353585, 0.597161, 1)
+theme_override_colors/font_hover_color = Color(0.85786, 0.326003, 0.584182, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.882881, 0.456006, 0.599834, 1)
+theme_override_colors/font_outline_color = Color(0, 0.296379, 0.590111, 1)
+text = "Dreamtwi"
+uri = "https://github.com/dreamtwi"
+
+[node name="xx" type="LinkButton" parent="MainUI/TeamPanel"]
+offset_left = 71.0
+offset_top = 207.0
+offset_right = 174.0
+offset_bottom = 279.0
+theme_override_colors/font_color = Color(3.76021e-10, 0.00101773, 0.000350005, 1)
+theme_override_colors/font_focus_color = Color(0.746291, 0.360339, 0.445633, 1)
+theme_override_colors/font_pressed_color = Color(0.793745, 0.353585, 0.597161, 1)
+theme_override_colors/font_hover_color = Color(0.85786, 0.326003, 0.584182, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.882881, 0.456006, 0.599834, 1)
+theme_override_colors/font_outline_color = Color(0, 0.296379, 0.590111, 1)
+text = "萧萧"
+uri = "`https://space.bilibili.com/348732826"
+
+[node name="Inh" type="LinkButton" parent="MainUI/TeamPanel"]
+offset_left = 872.0
+offset_top = 148.0
+offset_right = 1068.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0.73805, 0.879333, 0.974183, 1)
+theme_override_colors/font_focus_color = Color(0.746291, 0.360339, 0.445633, 1)
+theme_override_colors/font_pressed_color = Color(0.793745, 0.353585, 0.597161, 1)
+theme_override_colors/font_hover_color = Color(0.85786, 0.326003, 0.584182, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.882881, 0.456006, 0.599834, 1)
+theme_override_colors/font_outline_color = Color(0, 0.296379, 0.590111, 1)
+text = "Inh"
+uri = "https://space.bilibili.com/289934772"
+
+[node name="QED" type="LinkButton" parent="MainUI/TeamPanel"]
+offset_left = 8.0
+offset_top = 348.0
+offset_right = 296.0
+offset_bottom = 420.0
+theme_override_colors/font_color = Color(4.62055e-06, 0.790802, 0.984753, 1)
+theme_override_colors/font_focus_color = Color(0.746291, 0.360339, 0.445633, 1)
+theme_override_colors/font_pressed_color = Color(0.793745, 0.353585, 0.597161, 1)
+theme_override_colors/font_hover_color = Color(0.85786, 0.326003, 0.584182, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.882881, 0.456006, 0.599834, 1)
+theme_override_colors/font_outline_color = Color(0, 0.296379, 0.590111, 1)
+text = "发泡胶 Q.E.D"
+uri = "https://space.bilibili.com/323750592"
 
 [node name="MainPanel" type="Panel" parent="MainUI"]
 layout_mode = 0
@@ -55,3 +188,26 @@ offset_right = 593.0
 offset_bottom = 467.0
 text = "退出游戏
 "
+
+[node name="Chiko" type="TextureButton" parent="MainUI/MainPanel"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 40.0
+offset_right = 590.0
+offset_bottom = 552.0
+scale = Vector2(0.312647, 0.312647)
+texture_normal = ExtResource("3_ncs8n")
+
+[node name="Chiko2" type="TextureButton" parent="MainUI/MainPanel"]
+offset_left = 744.0
+offset_top = 40.0
+offset_right = 1256.0
+offset_bottom = 552.0
+scale = Vector2(0.312647, 0.312647)
+texture_normal = ExtResource("3_ncs8n")
+flip_h = true
+
+[connection signal="pressed" from="MainUI/TeamPanel/QuitChiko" to="." method="_on_quit_chiko_pressed"]
+[connection signal="pressed" from="MainUI/MainPanel/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MainUI/MainPanel/Chiko" to="." method="_on_chiko_pressed"]
+[connection signal="pressed" from="MainUI/MainPanel/Chiko2" to="." method="_on_chiko_pressed"]
