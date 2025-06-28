@@ -404,7 +404,7 @@ terrain_set_0/terrain_0/name = "砖头"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_sw7q2")
 
-[node name="LevelF1" type="Node2D" node_paths=PackedStringArray("player_spawner")]
+[node name="LevelF1" type="Node" node_paths=PackedStringArray("player_spawner")]
 script = ExtResource("1_2pwgl")
 player_spawner = NodePath("PlayerSpawner")
 metadata/_edit_horizontal_guides_ = [-931.0, -931.0, 576.0]
@@ -525,12 +525,4 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAAAAAEAAAABAAIAAABEAA0AAAAAAAE
 tile_set = SubResource("TileSet_1watm")
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("13_2pwgl")]
-position = Vector2(763, -104)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3, -4)
-enabled = false
-limit_left = 1000
-limit_top = 1000
-limit_right = 1000
-limit_bottom = 1000
+position = Vector2(604, -424)

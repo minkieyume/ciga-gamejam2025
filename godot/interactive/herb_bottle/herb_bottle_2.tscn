@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dhho58qu4y0u2" path="res://assets/静态背景2/瓶子8.png" id="2_x23jw"]
 
 [node name="HerbBottle2" instance=ExtResource("1_x23jw")]
-herb_id = -1
 
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
 position = Vector2(9.53674e-07, 0)
