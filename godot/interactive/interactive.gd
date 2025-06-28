@@ -150,6 +150,7 @@ func handle_interaction():
 	pass
 	
 func attach():
+	print("attached")
 	set_control(true)
 	if camera:
 		camera.enabled = true
