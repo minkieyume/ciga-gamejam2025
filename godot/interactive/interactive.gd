@@ -21,6 +21,7 @@ var is_grounded : bool = false
 var is_controlling:bool=false
 var can_interact: bool = false
 var can_possess: bool = false
+var ignore_attach_input: bool = false
 
 @onready var player_sprite = $AnimatedSprite2D
 #@onready var spawn_point = %SpawnPoint
@@ -33,25 +34,34 @@ var can_possess: bool = false
 # --------- BUILT-IN FUNCTIONS ---------- #
 func _ready():
 	$SelfArea.body_entered.connect(_on_SelfArea_body_entered)
-	interact_area.body_entered.connect(_on_IntereactArea_body_entered)
-	interact_area.body_exited.connect(_on_IntereactArea_body_exited)
+	#interact_area.body_entered.connect(_on_IntereactArea_body_entered)
+	#interact_area.body_exited.connect(_on_IntereactArea_body_exited)
 	#player.connect("possessed", Callable(player, "_on_possessed"))
 	if camera:
 		camera.enabled = false
+	#test
+	#set_control(true)
 
-func _physics_process(delta: float) -> void:
+
+func _physics_process(_delta: float):
+	handle_gravity(_delta)
 	# Calling functions
 	if is_controlling:
-		movement(delta)
+		handle_input()
+		movement()
 		player_animations()
 		flip_player()
 	
-func _unhandled_input(event):
+func handle_input():
 	if is_controlling:
-		if event.is_action_pressed("interactive"):
-			handle_interaction()
-		if event.is_action_pressed("interact"):
+		if Input.is_action_just_pressed("interact"):
+			print("interact pressed")
+			handle_interaction()			
+		if Input.is_action_just_pressed("attach") and not ignore_attach_input:
+			print("disattach pressed")
 			disattach()
+		# 重置输入缓冲
+		ignore_attach_input = false
 	#if can_interact and event.is_action_just_pressed("dialog"):
 		## 这里实现对话逻辑
 		#print("对话触发")
@@ -62,27 +72,21 @@ func _unhandled_input(event):
 # --------- CUSTOM FUNCTIONS ---------- #
 
 # <-- Player Movement Code -->
-func movement(delta):
-	var direction = 0.0
-	
-	if Input.is_action_pressed("Left"):
-		direction -= 1.0
-	elif Input.is_action_pressed("Right"):
-		direction += 1.0
-		
-	velocity.x = direction * move_speed
-	
+func handle_gravity(delta):
+	#初始化时更新is_on_floor
+	move_and_slide() 
 	# Gravity
 	if !is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity*delta
 	elif is_on_floor():
 		jump_count = max_jump_count
-	
-	move_and_slide()
+
+func movement():
 	#handle_jumping()
-	
 	# Move Player
 	var inputAxis = Input.get_axis("Left", "Right")
+	#if inputAxis!=0:
+		#print("Interactive Moving")
 	velocity = Vector2(inputAxis * move_speed, velocity.y)
 	move_and_slide()
 
@@ -151,11 +155,17 @@ func handle_interaction():
 	pass
 	
 func attach():
+	#print("attached")
 	set_control(true)
 	if camera:
 		camera.enabled = true
-		
+	# 设置输入缓冲，避免同一帧内触发disattach
+	ignore_attach_input = true
+	# 延迟一帧处理输入，避免同一帧内触发disattach
+	await get_tree().process_frame
+
 func disattach():
+	print("disattach")
 	set_control(false)
 	if camera:
 		camera.enabled = false
@@ -174,12 +184,13 @@ func _on_SelfArea_body_entered(body):
 #		death_particles.emitting = true
 		death_tween()
 		
-func _on_IntereactArea_body_entered(body):
-	if body.is_in_group("Player"):
-		can_interact = true
-		can_possess = true
-
-func _on_IntereactArea_body_exited(body):
-	if body.is_in_group("Player"):
-		can_interact = false
-		can_possess = false
+#func _on_IntereactArea_body_entered(body):
+	#if body.is_in_group("Player"):
+		#print("player body entered")
+		#can_interact = true
+		#can_possess = true
+#
+#func _on_IntereactArea_body_exited(body):
+	#if body.is_in_group("Player"):
+		#can_interact = false
+		#can_possess = false

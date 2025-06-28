@@ -1,13 +1,13 @@
 [gd_scene load_steps=13 format=3 uid="uid://bjb3dx2x4bocm"]
 
-[ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/level.gd" id="1_xbyko"]
+[ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/Level.gd" id="1_xbyko"]
 [ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://scenes/prefabs/player.tscn" id="2_lpo2y"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://scenes/prefabs/Coin.tscn" id="3_nht2m"]
-[ext_resource type="Script" path="res://scripts/GameManager.gd" id="4_ndpt4"]
-[ext_resource type="Texture2D" uid="uid://dl27wu6txldcl" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_8107p"]
+[ext_resource type="Script" uid="uid://crxrtalwdm1s" path="res://scripts/GameManager.gd" id="4_ndpt4"]
+[ext_resource type="Texture2D" uid="uid://b6b2rdivanum0" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_8107p"]
 [ext_resource type="Script" uid="uid://d0t2oif0sgvn6" path="res://scripts/GameUI.gd" id="6_um0jo"]
-[ext_resource type="Texture2D" uid="uid://df5nebamtd21y" path="res://assets/platformPack_item008.png" id="7_ns8o6"]
-[ext_resource type="FontFile" uid="uid://dhkpfb66aatc8" path="res://assets/fonts/Star Choco.ttf" id="8_doswy"]
+[ext_resource type="Texture2D" uid="uid://j7iqyfo12ado" path="res://assets/platformPack_item008.png" id="7_ns8o6"]
+[ext_resource type="FontFile" uid="uid://hqm27y0ugmn" path="res://assets/fonts/Star Choco.ttf" id="8_doswy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs0qk"]
 texture = ExtResource("5_8107p")
@@ -49,7 +49,7 @@ script = ExtResource("1_xbyko")
 z_index = 1
 position = Vector2(150, 318)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(16, 36)
 limit_left = 0
 limit_right = 1985
