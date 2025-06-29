@@ -24,6 +24,10 @@ var input_lock: bool = false
 
 func _ready():
 	target_position = global_position
+	camera.limit_left = MEventbus.limit_cameraLU.x
+	camera.limit_top = MEventbus.limit_cameraLU.y
+	camera.limit_right = MEventbus.limit_cameraRD.x
+	camera.limit_bottom = MEventbus.limit_cameraRD.y
 
 
 func _physics_process(_delta: float) -> void:
