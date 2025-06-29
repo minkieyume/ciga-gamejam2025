@@ -71,7 +71,7 @@ func _try_handle_input():
 			disattach()
 		# 重置输入缓冲
 		ignore_attach_input = false
-	if can_interact and Input.is_action_just_pressed("dialog"):
+	if can_interact and Input.is_action_just_pressed("chat"):
 		## 这里实现对话逻辑
 		var nodes = get_tree().get_nodes_in_group("ui_view")
 		if !nodes.is_empty():
@@ -119,7 +119,7 @@ func _movement():
 func handle_jumping():
 	if can_move_vertical:
 		return
-	if Input.is_action_pressed("Jump"):
+	if Input.is_action_pressed("interact"):
 		if is_on_floor() and !double_jump:
 			jump()
 		elif double_jump and jump_count > 0:
