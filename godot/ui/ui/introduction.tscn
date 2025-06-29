@@ -651,6 +651,26 @@ texture = ExtResource("36_lo4cj")
 hframes = 4
 vframes = 3
 
+[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide1"]
+offset_left = -154.0
+offset_top = -236.0
+offset_right = 611.0
+offset_bottom = -131.0
+theme_override_fonts/font = ExtResource("35_je7el")
+theme_override_font_sizes/font_size = 38
+text = "他按照配方搜集来材料，将他们投入坩埚"
+autowrap_mode = 3
+
+[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide1"]
+offset_left = -204.0
+offset_top = -260.0
+offset_right = 561.0
+offset_bottom = -155.0
+theme_override_fonts/font = ExtResource("35_je7el")
+theme_override_font_sizes/font_size = 38
+text = "他按照配方搜集来材料，将他们投入坩埚"
+autowrap_mode = 3
+
 [node name="Slide2" type="TextureRect" parent="Introduction/IntroComponents"]
 layout_mode = 0
 offset_left = 226.0
@@ -684,6 +704,26 @@ metadata/_edit_lock_ = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Introduction/IntroComponents/Slide2"]
 stream = ExtResource("38_nfdi7")
 
+[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide2"]
+offset_left = -175.0
+offset_top = -258.0
+offset_right = 590.0
+offset_bottom = -153.0
+theme_override_fonts/font = ExtResource("35_je7el")
+theme_override_font_sizes/font_size = 38
+text = "但是他忘记了那个邪龙之眼过期了，于是坩埚爆炸，魔药炼制失败，炼金师殒命"
+autowrap_mode = 3
+
+[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide2"]
+offset_left = -199.0
+offset_top = -259.0
+offset_right = 566.0
+offset_bottom = -154.0
+theme_override_fonts/font = ExtResource("35_je7el")
+theme_override_font_sizes/font_size = 38
+text = "但是他忘记了那个邪龙之眼过期了，于是坩埚爆炸，魔药炼制失败，炼金师殒命"
+autowrap_mode = 3
+
 [node name="Slide3" type="TextureRect" parent="Introduction/IntroComponents"]
 layout_mode = 0
 offset_left = 208.0
@@ -710,3 +750,23 @@ offset_bottom = 136.0
 rotation = 0.138264
 texture = ExtResource("39_1s0f6")
 stretch_mode = 6
+
+[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide3"]
+offset_left = -158.0
+offset_top = -99.0
+offset_right = 607.0
+offset_bottom = 6.0
+theme_override_fonts/font = ExtResource("35_je7el")
+theme_override_font_sizes/font_size = 38
+text = "错误的魔药使炼金师以魂体形式再次出现，而房间里的一切似乎都活了起来……"
+autowrap_mode = 3
+
+[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide3"]
+offset_left = -191.0
+offset_top = -97.0
+offset_right = 574.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("35_je7el")
+theme_override_font_sizes/font_size = 38
+text = "错误的魔药使炼金师以魂体形式再次出现，而房间里的一切似乎都活了起来……"
+autowrap_mode = 3
