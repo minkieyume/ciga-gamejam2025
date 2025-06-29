@@ -177,47 +177,75 @@ position = Vector2(151, 319)
 
 [node name="HerbBottle" parent="Poisions" instance=ExtResource("7_06a0y")]
 position = Vector2(573, 1073)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="HerbBottle2" parent="Poisions" instance=ExtResource("8_vasoo")]
 position = Vector2(1622, 558)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="HerbBottle3" parent="Poisions" instance=ExtResource("9_435fm")]
 position = Vector2(2262, 556)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="HerbBottle4" parent="Poisions" instance=ExtResource("7_06a0y")]
 position = Vector2(1816, 994)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="objects" type="Node2D" parent="."]
 
 [node name="EyeBall" parent="objects" instance=ExtResource("8_fa7hk")]
 position = Vector2(150, 145)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="Box" parent="objects" instance=ExtResource("9_uoucr")]
 position = Vector2(491, 608)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="Box2" parent="objects" instance=ExtResource("9_uoucr")]
 position = Vector2(557, 608)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="Box3" parent="objects" instance=ExtResource("9_uoucr")]
 position = Vector2(625, 608)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="Box4" parent="objects" instance=ExtResource("9_uoucr")]
 position = Vector2(522, 540)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="Box5" parent="objects" instance=ExtResource("9_uoucr")]
 position = Vector2(594, 542)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="Box6" parent="objects" instance=ExtResource("9_uoucr")]
 position = Vector2(554, 471)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="FlowerPot" parent="objects" instance=ExtResource("21_p5b8l")]
 position = Vector2(1829, 121)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="Chandelier" parent="objects" instance=ExtResource("22_j5les")]
 position = Vector2(1238, 77)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="PullRod" parent="objects" instance=ExtResource("23_tmh5r")]
 position = Vector2(984, 1525)
+dialogue_resource = null
+dialogue_node = ""
 
 [node name="BackGround2" type="Control" parent="."]
 layout_mode = 3
