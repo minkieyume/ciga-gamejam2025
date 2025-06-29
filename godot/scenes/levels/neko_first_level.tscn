@@ -164,9 +164,6 @@ position = Vector2(1622, 558)
 [node name="HerbBottle3" parent="Poisions" instance=ExtResource("9_435fm")]
 position = Vector2(2262, 556)
 
-[node name="HerbPot" parent="Poisions" instance=ExtResource("12_213p3")]
-position = Vector2(783, 670)
-
 [node name="HerbBottle4" parent="Poisions" instance=ExtResource("7_06a0y")]
 position = Vector2(400.843, -194.149)
 
