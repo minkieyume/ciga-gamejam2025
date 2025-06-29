@@ -3,7 +3,7 @@
 [ext_resource type="SpriteFrames" uid="uid://dth2yyhahtcmn" path="res://assets/animations/pot.tres" id="1_h62tq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctjfd"]
-size = Vector2(36, 18)
+size = Vector2(51, 44)
 
 [sub_resource type="Animation" id="Animation_t24dj"]
 resource_name = "potion_inside"
@@ -15,15 +15,15 @@ _data = {
 
 [node name="HerbPot" type="Area2D" groups=["Pot"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
-shape = SubResource("RectangleShape2D_ctjfd")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_h62tq")
 animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.775103
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_ctjfd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
