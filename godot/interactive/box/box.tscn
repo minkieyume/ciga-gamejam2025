@@ -2,21 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_s46h7"]
 [ext_resource type="Script" uid="uid://c8yfjivp6ktlj" path="res://interactive/box/box.gd" id="2_yf2ss"]
-[ext_resource type="Texture2D" uid="uid://peboo7seeonl" path="res://assets/静态物品/box.png" id="3_yf2ss"]
+[ext_resource type="Texture2D" uid="uid://b5nxjbfpq4viv" path="res://assets/静态物品/box.png" id="3_yf2ss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixq8g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf2ss"]
-size = Vector2(32, 32)
+size = Vector2(64, 64)
 
 [node name="Box" node_paths=PackedStringArray("body_collision_shape") instance=ExtResource("1_s46h7")]
 script = ExtResource("2_yf2ss")
-size = Vector2(81, 45)
+size = Vector2(64, 64)
 body_collision_shape = NodePath("CollisionShape2D")
 areashape = SubResource("RectangleShape2D_ixq8g")
 dialogue_resource = null
 
 [node name="Sprite2D" parent="." index="0"]
+scale = Vector2(2, 2)
 texture = ExtResource("3_yf2ss")
 
 [node name="CollisionShape2D" parent="SelfArea" index="0"]

@@ -54,7 +54,7 @@ func _physics_process(_delta: float):
 	# Calling functions
 	if is_controlling:
 		_try_handle_input()
-		_movement()
+		_movement(_delta)
 		#player_animations()
 		flip_player()
 
@@ -101,7 +101,7 @@ func handle_gravity(delta):
 
 
 ## 移动逻辑: 每个Interactive都有所不同
-func _movement():
+func _movement(_delta: float):
 	#handle_jumping()
 	# Move Player
 	var inputHorizontal = Input.get_axis("Left", "Right")
