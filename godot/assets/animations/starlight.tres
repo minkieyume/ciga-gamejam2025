@@ -1,70 +1,73 @@
 [gd_resource type="SpriteFrames" load_steps=17 format=3 uid="uid://c4upjgkj456jw"]
 
-[ext_resource type="Texture2D" uid="uid://brc25fcop36ov" path="res://assets/静态背景2/迸发星光atlas/迸发星光-Sheet.png" id="1_nca54"]
+[ext_resource type="Texture2D" uid="uid://dpt8oxb68a4bt" path="res://assets/静态背景2/迸发星光atlas/迸发星光-Sheet.png" id="1_nca54"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nca54"]
+atlas = ExtResource("1_nca54")
+region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nqq2m"]
 atlas = ExtResource("1_nca54")
-region = Rect2(0, 0, 1024, 1024)
+region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b378f"]
 atlas = ExtResource("1_nca54")
-region = Rect2(1024, 0, 1024, 1024)
+region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m0vjp"]
 atlas = ExtResource("1_nca54")
-region = Rect2(2048, 0, 1024, 1024)
+region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oflpg"]
 atlas = ExtResource("1_nca54")
-region = Rect2(3072, 0, 1024, 1024)
+region = Rect2(0, 128, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nvm7i"]
 atlas = ExtResource("1_nca54")
-region = Rect2(0, 1024, 1024, 1024)
+region = Rect2(128, 128, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ehar0"]
 atlas = ExtResource("1_nca54")
-region = Rect2(1024, 1024, 1024, 1024)
+region = Rect2(256, 128, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u48oh"]
 atlas = ExtResource("1_nca54")
-region = Rect2(2048, 1024, 1024, 1024)
+region = Rect2(384, 128, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_alkyc"]
 atlas = ExtResource("1_nca54")
-region = Rect2(3072, 1024, 1024, 1024)
+region = Rect2(0, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dy6qu"]
 atlas = ExtResource("1_nca54")
-region = Rect2(0, 2048, 1024, 1024)
+region = Rect2(128, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2a7et"]
 atlas = ExtResource("1_nca54")
-region = Rect2(1024, 2048, 1024, 1024)
+region = Rect2(256, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_002kn"]
 atlas = ExtResource("1_nca54")
-region = Rect2(2048, 2048, 1024, 1024)
+region = Rect2(384, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qi6n7"]
 atlas = ExtResource("1_nca54")
-region = Rect2(3072, 2048, 1024, 1024)
+region = Rect2(256, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bghtd"]
 atlas = ExtResource("1_nca54")
-region = Rect2(2048, 2048, 1024, 1024)
+region = Rect2(128, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_72igx"]
 atlas = ExtResource("1_nca54")
-region = Rect2(1024, 2048, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6fmkv"]
-atlas = ExtResource("1_nca54")
-region = Rect2(0, 2048, 1024, 1024)
+region = Rect2(0, 256, 128, 128)
 
 [resource]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nca54")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nqq2m")
 }, {
@@ -106,11 +109,8 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_72igx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6fmkv")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]

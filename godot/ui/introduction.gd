@@ -35,6 +35,10 @@ func handle_scheduling() :
 	if current_slide>0:
 		slide_name="Slide"+str(current_slide-1)
 		intro_components.get_node(slide_name).hide()
+	if current_slide == 1:
+		$IntroComponents/Slide1/AnimationPlayer.play("spark")
+	if current_slide==2:
+		$IntroComponents/Slide2/AudioStreamPlayer.play()
 	slide_name="Slide"+str(current_slide)
 	intro_components.get_node(slide_name).show()
 	
