@@ -10,11 +10,11 @@
 size = Vector2(32, 32)
 
 [node name="Box" node_paths=PackedStringArray("body_collision_shape") instance=ExtResource("1_s46h7")]
-scale = Vector2(2, 2)
 script = ExtResource("2_yf2ss")
 size = Vector2(81, 45)
 body_collision_shape = NodePath("CollisionShape2D")
 areashape = SubResource("RectangleShape2D_ixq8g")
+dialogue_resource = null
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_yf2ss")

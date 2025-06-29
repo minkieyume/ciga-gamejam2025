@@ -18,9 +18,12 @@ size = Vector2(25, 35)
 size = Vector2(20, 14)
 
 [node name="HerbBottle" instance=ExtResource("1_uw2r6")]
-scale = Vector2(2, 2)
 script = ExtResource("2_7ec1c")
 herb_id = -1
+dialogue_resource = null
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_pvygk")
 
 [node name="CollisionShape2D" parent="SelfArea" index="0"]
 shape = SubResource("RectangleShape2D_uskn8")
@@ -29,12 +32,9 @@ shape = SubResource("RectangleShape2D_uskn8")
 scale = Vector2(0.244302, 0.398172)
 shape = SubResource("RectangleShape2D_ajm4n")
 
-[node name="CollisionShape2D" parent="." index="2"]
+[node name="CollisionShape2D" parent="." index="3"]
 scale = Vector2(1, 1.38983)
 shape = SubResource("RectangleShape2D_afrrc")
-
-[node name="Sprite2D" parent="." index="5"]
-texture = ExtResource("3_pvygk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="7"]
 position = Vector2(-1, 33)
