@@ -140,7 +140,7 @@ metadata/_edit_lock_ = true
 
 [node name="LevelFinishDoor" parent="." node_paths=PackedStringArray("level") instance=ExtResource("2_fa7hk")]
 z_index = 1
-position = Vector2(1208, 131)
+position = Vector2(140, 774)
 scale = Vector2(2, 2)
 target_position = Vector2(-269, 93)
 target_id = 1
@@ -350,4 +350,4 @@ tile_set = ExtResource("15_pchsp")
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("6_435fm")]
 unique_name_in_owner = true
-position = Vector2(-269, 93)
+position = Vector2(601, 200)
