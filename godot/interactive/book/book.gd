@@ -43,7 +43,7 @@ func _try_handle_input():
 		if Input.is_action_pressed("attach"):
 			print()
 			pass
-	if can_interact and Input.is_action_just_pressed("dialog"):
+	if can_interact and Input.is_action_just_pressed("chat"):
 		## 这里实现对话逻辑
 		var nodes = get_tree().get_nodes_in_group("ui_view")
 		if !nodes.is_empty():
