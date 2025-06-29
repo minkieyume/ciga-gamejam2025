@@ -145,7 +145,7 @@ position = Vector2(186, 1737)
 scale = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("4_htwpa")]
-position = Vector2(97, 260)
+position = Vector2(37, 252)
 
 [node name="BackGround2" type="Control" parent="."]
 layout_mode = 3
@@ -322,12 +322,12 @@ position = Vector2(356, 227)
 dialogue_node = ""
 
 [node name="FlowerPot" parent="objects" instance=ExtResource("21_p5b8l")]
-position = Vector2(965, 279)
+position = Vector2(959, 297)
 dialogue_resource = null
 dialogue_node = ""
 
 [node name="Chandelier" parent="objects" instance=ExtResource("22_j5les")]
-position = Vector2(637, 55)
+position = Vector2(598, 55)
 dialogue_resource = null
 dialogue_node = ""
 
