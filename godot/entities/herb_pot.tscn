@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcevq147eb0fw"]
+[gd_scene load_steps=7 format=3 uid="uid://bcevq147eb0fw"]
 
 [ext_resource type="SpriteFrames" uid="uid://dth2yyhahtcmn" path="res://assets/animations/pot.tres" id="1_h62tq"]
+[ext_resource type="Script" uid="uid://c72ah3nd8e354" path="res://entities/herb_pot.gd" id="1_t24dj"]
+[ext_resource type="PackedScene" uid="uid://dbxdde08d45op" path="res://ui/ui/final_ui.tscn" id="2_ctjfd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctjfd"]
 size = Vector2(51, 44)
@@ -14,6 +16,8 @@ _data = {
 }
 
 [node name="HerbPot" type="Area2D" groups=["Pot"]]
+script = ExtResource("1_t24dj")
+final_ui = ExtResource("2_ctjfd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_h62tq")
@@ -29,3 +33,5 @@ shape = SubResource("RectangleShape2D_ctjfd")
 libraries = {
 &"": SubResource("AnimationLibrary_ctjfd")
 }
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,18 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://ik27nkd02ose"]
+[gd_scene load_steps=10 format=3 uid="uid://ik27nkd02ose"]
 
 [ext_resource type="Script" uid="uid://bfbcpcsge1tcn" path="res://ui/ui/main_ui/mainui.gd" id="1_bqiya"]
 [ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/ui/main_ui/maintheme.tres" id="2_0e4jt"]
-[ext_resource type="PackedScene" uid="uid://cjybbal1tv5f0" path="res://ui/ui/introduction.tscn" id="2_lluby"]
-[ext_resource type="Texture2D" uid="uid://cdmuglsdqm2kg" path="res://assets/chikochiko_full.png" id="3_7riyb"]
-[ext_resource type="Texture2D" uid="uid://cim3f7kmwdd4v" path="res://chikochiko.svg" id="3_ncs8n"]
-[ext_resource type="AudioStream" uid="uid://uv34x7lfpkh6" path="res://assets/crazy poision alives.ogg" id="6_lluby"]
+[ext_resource type="Texture2D" uid="uid://dsy5fijnuspn4" path="res://assets/chikochiko_full.png" id="3_7riyb"]
+[ext_resource type="Texture2D" uid="uid://jqtn0sp1ptt7" path="res://chikochiko.svg" id="3_ncs8n"]
+[ext_resource type="Texture2D" uid="uid://bnaujj8i2rfb" path="res://{BEC53DFB-FD22-9040-ACA0-6559149EDB9D}.png" id="3_pgaip"]
+[ext_resource type="Texture2D" uid="uid://d3ibaveuwyqqb" path="res://assets/textures/眼球.png" id="6_itr3r"]
+[ext_resource type="AudioStream" uid="uid://b3t8bib71awko" path="res://assets/crazy poision alives.ogg" id="6_lluby"]
+[ext_resource type="AudioStream" uid="uid://dysmfoqofwc0h" path="res://我的乐曲-6_1_.ogg" id="8_pgaip"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r3vs"]
 texture = ExtResource("3_7riyb")
 
 [node name="MainUi" type="CanvasLayer" node_paths=PackedStringArray("start_game_button", "quit_game_button")]
 script = ExtResource("1_bqiya")
-intoduction_ui = ExtResource("2_lluby")
 start_game_button = NodePath("MainUI/MainPanel/Start")
 quit_game_button = NodePath("MainUI/MainPanel/Quit")
 metadata/_custom_type_script = "uid://bhwyguulvscig"
@@ -27,10 +28,10 @@ grow_vertical = 2
 theme = ExtResource("2_0e4jt")
 
 [node name="Background" type="TextureRect" parent="MainUI"]
-visible = false
 layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
+texture = ExtResource("3_pgaip")
 
 [node name="TeamPanel" type="Panel" parent="MainUI"]
 visible = false
@@ -201,26 +202,22 @@ text = "退出游戏
 
 [node name="Chiko" type="TextureButton" parent="MainUI/MainPanel"]
 layout_mode = 0
-offset_left = 78.0
-offset_top = 40.0
-offset_right = 590.0
-offset_bottom = 552.0
-scale = Vector2(0.312647, 0.312647)
-texture_normal = ExtResource("3_ncs8n")
+offset_left = 75.0
+offset_top = 37.0
+offset_right = 107.0
+offset_bottom = 69.0
+scale = Vector2(5, 5)
+texture_normal = ExtResource("6_itr3r")
 
-[node name="Chiko2" type="TextureButton" parent="MainUI/MainPanel"]
-layout_mode = 0
-offset_left = 744.0
-offset_top = 40.0
-offset_right = 1256.0
-offset_bottom = 552.0
-scale = Vector2(0.312647, 0.312647)
-texture_normal = ExtResource("3_ncs8n")
-flip_h = true
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainUI"]
+[node name="crazy_music" type="AudioStreamPlayer" parent="MainUI"]
 stream = ExtResource("6_lluby")
 volume_db = -10.0
+mix_target = 1
+parameters/looping = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pgaip")
+volume_db = 10.0
 autoplay = true
 mix_target = 1
 parameters/looping = true
@@ -228,4 +225,3 @@ parameters/looping = true
 [connection signal="pressed" from="MainUI/TeamPanel/QuitChiko" to="." method="_on_quit_chiko_pressed"]
 [connection signal="pressed" from="MainUI/MainPanel/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="MainUI/MainPanel/Chiko" to="." method="_on_chiko_pressed"]
-[connection signal="pressed" from="MainUI/MainPanel/Chiko2" to="." method="_on_chiko_pressed"]

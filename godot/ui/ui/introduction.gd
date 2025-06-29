@@ -2,6 +2,9 @@ extends IUi
 @export var start_level:PackedScene
 @onready var intro_components:=$Introduction/IntroComponents
 
+
+signal start_level_scene
+
 #当前播放到的幻灯片
 var current_slide:int=-1
 var slide_name:String
