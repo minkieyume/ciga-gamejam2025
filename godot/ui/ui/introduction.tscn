@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cjybbal1tv5f0"]
+[gd_scene load_steps=45 format=3 uid="uid://cjybbal1tv5f0"]
 
 [ext_resource type="Script" uid="uid://nsxm1ap3uiwk" path="res://ui/ui/introduction.gd" id="1_kfe66"]
 [ext_resource type="Texture2D" uid="uid://w5owa1mrky28" path="res://assets/静态背景2/背景颜色.png" id="2_je7el"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://ua7m1ohu178r" path="res://assets/静态背景2/坩埚atlas/坩埚01.png" id="32_m33w2"]
 [ext_resource type="Texture2D" uid="uid://bvoemgr23fxxj" path="res://assets/静态背景2/女巫背身.png" id="33_ywif0"]
 [ext_resource type="Texture2D" uid="uid://bmtdwsb5rhoix" path="res://assets/静态背景2/书.png" id="34_vwni7"]
+[ext_resource type="FontFile" uid="uid://dhkpfb66aatc8" path="res://assets/fonts/Star Choco.ttf" id="35_je7el"]
 [ext_resource type="SpriteFrames" uid="uid://dth2yyhahtcmn" path="res://assets/animations/pot.tres" id="35_mmy5h"]
 [ext_resource type="Texture2D" uid="uid://brc25fcop36ov" path="res://assets/静态背景2/迸发星光atlas/迸发星光-Sheet.png" id="36_lo4cj"]
 [ext_resource type="Texture2D" uid="uid://cj6tbkrihr5hd" path="res://assets/静态背景2/爆炸.png" id="37_wu6df"]
@@ -586,6 +587,17 @@ texture = ExtResource("34_vwni7")
 stretch_mode = 6
 metadata/_edit_lock_ = true
 
+[node name="Label" type="Label" parent="Introduction/IntroComponents/Slide0"]
+layout_mode = 0
+offset_left = -327.0
+offset_top = -282.0
+offset_right = 595.0
+offset_bottom = -5.0
+theme_override_fonts/font = ExtResource("35_je7el")
+theme_override_font_sizes/font_size = 38
+text = "占卜出大限将至的炼金师，决定铤而走险尝试一本古老禁书上的不老魔药"
+autowrap_mode = 2
+
 [node name="Slide1" type="TextureRect" parent="Introduction/IntroComponents"]
 layout_mode = 0
 offset_left = 226.0
@@ -639,6 +651,17 @@ texture = ExtResource("36_lo4cj")
 hframes = 4
 vframes = 3
 
+[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide1"]
+layout_mode = 0
+offset_left = -154.0
+offset_top = -236.0
+offset_right = 611.0
+offset_bottom = -131.0
+theme_override_fonts/font = ExtResource("35_je7el")
+theme_override_font_sizes/font_size = 38
+text = "他按照配方搜集来材料，将他们投入坩埚"
+autowrap_mode = 3
+
 [node name="Slide2" type="TextureRect" parent="Introduction/IntroComponents"]
 layout_mode = 0
 offset_left = 226.0
@@ -672,6 +695,17 @@ metadata/_edit_lock_ = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Introduction/IntroComponents/Slide2"]
 stream = ExtResource("38_nfdi7")
 
+[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide2"]
+layout_mode = 0
+offset_left = -175.0
+offset_top = -258.0
+offset_right = 590.0
+offset_bottom = -153.0
+theme_override_fonts/font = ExtResource("35_je7el")
+theme_override_font_sizes/font_size = 38
+text = "但是他忘记了那个邪龙之眼过期了，于是坩埚爆炸，魔药炼制失败，炼金师殒命"
+autowrap_mode = 3
+
 [node name="Slide3" type="TextureRect" parent="Introduction/IntroComponents"]
 layout_mode = 0
 offset_left = 208.0
@@ -691,10 +725,21 @@ frame_progress = 0.464429
 
 [node name="Slide3" type="TextureRect" parent="Introduction/IntroComponents/Slide3"]
 layout_mode = 0
-offset_left = 118.0
-offset_top = -120.0
-offset_right = 616.0
-offset_bottom = 136.0
+offset_left = 286.0
+offset_top = -72.0
+offset_right = 784.0
+offset_bottom = 184.0
 rotation = 0.138264
 texture = ExtResource("39_1s0f6")
 stretch_mode = 6
+
+[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide3"]
+layout_mode = 0
+offset_left = -158.0
+offset_top = -99.0
+offset_right = 607.0
+offset_bottom = 6.0
+theme_override_fonts/font = ExtResource("35_je7el")
+theme_override_font_sizes/font_size = 38
+text = "错误的魔药使炼金师以魂体形式再次出现，而房间里的一切似乎都活了起来……"
+autowrap_mode = 3
