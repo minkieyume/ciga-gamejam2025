@@ -138,7 +138,7 @@ theme_override_colors/font_hover_color = Color(0.85786, 0.326003, 0.584182, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.882881, 0.456006, 0.599834, 1)
 theme_override_colors/font_outline_color = Color(0, 0.296379, 0.590111, 1)
 text = "萧萧"
-uri = "`https://space.bilibili.com/348732826"
+uri = "https://space.bilibili.com/348732826"
 
 [node name="Inh" type="LinkButton" parent="MainUI/TeamPanel"]
 layout_mode = 0

@@ -6,9 +6,11 @@ extends IUi
 var current_slide:int=-1
 var slide_name:String
 const SLIDE_SIZE:=4
+var tween 
 
 func _ready() -> void:
 	current_slide=0
+	tween = create_tween()
 	for i:int in range(0,SLIDE_SIZE):
 		slide_name="Slide"+str(i)
 		intro_components.get_node(slide_name).hide()
@@ -41,8 +43,8 @@ func handle_scheduling() :
 		$Introduction/IntroComponents/Slide2/AudioStreamPlayer.play()
 	slide_name="Slide"+str(current_slide)
 	intro_components.get_node(slide_name).show()
-	
-	intro_components
+	var label:=intro_components.get_node(slide_name).get_node("Text")
+	tween.tween_property(label, "visible_ratio", 1.0, 0.1)
 	current_slide+=1
 			
 func _input(event):
