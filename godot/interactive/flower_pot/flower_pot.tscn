@@ -7,7 +7,7 @@
 size = Vector2(32, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qch6g"]
-size = Vector2(80, 80)
+size = Vector2(35, 37)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f20jt"]
 size = Vector2(32, 16)
@@ -16,7 +16,6 @@ size = Vector2(32, 16)
 size = Vector2(32, 8)
 
 [node name="FlowerPot" instance=ExtResource("1_iciu2")]
-scale = Vector2(4, 4)
 platform_move_distance = 128
 platform_move_speed = 200.0
 
@@ -31,6 +30,7 @@ position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_6dgik")
 
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
+position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_qch6g")
 
 [node name="CollisionShape2D" parent="." index="4"]

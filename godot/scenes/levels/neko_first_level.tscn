@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bw0ybb5qykkti"]
+[gd_scene load_steps=26 format=4 uid="uid://bw0ybb5qykkti"]
 
 [ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/Level.gd" id="1_f65v8"]
 [ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://scenes/prefabs/LevelFinishDoor.tscn" id="2_fa7hk"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://blrtyc1yuhhh8" path="res://assets/界面基础物件.png" id="4_pchsp"]
 [ext_resource type="TileSet" uid="uid://bx56vrwwblljq" path="res://scenes/levels/tile.tres" id="5_435fm"]
 [ext_resource type="Texture2D" uid="uid://bao45uf1o2f57" path="res://assets/静态背景2/窗户.png" id="5_pbjge"]
-[ext_resource type="Texture2D" uid="uid://cjx6r1e6vsmk6" path="res://assets/spritesheet/platformPack_tilesheet.png" id="5_vasoo"]
 [ext_resource type="PackedScene" uid="uid://cvakmbjf2w42x" path="res://scenes/player_spawner/player_spawner.tscn" id="6_435fm"]
 [ext_resource type="Texture2D" uid="uid://bpv0nxh5b7i1h" path="res://assets/静态背景2/窗外的鸟.png" id="6_ly6xe"]
 [ext_resource type="PackedScene" uid="uid://djxo84uct5y7e" path="res://interactive/herb_bottle/herb_bottle.tscn" id="7_06a0y"]
@@ -22,23 +21,14 @@
 [ext_resource type="Texture2D" uid="uid://dxtgyxkjxr3px" path="res://assets/静态背景2/蜘蛛网.png" id="10_aldet"]
 [ext_resource type="Texture2D" uid="uid://yslcjoey3f3e" path="res://assets/静态背景2/小蜘蛛.png" id="11_7v5ol"]
 [ext_resource type="PackedScene" uid="uid://bcevq147eb0fw" path="res://entities/herb_pot.tscn" id="12_213p3"]
+[ext_resource type="TileSet" uid="uid://xpwqvmp7dvny" path="res://scenes/levels/traps.tres" id="15_pchsp"]
 [ext_resource type="PackedScene" uid="uid://chommy2oxei5m" path="res://interactive/flower_pot/flower_pot.tscn" id="21_p5b8l"]
 [ext_resource type="PackedScene" uid="uid://c2tottyw6nnsb" path="res://interactive/chandelier/chandelier.tscn" id="22_j5les"]
 [ext_resource type="PackedScene" uid="uid://ic7l8dm5nvl5" path="res://interactive/pull_rod/pull_rod.tscn" id="23_tmh5r"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pchsp"]
-texture = ExtResource("5_vasoo")
-texture_region_size = Vector2i(64, 64)
-0:5/0 = 0
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 32, 32, -32, 32)
-
-[sub_resource type="TileSet" id="TileSet_pbjge"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_pchsp")
-
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" node_paths=PackedStringArray("player_spawner")]
 script = ExtResource("1_f65v8")
+player_spawner = NodePath("Level/PlayerSpawner")
 
 [node name="BackGround" type="Control" parent="."]
 layout_mode = 3
@@ -273,12 +263,10 @@ tile_set = ExtResource("5_435fm")
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="Traps" type="TileMap" parent="Level" groups=["Traps"]]
-tile_set = SubResource("TileSet_pbjge")
-format = 2
-layer_0/tile_data = PackedInt32Array(1966101, 0, 5, 1966102, 0, 5, 1966103, 0, 5, 1966104, 0, 5, 1966105, 0, 5, 1966106, 0, 5, 1966107, 0, 5)
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
+[node name="Traps" type="TileMapLayer" parent="Level" groups=["Traps"]]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAUAB4AAAAAAAUAAAAVAB4AAAAAAAUAAAAWAB4AAAAAAAUAAAAXAB4AAAAAAAUAAAAYAB4AAAAAAAUAAAAZAB4AAAAAAAUAAAAaAB4AAAAAAAUAAAA=")
+tile_set = ExtResource("15_pchsp")
 
 [node name="PlayerSpawner" parent="Level" instance=ExtResource("6_435fm")]
 unique_name_in_owner = true
@@ -287,7 +275,7 @@ position = Vector2(151, 319)
 [node name="Poisions" type="Node2D" parent="."]
 
 [node name="HerbBottle" parent="Poisions" instance=ExtResource("7_06a0y")]
-position = Vector2(552, 874)
+position = Vector2(752, 249)
 dialogue_node = ""
 
 [node name="HerbBottle2" parent="Poisions" instance=ExtResource("8_vasoo")]
@@ -299,7 +287,7 @@ position = Vector2(130, 456)
 dialogue_node = ""
 
 [node name="HerbBottle4" parent="Poisions" instance=ExtResource("7_06a0y")]
-position = Vector2(1382, 30)
+position = Vector2(2000, -223)
 dialogue_node = ""
 
 [node name="objects" type="Node2D" parent="."]
@@ -334,7 +322,7 @@ position = Vector2(356, 227)
 dialogue_node = ""
 
 [node name="FlowerPot" parent="objects" instance=ExtResource("21_p5b8l")]
-position = Vector2(1829, 121)
+position = Vector2(965, 279)
 dialogue_resource = null
 dialogue_node = ""
 
@@ -351,3 +339,7 @@ dialogue_node = ""
 [node name="HerbPot" parent="." instance=ExtResource("12_213p3")]
 position = Vector2(-1072, 488)
 scale = Vector2(4, 4)
+
+[node name="Box3" parent="." instance=ExtResource("9_uoucr")]
+position = Vector2(1087, 886)
+dialogue_node = ""

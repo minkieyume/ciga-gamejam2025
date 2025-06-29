@@ -10,11 +10,7 @@ platform_move_direction = Vector2(0, -1)
 platform_move_distance = 0
 platform_move_speed = 0.0
 
-[node name="Sprite2D2" type="Sprite2D" parent="." index="0"]
-position = Vector2(4.76837e-07, 0)
-scale = Vector2(0.25, 0.25)
-
-[node name="Platform" type="StaticBody2D" parent="." index="6"]
+[node name="Platform" type="StaticBody2D" parent="." index="5"]
 script = ExtResource("4_bre1r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" index="0"]
