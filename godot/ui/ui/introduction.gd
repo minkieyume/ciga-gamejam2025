@@ -1,14 +1,16 @@
 extends IUi
 @export var start_level:PackedScene
-@onready var intro_components:=$IntroComponents
+@onready var intro_components:=$Introduction/IntroComponents
 
 #当前播放到的幻灯片
 var current_slide:int=-1
 var slide_name:String
 const SLIDE_SIZE:=4
+var tween 
 
 func _ready() -> void:
 	current_slide=0
+	tween = create_tween()
 	for i:int in range(0,SLIDE_SIZE):
 		slide_name="Slide"+str(i)
 		intro_components.get_node(slide_name).hide()
@@ -36,13 +38,13 @@ func handle_scheduling() :
 		slide_name="Slide"+str(current_slide-1)
 		intro_components.get_node(slide_name).hide()
 	if current_slide == 1:
-		$IntroComponents/Slide1/AnimationPlayer.play("spark")
+		$Introduction/IntroComponents/Slide1/AnimationPlayer.play("spark")
 	if current_slide==2:
-		$IntroComponents/Slide2/AudioStreamPlayer.play()
+		$Introduction/IntroComponents/Slide2/AudioStreamPlayer.play()
 	slide_name="Slide"+str(current_slide)
 	intro_components.get_node(slide_name).show()
-	
-	intro_components
+	var label:=intro_components.get_node(slide_name).get_node("Text")
+	tween.tween_property(label, "visible_ratio", 1.0, 0.1)
 	current_slide+=1
 			
 func _input(event):
@@ -56,4 +58,4 @@ func _input(event):
 			var current_state = MGameState.state_machine._get_leaf_state()
 			if current_state is GameStartState:
 				current_state.update_trigger = true
-			MLevel.level_loaded.emit(start_level_scene)
+			MLevel.level_loaded.emit(start_level)
