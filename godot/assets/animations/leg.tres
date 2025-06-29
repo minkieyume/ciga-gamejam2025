@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://dcadrvwkbvxnn"]
 
-[ext_resource type="Texture2D" uid="uid://rh1vfcpgf5ll" path="res://assets/静态背景2/腿atlas/长出的脚-Sheet.png" id="1_eafnj"]
+[ext_resource type="Texture2D" uid="uid://btcfy4axuh7k3" path="res://assets/静态背景2/腿atlas/长出的脚-Sheet.png" id="1_eafnj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0cydv"]
 atlas = ExtResource("1_eafnj")
