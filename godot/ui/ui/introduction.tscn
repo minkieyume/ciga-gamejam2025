@@ -586,17 +586,6 @@ texture = ExtResource("34_vwni7")
 stretch_mode = 6
 metadata/_edit_lock_ = true
 
-[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide0"]
-layout_mode = 0
-offset_left = -275.0
-offset_top = -265.0
-offset_right = 490.0
-offset_bottom = -160.0
-theme_override_fonts/font = ExtResource("35_je7el")
-theme_override_font_sizes/font_size = 38
-text = "占卜出大限将至的炼金师，决定铤而走险尝试一本古老禁书上的不老魔药"
-autowrap_mode = 3
-
 [node name="Slide1" type="TextureRect" parent="Introduction/IntroComponents"]
 layout_mode = 0
 offset_left = 226.0
