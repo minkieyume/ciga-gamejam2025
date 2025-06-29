@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbxdde08d45op"]
+
+[ext_resource type="Script" uid="uid://b5hoppscsnu8u" path="res://ui/ui/final_ui.gd" id="1_gdlbo"]
+[ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/ui/main_ui/maintheme.tres" id="2_vh433"]
+
+[node name="FinalUi" type="CanvasLayer"]
+script = ExtResource("1_gdlbo")
+metadata/_custom_type_script = "uid://bpkvp0l3wxrx1"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vh433")
+
+[node name="Panel" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "你复活了！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "退出"
+
+[connection signal="pressed" from="Control/Panel/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
