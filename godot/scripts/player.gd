@@ -37,6 +37,8 @@ func _physics_process(_delta: float) -> void:
 	_movement(_delta)
 	player_animations()
 	flip_player()
+	$SFX/Moving.playing=true if is_moving else false
+		
 
 
 func _input(event):

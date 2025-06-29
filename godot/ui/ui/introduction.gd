@@ -1,6 +1,9 @@
-extends Control
+extends IUi
+@export var start_level:PackedScene
+@onready var intro_components:=$Introduction/IntroComponents
 
-@onready var intro_components:=$IntroComponents
+
+signal start_level_scene
 
 #当前播放到的幻灯片
 var current_slide:int=-1
@@ -36,9 +39,9 @@ func handle_scheduling() :
 		slide_name="Slide"+str(current_slide-1)
 		intro_components.get_node(slide_name).hide()
 	if current_slide == 1:
-		$IntroComponents/Slide1/AnimationPlayer.play("spark")
+		$Introduction/IntroComponents/Slide1/AnimationPlayer.play("spark")
 	if current_slide==2:
-		$IntroComponents/Slide2/AudioStreamPlayer.play()
+		$Introduction/IntroComponents/Slide2/AudioStreamPlayer.play()
 	slide_name="Slide"+str(current_slide)
 	intro_components.get_node(slide_name).show()
 	
@@ -52,3 +55,8 @@ func _input(event):
 		else:
 			#TODO: 幻灯片播放结束，进入游戏场景
 			print("幻灯片播放结束")
+			
+			var current_state = MGameState.state_machine._get_leaf_state()
+			if current_state is GameStartState:
+				current_state.update_trigger = true
+			MLevel.level_loaded.emit(start_level_scene)
