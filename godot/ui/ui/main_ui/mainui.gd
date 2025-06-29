@@ -38,6 +38,6 @@ func _on_quit_pressed() -> void:
 
 func _on_quit_chiko_pressed() -> void:
 	$MainUI/crazy_music.stop()
-	$Music.start()
+	$Music.play()
 	team_panel.visible = false
 	main_panel.visible = true
