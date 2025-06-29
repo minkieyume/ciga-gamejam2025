@@ -23,13 +23,13 @@ func _ready():
 	)
 
 
-func _on_start_button_down() -> void:
-	$MainUI/AudioStreamPlayer.stop()
+func _on_start_button_down() -> void:	
 	visible = false
 	game_start.emit(start_level)
 
 
 func _on_chiko_pressed() -> void:
+	$MainUI/crazy_music.play()
 	main_panel.visible = false
 	team_panel.visible = true
 
@@ -39,5 +39,6 @@ func _on_quit_pressed() -> void:
 
 
 func _on_quit_chiko_pressed() -> void:
+	$MainUI/crazy_music.stop()
 	team_panel.visible = false
 	main_panel.visible = true
