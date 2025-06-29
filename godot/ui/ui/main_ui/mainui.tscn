@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://ik27nkd02ose"]
+[gd_scene load_steps=10 format=3 uid="uid://ik27nkd02ose"]
 
 [ext_resource type="Script" uid="uid://bfbcpcsge1tcn" path="res://ui/ui/main_ui/mainui.gd" id="1_bqiya"]
 [ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/ui/main_ui/maintheme.tres" id="2_0e4jt"]
-[ext_resource type="PackedScene" uid="uid://cjybbal1tv5f0" path="res://ui/ui/introduction.tscn" id="2_lluby"]
-[ext_resource type="Texture2D" uid="uid://cdmuglsdqm2kg" path="res://assets/chikochiko_full.png" id="3_7riyb"]
-[ext_resource type="Texture2D" uid="uid://cim3f7kmwdd4v" path="res://chikochiko.svg" id="3_ncs8n"]
-[ext_resource type="AudioStream" uid="uid://uv34x7lfpkh6" path="res://assets/crazy poision alives.ogg" id="6_lluby"]
+[ext_resource type="PackedScene" uid="uid://bw0ybb5qykkti" path="res://scenes/levels/neko_first_level.tscn" id="2_8af7k"]
+[ext_resource type="Texture2D" uid="uid://dsy5fijnuspn4" path="res://assets/chikochiko_full.png" id="3_7riyb"]
+[ext_resource type="Texture2D" uid="uid://jqtn0sp1ptt7" path="res://chikochiko.svg" id="3_ncs8n"]
+[ext_resource type="Texture2D" uid="uid://d3ibaveuwyqqb" path="res://assets/textures/眼球.png" id="6_itr3r"]
+[ext_resource type="AudioStream" uid="uid://b3t8bib71awko" path="res://assets/crazy poision alives.ogg" id="6_lluby"]
+[ext_resource type="AudioStream" uid="uid://dysmfoqofwc0h" path="res://我的乐曲-6_1_.ogg" id="8_pgaip"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r3vs"]
 texture = ExtResource("3_7riyb")
@@ -211,6 +213,12 @@ texture_normal = ExtResource("6_itr3r")
 [node name="crazy_music" type="AudioStreamPlayer" parent="MainUI"]
 stream = ExtResource("6_lluby")
 volume_db = -10.0
+mix_target = 1
+parameters/looping = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pgaip")
+autoplay = true
 mix_target = 1
 parameters/looping = true
 
