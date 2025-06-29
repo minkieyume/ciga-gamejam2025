@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="灵魂炼金师"
+config/description="CIGA GAMEJAM 2025项目"
+config/version="v.0.1.0"
 config/tags=PackedStringArray("ciga2025")
 run/main_scene="uid://cmqqdhtcmdkqd"
 config/features=PackedStringArray("4.4", "Forward Plus")
-boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="uid://cjd8i5utscqxg"
-config/icon="uid://bprwnuxjecm6p"
+boot_splash/image="uid://dsy5fijnuspn4"
+config/icon="uid://jqtn0sp1ptt7"
 
 [autoload]
 
@@ -37,7 +38,7 @@ window/size/viewport_height=540
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
-mouse_cursor/custom_image="uid://bur3cmyasbyod"
+mouse_cursor/custom_image="uid://bv8gb4ad2mfec"
 mouse_cursor/custom_image_hotspot=Vector2(30, 15)
 
 [dotnet]
@@ -135,6 +136,5 @@ textures/canvas_textures/default_texture_filter=0
 textures/default_filters/use_nearest_mipmap_filter=true
 textures/decals/filter=0
 textures/light_projectors/filter=0
-environment/defaults/default_clear_color=Color(0.105469, 0.457031, 0.730469, 1)
 rendering_device/custom_image_hotspot=Vector2(64, 0)
 rendering_device/custom_image="uid://bg26d4eh7hakn"
