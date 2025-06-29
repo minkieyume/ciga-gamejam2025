@@ -1,21 +1,59 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyti38f0lagf2"]
+[gd_scene load_steps=9 format=3 uid="uid://cyti38f0lagf2"]
 
 [ext_resource type="Script" uid="uid://b45u3vtw7plgf" path="res://scripts/LevelFinishDoor.gd" id="1_bto8y"]
-[ext_resource type="Texture2D" uid="uid://clnok6h0axegl" path="res://assets/platformPack_tile048.png" id="2_v64bf"]
+[ext_resource type="Texture2D" uid="uid://dbbfn3m0jjnbt" path="res://assets/静态背景2/场景门atlas/场景门-Sheet.png" id="2_di0uh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_di0uh"]
+atlas = ExtResource("2_di0uh")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr17v"]
+atlas = ExtResource("2_di0uh")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msqvw"]
+atlas = ExtResource("2_di0uh")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhl7q"]
+atlas = ExtResource("2_di0uh")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r5end"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_di0uh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr17v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msqvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhl7q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_34g1n"]
-size = Vector2(66, 80)
+size = Vector2(1.325e+07, 1.5e+07)
 
 [node name="LevelFinishDoor" type="Area2D"]
 script = ExtResource("1_bto8y")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("2_v64bf")
-region_rect = Rect2(320, 320, 64, 64)
+sprite_frames = SubResource("SpriteFrames_r5end")
+frame_progress = 0.892823
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(-1.25012, 18.0001)
+scale = Vector2(1e-05, 1e-05)
 shape = SubResource("RectangleShape2D_34g1n")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

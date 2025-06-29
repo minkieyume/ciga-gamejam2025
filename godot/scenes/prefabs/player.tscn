@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://w7m6tehvvy3g"]
 
 [ext_resource type="Script" uid="uid://dlwkp0b4dx13s" path="res://scripts/player.gd" id="1_qt7d6"]
-[ext_resource type="Texture2D" uid="uid://blsrwx7ltdjb8" path="res://assets/textures/小幽灵.png" id="2_8cdkg"]
-[ext_resource type="Texture2D" uid="uid://d1ey8ppfrf8df" path="res://assets/textures/CloudTexture.png" id="3_8vxmb"]
+[ext_resource type="Texture2D" uid="uid://cxu6vprtgf8hr" path="res://assets/textures/小幽灵.png" id="2_8cdkg"]
+[ext_resource type="Texture2D" uid="uid://eiiukusk3l1f" path="res://assets/textures/CloudTexture.png" id="3_8vxmb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_56dyf"]
 atlas = ExtResource("2_8cdkg")
@@ -88,10 +88,6 @@ scale_amount_curve = SubResource("Curve_m2jh0")
 color_ramp = SubResource("Gradient_3gc37")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-limit_left = -910
-limit_top = -1145
-limit_right = 2455
-limit_bottom = 735
 limit_smoothed = true
 position_smoothing_enabled = true
 

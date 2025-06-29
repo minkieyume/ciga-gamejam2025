@@ -10,6 +10,8 @@ interact_area = NodePath("InteractArea")
 self_area = NodePath("SelfArea")
 camera = NodePath("Camera2D")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
 [node name="SelfArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SelfArea"]
@@ -26,7 +28,5 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Component" type="Node2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
