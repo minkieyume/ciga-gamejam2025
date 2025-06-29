@@ -212,7 +212,7 @@ texture_normal = ExtResource("6_itr3r")
 
 [node name="crazy_music" type="AudioStreamPlayer" parent="MainUI"]
 stream = ExtResource("6_lluby")
-volume_db = -10.0
+volume_db = -20.0
 mix_target = 1
 parameters/looping = true
 

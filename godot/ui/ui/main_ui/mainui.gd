@@ -26,7 +26,8 @@ func _on_start_button_down() -> void:
 
 
 func _on_chiko_pressed() -> void:
-	$MainUI/crazy_music.play()
+	$Music.stop()
+	$MainUI/crazy_music.play()	
 	main_panel.visible = false
 	team_panel.visible = true
 
@@ -37,5 +38,6 @@ func _on_quit_pressed() -> void:
 
 func _on_quit_chiko_pressed() -> void:
 	$MainUI/crazy_music.stop()
+	$Music.start()
 	team_panel.visible = false
 	main_panel.visible = true
