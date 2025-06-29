@@ -20,6 +20,8 @@ func _setup():
 func _spawn(scene: PackedScene) -> CanvasLayer:
 	var canvas = scene.instantiate()
 	if canvas is IUi:
+		if current_ui:
+			current_ui.queue_free()
 		current_ui = canvas
 		MEventbus.main.game_view.add_child(current_ui)
 		return canvas

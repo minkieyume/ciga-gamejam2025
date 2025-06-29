@@ -26,6 +26,7 @@ size = Vector2(25, 35)
 size = Vector2(20, 14)
 
 [node name="HerbBottle" instance=ExtResource("1_uw2r6")]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("2_7ec1c")
 herb_id = 0
 texture = Dictionary[int, Texture2D]({

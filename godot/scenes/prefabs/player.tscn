@@ -34,7 +34,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [node name="Player" type="Area2D" node_paths=PackedStringArray("player_sprite", "particle_trails", "death_particles", "camera") groups=["Player"]]
 z_index = 2
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.7, 0.7)
 collision_layer = 2
 script = ExtResource("1_qt7d6")
 player_sprite = NodePath("AnimatedSprite2D")
