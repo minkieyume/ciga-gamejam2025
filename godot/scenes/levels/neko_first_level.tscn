@@ -327,7 +327,7 @@ dialogue_resource = null
 dialogue_node = ""
 
 [node name="Chandelier" parent="objects" instance=ExtResource("22_j5les")]
-position = Vector2(598, 55)
+position = Vector2(598, 57)
 dialogue_resource = null
 dialogue_node = ""
 
@@ -341,5 +341,13 @@ position = Vector2(-1072, 488)
 scale = Vector2(4, 4)
 
 [node name="Box3" parent="." instance=ExtResource("9_uoucr")]
-position = Vector2(1087, 886)
+position = Vector2(1114, 855)
+dialogue_node = ""
+
+[node name="Box7" parent="." instance=ExtResource("9_uoucr")]
+position = Vector2(977, 886)
+dialogue_node = ""
+
+[node name="Box6" parent="." instance=ExtResource("9_uoucr")]
+position = Vector2(1053, 902)
 dialogue_node = ""
