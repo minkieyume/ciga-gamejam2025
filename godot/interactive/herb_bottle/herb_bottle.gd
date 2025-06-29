@@ -26,7 +26,17 @@ func _try_handle_input():
 	# 保留父类的交互逻辑
 		# if event.is_action_pressed("interact"):
 		# 	handle_interaction() 
-			
+
+func _movement(_delta: float):
+	var inputHorizontal = Input.get_axis("Left", "Right")
+	#if inputAxis!=0:
+	#print("Interactive Moving")
+	#if can_move_vertical:
+		#velocity = Vector2(inputHorizontal * move_speed, velocity.y+inputVertical*move_speed)
+	#else:
+	velocity = Vector2(inputHorizontal * move_speed * _delta, velocity.y)
+	move_and_slide()
+
 func _on_SelfArea_body_entered(body):
 	if body.is_in_group("Traps") :
 		disattach()

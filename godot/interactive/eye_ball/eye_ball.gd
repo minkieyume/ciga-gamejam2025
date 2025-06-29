@@ -5,7 +5,7 @@ extends Interactive
 var current_award: Vector2 = Vector2.RIGHT
 
 ## 眼球的特点: 全向移动, 转弯很缓慢
-func _movement():
+func _movement(_delta: float):
 	var vector = Input.get_vector("Left", "Right", "Up", "Down")
 	if vector.is_zero_approx():
 		velocity = velocity.lerp(Vector2.ZERO, 0.2)

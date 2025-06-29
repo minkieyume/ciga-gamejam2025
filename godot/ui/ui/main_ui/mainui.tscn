@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfbcpcsge1tcn" path="res://ui/ui/main_ui/mainui.gd" id="1_bqiya"]
 [ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/ui/main_ui/maintheme.tres" id="2_0e4jt"]
-[ext_resource type="PackedScene" uid="uid://nh1ud1cfvpur" path="res://scenes/levels/level_f_1.tscn" id="2_8af7k"]
+[ext_resource type="PackedScene" uid="uid://bw0ybb5qykkti" path="res://scenes/levels/neko_first_level.tscn" id="2_8af7k"]
 [ext_resource type="Texture2D" uid="uid://4qh5wnlc4xfs" path="res://assets/chikochiko_full.png" id="3_7riyb"]
 [ext_resource type="Texture2D" uid="uid://883q87siu5li" path="res://chikochiko.svg" id="3_ncs8n"]
 
