@@ -6,16 +6,33 @@ class_name HerbBottle
 signal herb_added(herb_id)
 
 enum HerbType{
-	Unknown = -1,
-	Green = 0,
-	
+	Purple = 0,
+	Green, 
+	Brown,
+	Blue,
+	Triangle_Bottle,
+	Love,
+	Green_Bottle,
+	Purple_Bottle,
+	Black_Bottle,
 }
 
 #不同种类药剂的唯一编号
-@export var herb_id:=-1
+@export var herb_id : HerbType = HerbType.Green_Bottle:
+	set(value):
+		herb_id = value
+		if Engine.is_editor_hint():
+			player_sprite.texture = texture[value]
+
+@export_subgroup("引用项")
+@export var texture: Dictionary[HerbType, Texture2D]
 
 func _ready() -> void:
+	if Engine.is_editor_hint():
+		return
 	super()
+	player_sprite.texture = texture[herb_id]
+	
 	#.connect("herb_added", Callable(herb_id, "_on_herb_added"))
 
 func _try_handle_input():
@@ -29,12 +46,10 @@ func _try_handle_input():
 
 func _movement(_delta: float):
 	var inputHorizontal = Input.get_axis("Left", "Right")
-	#if inputAxis!=0:
-	#print("Interactive Moving")
-	#if can_move_vertical:
-		#velocity = Vector2(inputHorizontal * move_speed, velocity.y+inputVertical*move_speed)
-	#else:
-	velocity = Vector2(inputHorizontal * move_speed * _delta, velocity.y)
+	
+	
+	
+	velocity = Vector2(inputHorizontal * move_speed, velocity.y)
 	move_and_slide()
 
 func _on_SelfArea_body_entered(body):

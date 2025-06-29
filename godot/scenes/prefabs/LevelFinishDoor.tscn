@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cyti38f0lagf2"]
 
 [ext_resource type="Script" uid="uid://b45u3vtw7plgf" path="res://scripts/LevelFinishDoor.gd" id="1_bto8y"]
-[ext_resource type="Texture2D" uid="uid://dbbfn3m0jjnbt" path="res://assets/静态背景2/场景门atlas/场景门-Sheet.png" id="2_di0uh"]
+[ext_resource type="Texture2D" uid="uid://di1fqrlqvarik" path="res://assets/静态背景2/场景门atlas/场景门-Sheet.png" id="2_di0uh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_di0uh"]
 atlas = ExtResource("2_di0uh")
