@@ -46,9 +46,6 @@ func _try_handle_input():
 
 func _movement(_delta: float):
 	var inputHorizontal = Input.get_axis("Left", "Right")
-	
-	
-	
 	velocity = Vector2(inputHorizontal * move_speed, velocity.y)
 	move_and_slide()
 

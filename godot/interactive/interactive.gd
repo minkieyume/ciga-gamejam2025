@@ -57,6 +57,10 @@ func _physics_process(_delta: float):
 		_movement(_delta)
 		#player_animations()
 		flip_player()
+	if velocity.x!=0 and is_on_floor():
+		$SFX/Moving.play()
+	else:
+		$SFX/Moving.stop()
 
 
 ## 可覆盖: 与目标相关的交互逻辑, 相当于控制器
@@ -132,6 +136,7 @@ func jump():
 	jump_tween()
 	AudioManager.jump_sfx.play()
 	velocity.y = -jump_force
+	$SFX/Jump.play()
 
 
 # Handle Player Animations
@@ -194,6 +199,7 @@ func handle_interaction():
 
 func attach():
 	print("attached")
+	$SFX/Attach.play()
 	set_control(true)
 	if camera:
 		camera.enabled = true
@@ -205,6 +211,7 @@ func attach():
 
 func disattach():
 	print("disattach")
+	$SFX/Disattach.play()
 	set_control(false)
 	if camera:
 		camera.enabled = false
