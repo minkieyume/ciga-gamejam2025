@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_s46h7"]
 [ext_resource type="Script" uid="uid://c8yfjivp6ktlj" path="res://interactive/box/box.gd" id="2_yf2ss"]
-[ext_resource type="Resource" uid="uid://d201v5x71j3gp" path="res://dialogue/item.dialogue" id="3_wisct"]
-[ext_resource type="Texture2D" uid="uid://bdake6p5pukpt" path="res://assets/静态物品/box.png" id="3_yf2ss"]
+[ext_resource type="Resource" uid="uid://dik4awg5qcxei" path="res://dialogue/item.dialogue" id="3_wisct"]
+[ext_resource type="Texture2D" uid="uid://b5nxjbfpq4viv" path="res://assets/静态物品/box.png" id="3_yf2ss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixq8g"]
 

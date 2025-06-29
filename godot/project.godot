@@ -16,7 +16,7 @@ config/version="v.0.1.0"
 config/tags=PackedStringArray("ciga2025")
 run/main_scene="uid://cmqqdhtcmdkqd"
 config/features=PackedStringArray("4.4", "Forward Plus")
-boot_splash/image="uid://dsy5fijnuspn4"
+boot_splash/image="uid://4qh5wnlc4xfs"
 config/icon="uid://jqtn0sp1ptt7"
 
 [autoload]
@@ -38,7 +38,7 @@ window/size/viewport_height=540
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
-mouse_cursor/custom_image="uid://cw0r4acx0ytut"
+mouse_cursor/custom_image="uid://clswbeh7yfp6p"
 mouse_cursor/custom_image_hotspot=Vector2(30, 15)
 
 [dotnet]
