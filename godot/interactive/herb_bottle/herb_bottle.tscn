@@ -1,17 +1,18 @@
-[gd_scene load_steps=17 format=3 uid="uid://djxo84uct5y7e"]
+[gd_scene load_steps=18 format=3 uid="uid://djxo84uct5y7e"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_uw2r6"]
 [ext_resource type="Script" uid="uid://bccmp7txe2nmu" path="res://interactive/herb_bottle/herb_bottle.gd" id="2_7ec1c"]
-[ext_resource type="Texture2D" uid="uid://cplsps2g2xva1" path="res://assets/静态物品/药水1.png" id="3_d1iwm"]
+[ext_resource type="Texture2D" uid="uid://cfdacy5dkaf7l" path="res://assets/静态物品/药水1.png" id="3_d1iwm"]
 [ext_resource type="SpriteFrames" uid="uid://dcadrvwkbvxnn" path="res://assets/animations/leg.tres" id="4_4tpyw"]
-[ext_resource type="Texture2D" uid="uid://kfc0dsccp5m" path="res://assets/静态物品/药水2.png" id="4_xj8ka"]
-[ext_resource type="Texture2D" uid="uid://cqkh0bvph7g3h" path="res://assets/静态物品/药水3.png" id="5_05dd2"]
-[ext_resource type="Texture2D" uid="uid://be3jvjgf6i7rb" path="res://assets/静态物品/药水4.png" id="6_y8d30"]
-[ext_resource type="Texture2D" uid="uid://bdw5f25xihooc" path="res://assets/静态物品/药瓶5.png" id="7_y8d30"]
-[ext_resource type="Texture2D" uid="uid://o4ugxfa0c1pf" path="res://assets/静态物品/药瓶6.png" id="8_iq2ug"]
-[ext_resource type="Texture2D" uid="uid://cl0qu6n2ldear" path="res://assets/静态背景2/瓶子7.png" id="9_r6owu"]
-[ext_resource type="Texture2D" uid="uid://bg31mhiw2nqwe" path="res://assets/静态背景2/瓶子9.png" id="10_x1g5k"]
-[ext_resource type="Texture2D" uid="uid://dhho58qu4y0u2" path="res://assets/静态背景2/瓶子8.png" id="11_fmf0j"]
+[ext_resource type="Texture2D" uid="uid://cbx2thdkdnloy" path="res://assets/静态物品/药水2.png" id="4_xj8ka"]
+[ext_resource type="Texture2D" uid="uid://chs6t5bmy4y3c" path="res://assets/静态物品/药水3.png" id="5_05dd2"]
+[ext_resource type="Texture2D" uid="uid://dfg12j1fwd5hb" path="res://assets/静态物品/药水4.png" id="6_y8d30"]
+[ext_resource type="Texture2D" uid="uid://ckxncedsvtmag" path="res://assets/静态物品/药瓶5.png" id="7_y8d30"]
+[ext_resource type="Texture2D" uid="uid://dbp8atjrvn1ed" path="res://assets/静态物品/药瓶6.png" id="8_iq2ug"]
+[ext_resource type="Texture2D" uid="uid://cq3vwpeaxltt4" path="res://assets/静态背景2/瓶子7.png" id="9_r6owu"]
+[ext_resource type="Texture2D" uid="uid://bj4fdgiachl83" path="res://assets/静态背景2/瓶子9.png" id="10_x1g5k"]
+[ext_resource type="Texture2D" uid="uid://b5aehu4y6agt1" path="res://assets/静态背景2/瓶子8.png" id="11_fmf0j"]
+[ext_resource type="Resource" uid="uid://d201v5x71j3gp" path="res://dialogue/item.dialogue" id="12_fmf0j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uskn8"]
 size = Vector2(30, 60)
@@ -40,7 +41,8 @@ texture = Dictionary[int, Texture2D]({
 7: ExtResource("11_fmf0j"),
 8: ExtResource("10_x1g5k")
 })
-dialogue_resource = null
+dialogue_resource = ExtResource("12_fmf0j")
+dialogue_node = "bottle1"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(-1, 33)

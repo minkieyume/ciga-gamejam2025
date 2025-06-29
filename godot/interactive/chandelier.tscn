@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfq06cp1k6xih"]
+[gd_scene load_steps=8 format=3 uid="uid://dfq06cp1k6xih"]
 
 [ext_resource type="PackedScene" uid="uid://cwyajbo1iy7ii" path="res://interactive/platform_interactive.tscn" id="1_y0fy5"]
-[ext_resource type="Script" path="res://interactive/chandelier.gd" id="2_3ls5r"]
+[ext_resource type="Script" uid="uid://4hg0mwxh0aj7" path="res://interactive/chandelier/chandelier.gd" id="2_3ls5r"]
 [ext_resource type="Texture2D" uid="uid://cdgognnt83s33" path="res://icon.svg" id="2_e64hr"]
+[ext_resource type="Resource" uid="uid://d201v5x71j3gp" path="res://dialogue/item.dialogue" id="3_rhiwo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ls5r"]
 size = Vector2(32, 32)
@@ -19,6 +20,8 @@ script = ExtResource("2_3ls5r")
 platform_move_direction = Vector2(0, 1)
 platform_move_distance = 128
 platform_move_speed = 200.0
+dialogue_resource = ExtResource("3_rhiwo")
+dialogue_node = "chandier"
 
 [node name="CollisionShape2D" parent="SelfArea" index="0"]
 shape = SubResource("RectangleShape2D_3ls5r")

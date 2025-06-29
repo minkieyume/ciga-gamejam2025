@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://chommy2oxei5m"]
+[gd_scene load_steps=8 format=3 uid="uid://chommy2oxei5m"]
 
 [ext_resource type="PackedScene" uid="uid://cwyajbo1iy7ii" path="res://interactive/platform_interactive.tscn" id="1_iciu2"]
-[ext_resource type="Texture2D" uid="uid://bd3u4mjoh8n48" path="res://assets/静态背景2/花盆atlas/花盆-Sheet.png" id="2_8xicl"]
+[ext_resource type="Resource" uid="uid://d201v5x71j3gp" path="res://dialogue/item.dialogue" id="2_05tst"]
+[ext_resource type="Texture2D" uid="uid://chsx6mglybes1" path="res://assets/静态背景2/花盆atlas/花盆-Sheet.png" id="2_8xicl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dgik"]
 size = Vector2(32, 16)
@@ -18,8 +19,10 @@ size = Vector2(32, 8)
 [node name="FlowerPot" instance=ExtResource("1_iciu2")]
 platform_move_distance = 128
 platform_move_speed = 200.0
+dialogue_resource = ExtResource("2_05tst")
+dialogue_node = "flower"
 
-[node name="Sprite2D" parent="." index="1"]
+[node name="Sprite2D" parent="." index="0"]
 position = Vector2(-1, -14)
 texture = ExtResource("2_8xicl")
 hframes = 4
@@ -33,7 +36,7 @@ shape = SubResource("RectangleShape2D_6dgik")
 position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_qch6g")
 
-[node name="CollisionShape2D" parent="." index="4"]
+[node name="CollisionShape2D" parent="." index="3"]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_f20jt")
 

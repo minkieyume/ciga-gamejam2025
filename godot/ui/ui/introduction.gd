@@ -41,8 +41,9 @@ func handle_scheduling() :
 		$Introduction/IntroComponents/Slide2/AudioStreamPlayer.play()
 	slide_name="Slide"+str(current_slide)
 	intro_components.get_node(slide_name).show()
-	
-	intro_components
+	#match current_slide:
+		#$Introduction/IntroComponents/Slide0/Text.visible_ratio=0
+		
 	current_slide+=1
 			
 func _input(event):
