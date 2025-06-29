@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bl1udqpqocb2a"]
+[gd_scene load_steps=8 format=3 uid="uid://bl1udqpqocb2a"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_fsh4t"]
 [ext_resource type="Script" uid="uid://b47miqjjovijq" path="res://interactive/eye_ball/eye_ball.gd" id="2_sr5sd"]
-[ext_resource type="Texture2D" uid="uid://qai64on4fwfr" path="res://assets/textures/眼球.png" id="3_wh8x7"]
+[ext_resource type="Resource" uid="uid://d201v5x71j3gp" path="res://dialogue/item.dialogue" id="3_0pfu0"]
+[ext_resource type="Texture2D" uid="uid://d3ibaveuwyqqb" path="res://assets/textures/眼球.png" id="3_wh8x7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wh8x7"]
 size = Vector2(33, 29.5)
@@ -17,6 +18,8 @@ radius = 18.0278
 scale = Vector2(2, 2)
 script = ExtResource("2_sr5sd")
 gravity = 0.0
+dialogue_resource = ExtResource("3_0pfu0")
+dialogue_node = "eye"
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_wh8x7")

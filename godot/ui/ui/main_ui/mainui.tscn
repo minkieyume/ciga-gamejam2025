@@ -1,19 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://ik27nkd02ose"]
+[gd_scene load_steps=11 format=3 uid="uid://ik27nkd02ose"]
 
 [ext_resource type="Script" uid="uid://bfbcpcsge1tcn" path="res://ui/ui/main_ui/mainui.gd" id="1_bqiya"]
 [ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/ui/main_ui/maintheme.tres" id="2_0e4jt"]
-[ext_resource type="Texture2D" uid="uid://dsy5fijnuspn4" path="res://assets/chikochiko_full.png" id="3_7riyb"]
-[ext_resource type="Texture2D" uid="uid://jqtn0sp1ptt7" path="res://chikochiko.svg" id="3_ncs8n"]
-[ext_resource type="Texture2D" uid="uid://bnaujj8i2rfb" path="res://{BEC53DFB-FD22-9040-ACA0-6559149EDB9D}.png" id="3_pgaip"]
-[ext_resource type="Texture2D" uid="uid://d3ibaveuwyqqb" path="res://assets/textures/眼球.png" id="6_itr3r"]
-[ext_resource type="AudioStream" uid="uid://b3t8bib71awko" path="res://assets/crazy poision alives.ogg" id="6_lluby"]
-[ext_resource type="AudioStream" uid="uid://dysmfoqofwc0h" path="res://我的乐曲-6_1_.ogg" id="8_pgaip"]
+[ext_resource type="PackedScene" uid="uid://cjybbal1tv5f0" path="res://ui/ui/introduction.tscn" id="2_kx1vw"]
+[ext_resource type="Texture2D" uid="uid://4qh5wnlc4xfs" path="res://assets/chikochiko_full.png" id="3_7riyb"]
+[ext_resource type="Texture2D" uid="uid://883q87siu5li" path="res://chikochiko.svg" id="3_ncs8n"]
+[ext_resource type="Texture2D" uid="uid://x0poxvkjhdrt" path="res://{BEC53DFB-FD22-9040-ACA0-6559149EDB9D}.png" id="3_pgaip"]
+[ext_resource type="Texture2D" uid="uid://db56dktkggbt5" path="res://assets/textures/眼球.png" id="6_itr3r"]
+[ext_resource type="AudioStream" uid="uid://dh30fjo7ymc6n" path="res://assets/crazy poision alives.ogg" id="6_lluby"]
+[ext_resource type="AudioStream" uid="uid://dn6l0k6oxdo2d" path="res://我的乐曲-6_1_.ogg" id="8_pgaip"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r3vs"]
 texture = ExtResource("3_7riyb")
 
 [node name="MainUi" type="CanvasLayer" node_paths=PackedStringArray("start_game_button", "quit_game_button")]
 script = ExtResource("1_bqiya")
+intoduction_ui = ExtResource("2_kx1vw")
 start_game_button = NodePath("MainUI/MainPanel/Start")
 quit_game_button = NodePath("MainUI/MainPanel/Quit")
 metadata/_custom_type_script = "uid://bhwyguulvscig"

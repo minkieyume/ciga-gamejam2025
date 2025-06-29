@@ -2,18 +2,13 @@ extends IUi
 @export var start_level:PackedScene
 @onready var intro_components:=$Introduction/IntroComponents
 
-
-signal start_level_scene
-
 #当前播放到的幻灯片
 var current_slide:int=-1
 var slide_name:String
 const SLIDE_SIZE:=4
-var tween 
 
 func _ready() -> void:
 	current_slide=0
-	tween = create_tween()
 	for i:int in range(0,SLIDE_SIZE):
 		slide_name="Slide"+str(i)
 		intro_components.get_node(slide_name).hide()
@@ -63,3 +58,5 @@ func _input(event):
 			if current_state is GameStartState:
 				current_state.update_trigger = true
 			MLevel.level_loaded.emit(start_level)
+			MUiSpawner._unspawn()
+			

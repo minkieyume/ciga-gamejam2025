@@ -1,45 +1,45 @@
 [gd_scene load_steps=44 format=3 uid="uid://cjybbal1tv5f0"]
 
 [ext_resource type="Script" uid="uid://nsxm1ap3uiwk" path="res://ui/ui/introduction.gd" id="1_kfe66"]
-[ext_resource type="Texture2D" uid="uid://bmgbihu2uyue4" path="res://assets/静态背景2/背景颜色.png" id="2_je7el"]
-[ext_resource type="Texture2D" uid="uid://2x5n8y08dlcy" path="res://assets/静态背景2/破败墙壁.png" id="3_nb47s"]
-[ext_resource type="Texture2D" uid="uid://dw8acjjw5wsgf" path="res://assets/界面基础物件.png" id="4_su6op"]
-[ext_resource type="Texture2D" uid="uid://brnp7xflfi5db" path="res://assets/静态背景2/窗户.png" id="5_0l870"]
-[ext_resource type="Texture2D" uid="uid://bdg2hoiriwe6x" path="res://assets/静态背景2/窗外风景.png" id="6_ejrfm"]
-[ext_resource type="Texture2D" uid="uid://4ie6hus8sqk2" path="res://assets/静态背景2/主界面组件1.png" id="7_uv8lv"]
-[ext_resource type="Texture2D" uid="uid://ch62os7jjhb3q" path="res://assets/静态背景2/主界面组件.png" id="8_86htv"]
-[ext_resource type="Texture2D" uid="uid://chhfxdqba1yld" path="res://assets/静态背景2/蜘蛛网.png" id="9_pgyv4"]
-[ext_resource type="Texture2D" uid="uid://qhaefl5gsrgi" path="res://assets/静态背景2/小蜘蛛.png" id="10_1cine"]
-[ext_resource type="Texture2D" uid="uid://vwqelaykqefb" path="res://assets/静态物品/药水1.png" id="11_gjha2"]
-[ext_resource type="Texture2D" uid="uid://b858bp5gy5cqf" path="res://assets/静态物品/药水2.png" id="12_t6mjd"]
-[ext_resource type="Texture2D" uid="uid://bxcs7fsx840fo" path="res://assets/静态物品/药水3.png" id="13_55pyt"]
-[ext_resource type="Texture2D" uid="uid://dl8ewamino2y4" path="res://assets/静态物品/药水4.png" id="14_g2fst"]
-[ext_resource type="Texture2D" uid="uid://c03vsk24jgj7n" path="res://assets/静态物品/烛台.png" id="15_ou3up"]
-[ext_resource type="Texture2D" uid="uid://brqsx3gqu7n82" path="res://assets/静态背景2/绿藤蔓.png" id="16_0b6vh"]
-[ext_resource type="Texture2D" uid="uid://bmq0hpm814lys" path="res://assets/静态物品/药瓶5.png" id="17_tnqcw"]
-[ext_resource type="Texture2D" uid="uid://djdy5tyhy1bwl" path="res://assets/静态物品/空罐子.png" id="18_ywy3b"]
-[ext_resource type="Texture2D" uid="uid://0xgtki4omfkd" path="res://assets/静态背景2/瓶子7.png" id="19_gboqk"]
-[ext_resource type="Texture2D" uid="uid://bk5vn7gw4qv17" path="res://assets/静态背景2/捣药台.png" id="20_iwa3i"]
-[ext_resource type="Texture2D" uid="uid://cn1kqvlqb4f1m" path="res://assets/静态背景2/瓶子8.png" id="21_ht06a"]
-[ext_resource type="Texture2D" uid="uid://bbrfjg0es4bqr" path="res://assets/静态背景2/瓶子10.png" id="22_kepof"]
-[ext_resource type="Texture2D" uid="uid://cljp2istngd2x" path="res://assets/静态背景2/瓶子9.png" id="23_mu8r3"]
-[ext_resource type="Texture2D" uid="uid://tyl2ko7rk6y8" path="res://assets/静态背景2/鸟头骨.png" id="24_8wj7h"]
-[ext_resource type="Texture2D" uid="uid://ctb6ig6op3grv" path="res://assets/静态物品/书架.png" id="25_f8jcx"]
-[ext_resource type="Texture2D" uid="uid://vcc4j7w5etjw" path="res://assets/静态物品/红水晶.png" id="26_k28t2"]
-[ext_resource type="Texture2D" uid="uid://cn7jkbw4k8e31" path="res://assets/静态物品/水晶球.png" id="27_wx6t7"]
-[ext_resource type="Texture2D" uid="uid://cs58wssb0d5m1" path="res://assets/静态背景2/书本.png" id="28_cbula"]
-[ext_resource type="Texture2D" uid="uid://21rynewon3io" path="res://assets/静态物品/药瓶6.png" id="29_05wjr"]
-[ext_resource type="Texture2D" uid="uid://dyr7tnkoa8aky" path="res://assets/静态物品/眼球.png" id="30_3oq0k"]
-[ext_resource type="Texture2D" uid="uid://diomgkmc67ve8" path="res://assets/静态物品/章鱼触手.png" id="31_15jhx"]
-[ext_resource type="Texture2D" uid="uid://bw7cbvixbj6dw" path="res://assets/静态背景2/坩埚atlas/坩埚01.png" id="32_m33w2"]
-[ext_resource type="Texture2D" uid="uid://dffwgpwjigi11" path="res://assets/静态背景2/女巫背身.png" id="33_ywif0"]
-[ext_resource type="Texture2D" uid="uid://ke1a6qh1kejq" path="res://assets/静态背景2/书.png" id="34_vwni7"]
-[ext_resource type="FontFile" uid="uid://hqm27y0ugmn" path="res://assets/fonts/Star Choco.ttf" id="35_je7el"]
+[ext_resource type="Texture2D" uid="uid://w5owa1mrky28" path="res://assets/静态背景2/背景颜色.png" id="2_je7el"]
+[ext_resource type="PackedScene" uid="uid://bw0ybb5qykkti" path="res://scenes/levels/neko_first_level.tscn" id="2_nb47s"]
+[ext_resource type="Texture2D" uid="uid://5o50wgfhodp" path="res://assets/静态背景2/破败墙壁.png" id="3_nb47s"]
+[ext_resource type="Texture2D" uid="uid://81o5vqn4qxuh" path="res://assets/界面基础物件.png" id="4_su6op"]
+[ext_resource type="Texture2D" uid="uid://bj46nwccxldu3" path="res://assets/静态背景2/窗户.png" id="5_0l870"]
+[ext_resource type="Texture2D" uid="uid://dv05pfcvh78w5" path="res://assets/静态背景2/窗外风景.png" id="6_ejrfm"]
+[ext_resource type="Texture2D" uid="uid://3fghuxecna5" path="res://assets/静态背景2/主界面组件1.png" id="7_uv8lv"]
+[ext_resource type="Texture2D" uid="uid://5vdbl34pxrb" path="res://assets/静态背景2/主界面组件.png" id="8_86htv"]
+[ext_resource type="Texture2D" uid="uid://51rikfy0ne8k" path="res://assets/静态背景2/蜘蛛网.png" id="9_pgyv4"]
+[ext_resource type="Texture2D" uid="uid://cn3ep2dkd6vwc" path="res://assets/静态背景2/小蜘蛛.png" id="10_1cine"]
+[ext_resource type="Texture2D" uid="uid://cplsps2g2xva1" path="res://assets/静态物品/药水1.png" id="11_gjha2"]
+[ext_resource type="Texture2D" uid="uid://kfc0dsccp5m" path="res://assets/静态物品/药水2.png" id="12_t6mjd"]
+[ext_resource type="Texture2D" uid="uid://cqkh0bvph7g3h" path="res://assets/静态物品/药水3.png" id="13_55pyt"]
+[ext_resource type="Texture2D" uid="uid://be3jvjgf6i7rb" path="res://assets/静态物品/药水4.png" id="14_g2fst"]
+[ext_resource type="Texture2D" uid="uid://cckl5kixrx4ak" path="res://assets/静态物品/烛台.png" id="15_ou3up"]
+[ext_resource type="Texture2D" uid="uid://dq2yo6bmqg32w" path="res://assets/静态背景2/绿藤蔓.png" id="16_0b6vh"]
+[ext_resource type="Texture2D" uid="uid://bdw5f25xihooc" path="res://assets/静态物品/药瓶5.png" id="17_tnqcw"]
+[ext_resource type="Texture2D" uid="uid://jt2pl1fbl438" path="res://assets/静态物品/空罐子.png" id="18_ywy3b"]
+[ext_resource type="Texture2D" uid="uid://cl0qu6n2ldear" path="res://assets/静态背景2/瓶子7.png" id="19_gboqk"]
+[ext_resource type="Texture2D" uid="uid://xihpxrwu4yyh" path="res://assets/静态背景2/捣药台.png" id="20_iwa3i"]
+[ext_resource type="Texture2D" uid="uid://dhho58qu4y0u2" path="res://assets/静态背景2/瓶子8.png" id="21_ht06a"]
+[ext_resource type="Texture2D" uid="uid://dj8bouv7bibi0" path="res://assets/静态背景2/瓶子10.png" id="22_kepof"]
+[ext_resource type="Texture2D" uid="uid://bg31mhiw2nqwe" path="res://assets/静态背景2/瓶子9.png" id="23_mu8r3"]
+[ext_resource type="Texture2D" uid="uid://cnua1onaueyaq" path="res://assets/静态背景2/鸟头骨.png" id="24_8wj7h"]
+[ext_resource type="Texture2D" uid="uid://bmtbt5ywiewr0" path="res://assets/静态物品/书架.png" id="25_f8jcx"]
+[ext_resource type="Texture2D" uid="uid://c248nvj0nu3ud" path="res://assets/静态物品/红水晶.png" id="26_k28t2"]
+[ext_resource type="Texture2D" uid="uid://duu6dgejace6c" path="res://assets/静态物品/水晶球.png" id="27_wx6t7"]
+[ext_resource type="Texture2D" uid="uid://cxtb1khsb5wsl" path="res://assets/静态背景2/书本.png" id="28_cbula"]
+[ext_resource type="Texture2D" uid="uid://o4ugxfa0c1pf" path="res://assets/静态物品/药瓶6.png" id="29_05wjr"]
+[ext_resource type="Texture2D" uid="uid://3nd8r3yhjskw" path="res://assets/静态物品/眼球.png" id="30_3oq0k"]
+[ext_resource type="Texture2D" uid="uid://7j28h4jlraaw" path="res://assets/静态物品/章鱼触手.png" id="31_15jhx"]
+[ext_resource type="Texture2D" uid="uid://ua7m1ohu178r" path="res://assets/静态背景2/坩埚atlas/坩埚01.png" id="32_m33w2"]
+[ext_resource type="Texture2D" uid="uid://bvoemgr23fxxj" path="res://assets/静态背景2/女巫背身.png" id="33_ywif0"]
+[ext_resource type="Texture2D" uid="uid://bmtdwsb5rhoix" path="res://assets/静态背景2/书.png" id="34_vwni7"]
 [ext_resource type="SpriteFrames" uid="uid://dth2yyhahtcmn" path="res://assets/animations/pot.tres" id="35_mmy5h"]
-[ext_resource type="Texture2D" uid="uid://dpt8oxb68a4bt" path="res://assets/静态背景2/迸发星光atlas/迸发星光-Sheet.png" id="36_lo4cj"]
-[ext_resource type="Texture2D" uid="uid://cm0tyeuk33f8e" path="res://assets/静态背景2/爆炸.png" id="37_wu6df"]
-[ext_resource type="AudioStream" uid="uid://e562efstsp58" path="res://assets/free/小爆炸.mp3" id="38_nfdi7"]
-[ext_resource type="Texture2D" uid="uid://4fh2exyvexca" path="res://assets/静态物品/小幽灵.png" id="39_1s0f6"]
+[ext_resource type="Texture2D" uid="uid://brc25fcop36ov" path="res://assets/静态背景2/迸发星光atlas/迸发星光-Sheet.png" id="36_lo4cj"]
+[ext_resource type="Texture2D" uid="uid://cj6tbkrihr5hd" path="res://assets/静态背景2/爆炸.png" id="37_wu6df"]
+[ext_resource type="AudioStream" uid="uid://duuwqnqulbrw5" path="res://assets/free/小爆炸.mp3" id="38_nfdi7"]
+[ext_resource type="Texture2D" uid="uid://bnbkxx134cc14" path="res://assets/静态物品/小幽灵.png" id="39_1s0f6"]
 
 [sub_resource type="Animation" id="Animation_m15re"]
 length = 0.001
@@ -154,6 +154,7 @@ _data = {
 
 [node name="IUi" type="CanvasLayer"]
 script = ExtResource("1_kfe66")
+start_level = ExtResource("2_nb47s")
 metadata/_custom_type_script = "uid://bpkvp0l3wxrx1"
 
 [node name="Introduction" type="Control" parent="."]
@@ -584,17 +585,6 @@ offset_bottom = 331.0
 texture = ExtResource("34_vwni7")
 stretch_mode = 6
 metadata/_edit_lock_ = true
-
-[node name="Text" type="Label" parent="Introduction/IntroComponents/Slide0"]
-layout_mode = 0
-offset_left = -275.0
-offset_top = -265.0
-offset_right = 490.0
-offset_bottom = -160.0
-theme_override_fonts/font = ExtResource("35_je7el")
-theme_override_font_sizes/font_size = 38
-text = "占卜出大限将至的炼金师，决定铤而走险尝试一本古老禁书上的不老魔药"
-autowrap_mode = 3
 
 [node name="Slide1" type="TextureRect" parent="Introduction/IntroComponents"]
 layout_mode = 0
