@@ -40,12 +40,16 @@ func _ready():
 	self_area.body_entered.connect(_on_SelfArea_body_entered)
 	self_area.area_entered.connect(_on_SelfArea_area_entered)
 	self_area.area_exited.connect(_on_SelfArea_area_exited)
+	_fix_camera()
+
+func _fix_camera() -> void:
 	if camera:
 		camera.enabled = false
 		camera.limit_left = MEventbus.limit_cameraLU.x
 		camera.limit_top = MEventbus.limit_cameraLU.y
 		camera.limit_right = MEventbus.limit_cameraRD.x
 		camera.limit_bottom = MEventbus.limit_cameraRD.y
+
 
 func _physics_process(_delta: float):
 	if Engine.is_editor_hint():

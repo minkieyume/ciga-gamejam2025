@@ -3,11 +3,13 @@ extends Node
 
 @export var player_spawner: PlayerSpawner
 
-@export var LU_position : Vector2:
-	set(value):
-		MEventbus.limit_cameraLU = value
-		LU_position = value
-@export var RD_position : Vector2:
-	set(value):
-		MEventbus.limit_cameraRD = value
-		RD_position = value
+@export var LU_position : Array[Vector2]
+
+@export var RD_position : Array[Vector2]
+
+func _enter_tree() -> void:
+	_change_camera_limit(0)
+
+func _change_camera_limit(id: int):
+	MEventbus.limit_cameraLU = LU_position[id]
+	MEventbus.limit_cameraRD = RD_position[id]
