@@ -136,7 +136,8 @@ metadata/_edit_lock_ = true
 
 [node name="LevelFinishDoor" parent="." instance=ExtResource("2_fa7hk")]
 z_index = 1
-position = Vector2(94, 1827)
+position = Vector2(186, 1737)
+scale = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("4_htwpa")]
 position = Vector2(132, 476)

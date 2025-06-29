@@ -1,7 +1,7 @@
 extends Area2D
 
-# Define the next scene to load in the inspector
-@export var next_scene : PackedScene
+func _ready() -> void:
+	$Sprite2D.play(&"default")
 
 # Load next level scene when player collide with level finish door.
 func _on_body_entered(body):

@@ -88,6 +88,7 @@ scale_amount_curve = SubResource("Curve_m2jh0")
 color_ramp = SubResource("Gradient_3gc37")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+z_index = 3
 limit_smoothed = true
 position_smoothing_enabled = true
 
