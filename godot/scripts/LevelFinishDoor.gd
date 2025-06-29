@@ -14,7 +14,7 @@ func _ready() -> void:
 
 # Load next level scene when player collide with level finish door.
 func _on_body_entered(body):
-	if body is Interactive: 
+	if body is HerbBottle: 
 		await level._change_camera_limit(target_id)
 		body._fix_camera()
 		MPlayerStatic.player_static._fix_camera()

@@ -48,7 +48,7 @@ script = ExtResource("1_bto8y")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_r5end")
-frame_progress = 0.892823
+frame_progress = 0.565008
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
