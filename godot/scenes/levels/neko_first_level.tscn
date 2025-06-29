@@ -336,7 +336,7 @@ dialogue_resource = null
 dialogue_node = ""
 
 [node name="Chandelier" parent="objects" instance=ExtResource("22_j5les")]
-position = Vector2(1238, 77)
+position = Vector2(639, 121)
 dialogue_resource = null
 dialogue_node = ""
 
