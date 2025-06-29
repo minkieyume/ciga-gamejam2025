@@ -15,6 +15,7 @@ extends Interactive
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
+	super._ready()
 	update_size()
 
 
