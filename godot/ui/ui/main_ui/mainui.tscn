@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bfbcpcsge1tcn" path="res://ui/ui/main_ui/mainui.gd" id="1_bqiya"]
 [ext_resource type="Theme" uid="uid://dq67os7j8flsh" path="res://ui/ui/main_ui/maintheme.tres" id="2_0e4jt"]
-[ext_resource type="PackedScene" uid="uid://bw0ybb5qykkti" path="res://scenes/levels/neko_first_level.tscn" id="2_8af7k"]
 [ext_resource type="Texture2D" uid="uid://dsy5fijnuspn4" path="res://assets/chikochiko_full.png" id="3_7riyb"]
 [ext_resource type="Texture2D" uid="uid://jqtn0sp1ptt7" path="res://chikochiko.svg" id="3_ncs8n"]
+[ext_resource type="Texture2D" uid="uid://bnaujj8i2rfb" path="res://{BEC53DFB-FD22-9040-ACA0-6559149EDB9D}.png" id="3_pgaip"]
 [ext_resource type="Texture2D" uid="uid://d3ibaveuwyqqb" path="res://assets/textures/眼球.png" id="6_itr3r"]
 [ext_resource type="AudioStream" uid="uid://b3t8bib71awko" path="res://assets/crazy poision alives.ogg" id="6_lluby"]
 [ext_resource type="AudioStream" uid="uid://dysmfoqofwc0h" path="res://我的乐曲-6_1_.ogg" id="8_pgaip"]
@@ -14,7 +14,6 @@ texture = ExtResource("3_7riyb")
 
 [node name="MainUi" type="CanvasLayer" node_paths=PackedStringArray("start_game_button", "quit_game_button")]
 script = ExtResource("1_bqiya")
-intoduction_ui = ExtResource("2_lluby")
 start_game_button = NodePath("MainUI/MainPanel/Start")
 quit_game_button = NodePath("MainUI/MainPanel/Quit")
 metadata/_custom_type_script = "uid://bhwyguulvscig"
@@ -29,10 +28,10 @@ grow_vertical = 2
 theme = ExtResource("2_0e4jt")
 
 [node name="Background" type="TextureRect" parent="MainUI"]
-visible = false
 layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
+texture = ExtResource("3_pgaip")
 
 [node name="TeamPanel" type="Panel" parent="MainUI"]
 visible = false
