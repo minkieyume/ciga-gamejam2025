@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bw0ybb5qykkti"]
+[gd_scene load_steps=25 format=4 uid="uid://bw0ybb5qykkti"]
 
 [ext_resource type="Script" uid="uid://dy8to0hemrooh" path="res://scenes/levels/Level.gd" id="1_f65v8"]
 [ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://scenes/prefabs/LevelFinishDoor.tscn" id="2_fa7hk"]
@@ -21,6 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://dxtgyxkjxr3px" path="res://assets/静态背景2/蜘蛛网.png" id="10_aldet"]
 [ext_resource type="Texture2D" uid="uid://yslcjoey3f3e" path="res://assets/静态背景2/小蜘蛛.png" id="11_7v5ol"]
 [ext_resource type="PackedScene" uid="uid://bcevq147eb0fw" path="res://entities/herb_pot.tscn" id="12_213p3"]
+[ext_resource type="PackedScene" uid="uid://chommy2oxei5m" path="res://interactive/flower_pot/flower_pot.tscn" id="21_p5b8l"]
+[ext_resource type="PackedScene" uid="uid://c2tottyw6nnsb" path="res://interactive/chandelier/chandelier.tscn" id="22_j5les"]
+[ext_resource type="PackedScene" uid="uid://ic7l8dm5nvl5" path="res://interactive/pull_rod/pull_rod.tscn" id="23_tmh5r"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_f65v8")
@@ -165,7 +168,7 @@ position = Vector2(1622, 558)
 position = Vector2(2262, 556)
 
 [node name="HerbBottle4" parent="Poisions" instance=ExtResource("7_06a0y")]
-position = Vector2(400.843, -194.149)
+position = Vector2(1816, 994)
 
 [node name="objects" type="Node2D" parent="."]
 
@@ -173,7 +176,31 @@ position = Vector2(400.843, -194.149)
 position = Vector2(150, 145)
 
 [node name="Box" parent="objects" instance=ExtResource("9_uoucr")]
-position = Vector2(491, 592)
+position = Vector2(491, 608)
+
+[node name="Box2" parent="objects" instance=ExtResource("9_uoucr")]
+position = Vector2(557, 608)
+
+[node name="Box3" parent="objects" instance=ExtResource("9_uoucr")]
+position = Vector2(625, 608)
+
+[node name="Box4" parent="objects" instance=ExtResource("9_uoucr")]
+position = Vector2(522, 540)
+
+[node name="Box5" parent="objects" instance=ExtResource("9_uoucr")]
+position = Vector2(594, 542)
+
+[node name="Box6" parent="objects" instance=ExtResource("9_uoucr")]
+position = Vector2(554, 471)
+
+[node name="FlowerPot" parent="objects" instance=ExtResource("21_p5b8l")]
+position = Vector2(1829, 121)
+
+[node name="Chandelier" parent="objects" instance=ExtResource("22_j5les")]
+position = Vector2(1238, 77)
+
+[node name="PullRod" parent="objects" instance=ExtResource("23_tmh5r")]
+position = Vector2(984, 1525)
 
 [node name="BackGround2" type="Control" parent="."]
 layout_mode = 3

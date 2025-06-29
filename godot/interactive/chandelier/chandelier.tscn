@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cwyajbo1iy7ii" path="res://interactive/platform_interactive.tscn" id="1_y0fy5"]
 [ext_resource type="Script" uid="uid://4hg0mwxh0aj7" path="res://interactive/chandelier/chandelier.gd" id="2_3ls5r"]
-[ext_resource type="Texture2D" uid="uid://cl87apey7hedr" path="res://assets/静态背景2/吊灯.png" id="3_5morm"]
+[ext_resource type="Texture2D" uid="uid://qvrfngq61kxb" path="res://assets/静态背景2/吊灯.png" id="3_5morm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ls5r"]
 size = Vector2(32, 32)
@@ -14,11 +14,15 @@ size = Vector2(80, 80)
 size = Vector2(32, 8)
 
 [node name="Chandelier" instance=ExtResource("1_y0fy5")]
+scale = Vector2(3, 3)
 motion_mode = 1
 script = ExtResource("2_3ls5r")
 platform_move_direction = Vector2(0, 1)
 platform_move_distance = 128
 platform_move_speed = 200.0
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_5morm")
 
 [node name="CollisionShape2D" parent="SelfArea" index="0"]
 shape = SubResource("RectangleShape2D_3ls5r")
@@ -33,6 +37,3 @@ shape = SubResource("RectangleShape2D_41n44")
 [node name="Sprite2D" type="Sprite2D" parent="Platform" index="1"]
 position = Vector2(0, 12)
 scale = Vector2(0.25, 0.0625)
-
-[node name="Sprite2D" parent="." index="7"]
-texture = ExtResource("3_5morm")

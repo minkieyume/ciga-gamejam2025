@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://chommy2oxei5m"]
 
 [ext_resource type="PackedScene" uid="uid://cwyajbo1iy7ii" path="res://interactive/platform_interactive.tscn" id="1_iciu2"]
-[ext_resource type="Texture2D" uid="uid://qpb03ag85dhg" path="res://assets/静态背景2/花盆atlas/花盆-Sheet.png" id="2_8xicl"]
+[ext_resource type="Texture2D" uid="uid://bd3u4mjoh8n48" path="res://assets/静态背景2/花盆atlas/花盆-Sheet.png" id="2_8xicl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dgik"]
 size = Vector2(32, 16)
@@ -16,8 +16,15 @@ size = Vector2(32, 16)
 size = Vector2(32, 8)
 
 [node name="FlowerPot" instance=ExtResource("1_iciu2")]
+scale = Vector2(4, 4)
 platform_move_distance = 128
 platform_move_speed = 200.0
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(-1, -14)
+texture = ExtResource("2_8xicl")
+hframes = 4
+vframes = 4
 
 [node name="CollisionShape2D" parent="SelfArea" index="0"]
 position = Vector2(0, 8)
@@ -26,7 +33,7 @@ shape = SubResource("RectangleShape2D_6dgik")
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
 shape = SubResource("RectangleShape2D_qch6g")
 
-[node name="CollisionShape2D" parent="." index="3"]
+[node name="CollisionShape2D" parent="." index="4"]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_f20jt")
 
@@ -37,9 +44,3 @@ shape = SubResource("RectangleShape2D_lmhpc")
 [node name="Sprite2D" type="Sprite2D" parent="Platform" index="1"]
 position = Vector2(0, -12)
 scale = Vector2(0.25, 0.0625)
-
-[node name="Sprite2D" parent="." index="7"]
-position = Vector2(-1, -14)
-texture = ExtResource("2_8xicl")
-hframes = 4
-vframes = 4
