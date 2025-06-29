@@ -1,15 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://djxo84uct5y7e"]
+[gd_scene load_steps=17 format=3 uid="uid://djxo84uct5y7e"]
 
 [ext_resource type="PackedScene" uid="uid://d00smms5c2anp" path="res://interactive/interactive.tscn" id="1_uw2r6"]
 [ext_resource type="Script" uid="uid://bccmp7txe2nmu" path="res://interactive/herb_bottle/herb_bottle.gd" id="2_7ec1c"]
-[ext_resource type="Texture2D" uid="uid://i75gnwsdaeif" path="res://assets/textures/瓶子7.png" id="3_pvygk"]
+[ext_resource type="Texture2D" uid="uid://cplsps2g2xva1" path="res://assets/静态物品/药水1.png" id="3_d1iwm"]
 [ext_resource type="SpriteFrames" uid="uid://dcadrvwkbvxnn" path="res://assets/animations/leg.tres" id="4_4tpyw"]
+[ext_resource type="Texture2D" uid="uid://kfc0dsccp5m" path="res://assets/静态物品/药水2.png" id="4_xj8ka"]
+[ext_resource type="Texture2D" uid="uid://cqkh0bvph7g3h" path="res://assets/静态物品/药水3.png" id="5_05dd2"]
+[ext_resource type="Texture2D" uid="uid://be3jvjgf6i7rb" path="res://assets/静态物品/药水4.png" id="6_y8d30"]
+[ext_resource type="Texture2D" uid="uid://bdw5f25xihooc" path="res://assets/静态物品/药瓶5.png" id="7_y8d30"]
+[ext_resource type="Texture2D" uid="uid://o4ugxfa0c1pf" path="res://assets/静态物品/药瓶6.png" id="8_iq2ug"]
+[ext_resource type="Texture2D" uid="uid://cl0qu6n2ldear" path="res://assets/静态背景2/瓶子7.png" id="9_r6owu"]
+[ext_resource type="Texture2D" uid="uid://bg31mhiw2nqwe" path="res://assets/静态背景2/瓶子9.png" id="10_x1g5k"]
+[ext_resource type="Texture2D" uid="uid://dhho58qu4y0u2" path="res://assets/静态背景2/瓶子8.png" id="11_fmf0j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uskn8"]
-size = Vector2(27, 48)
+size = Vector2(30, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajm4n"]
-size = Vector2(110.519, 120.551)
+size = Vector2(120, 140)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afrrc"]
 size = Vector2(25, 35)
@@ -19,28 +27,42 @@ size = Vector2(20, 14)
 
 [node name="HerbBottle" instance=ExtResource("1_uw2r6")]
 script = ExtResource("2_7ec1c")
-herb_id = -1
-move_speed = 100.0
+herb_id = 0
+texture = Dictionary[int, Texture2D]({
+0: ExtResource("3_d1iwm"),
+1: ExtResource("4_xj8ka"),
+2: ExtResource("5_05dd2"),
+3: ExtResource("6_y8d30"),
+4: ExtResource("7_y8d30"),
+5: ExtResource("8_iq2ug"),
+6: ExtResource("9_r6owu"),
+7: ExtResource("11_fmf0j"),
+8: ExtResource("10_x1g5k")
+})
 dialogue_resource = null
 
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("3_pvygk")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(-1, 33)
+scale = Vector2(1.5, 2.5)
+sprite_frames = ExtResource("4_4tpyw")
+animation = &"idle"
+frame_progress = 0.643405
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("9_r6owu")
 
 [node name="CollisionShape2D" parent="SelfArea" index="0"]
+position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_uskn8")
 
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
+position = Vector2(0, 5)
 scale = Vector2(0.244302, 0.398172)
 shape = SubResource("RectangleShape2D_ajm4n")
 
-[node name="CollisionShape2D" parent="." index="3"]
+[node name="CollisionShape2D" parent="." index="4"]
 scale = Vector2(1, 1.38983)
 shape = SubResource("RectangleShape2D_afrrc")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="7"]
-position = Vector2(-1, 33)
-sprite_frames = ExtResource("4_4tpyw")
-animation = &"idle"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="8"]
 position = Vector2(0, 32)

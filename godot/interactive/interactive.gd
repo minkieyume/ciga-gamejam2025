@@ -6,9 +6,9 @@ extends CharacterBody2D
 
 # --------- VARIABLES ---------- #
 
-@export var move_speed: float = 300
+@export var move_speed: float = 100
 @export var jump_force: float = 250
-@export var gravity: float = 980 / 2
+@export var gravity: float = 700
 @export var max_jump_count: int = 2
 @export var dialogue_resource: DialogueResource
 @export var dialogue_node: String
@@ -40,12 +40,12 @@ func _ready():
 	self_area.body_entered.connect(_on_SelfArea_body_entered)
 	self_area.area_entered.connect(_on_SelfArea_area_entered)
 	self_area.area_exited.connect(_on_SelfArea_area_exited)
-	#player.connect("possessed", Callable(player, "_on_possessed"))
 	if camera:
 		camera.enabled = false
-	#test
-	#set_control(true)
-
+		camera.limit_left = MEventbus.limit_cameraLU.x
+		camera.limit_top = MEventbus.limit_cameraLU.y
+		camera.limit_right = MEventbus.limit_cameraRD.x
+		camera.limit_bottom = MEventbus.limit_cameraRD.y
 
 func _physics_process(_delta: float):
 	if Engine.is_editor_hint():

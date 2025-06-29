@@ -24,6 +24,7 @@ func _ready():
 
 
 func _on_start_button_down() -> void:
+	$MainUI/AudioStreamPlayer.stop()
 	visible = false
 	game_start.emit(start_level)
 
